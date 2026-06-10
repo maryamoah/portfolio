@@ -1,6 +1,6 @@
-# Mary Amoah Portfolio
+# Mary Abenawa Techiesiwa Amoah Portfolio
 
-A production-ready cybersecurity portfolio for Mary Amoah, built with Vite, React, Tailwind CSS, Framer Motion, and Lucide React icons. The site highlights cybersecurity analyst experience, instructor work, SOC automation, SIEM monitoring, incident response workflows, threat intelligence, firewall automation, executive dashboards, and research interests.
+A production-ready cybersecurity portfolio for Mary Abenawa Techiesiwa Amoah, built with Vite, React, Tailwind CSS, Framer Motion, and Lucide React icons. The site highlights cybersecurity analyst experience, instructor work, SOC automation, SIEM monitoring, incident response workflows, threat intelligence, firewall automation, executive dashboards, and research interests.
 
 ## Tech Stack
 
@@ -17,7 +17,7 @@ A production-ready cybersecurity portfolio for Mary Amoah, built with Vite, Reac
 src/
   components/  Reusable UI building blocks
   sections/    Page sections for the one-page portfolio
-  data/        Mary Amoah profile, skills, case studies, research interests, and contact content
+  data/        Mary Abenawa Techiesiwa Amoah profile, skills, case studies, research interests, and contact content
   assets/      Static assets for images or documents
   hooks/       Reusable React hooks
 ```
@@ -72,4 +72,4 @@ To deploy:
 
 ## Content Updates
 
-Most visible copy is managed in `src/data/portfolio.js`, including Mary’s profile, skills, experience, detailed case studies, research interests, portfolio evidence, and contact cards.
+Most visible copy is managed in `src/data/portfolio.js`, including Mary Abenawa Techiesiwa Amoah’s profile, skills, experience, detailed case studies, research interests, portfolio evidence, and contact cards.

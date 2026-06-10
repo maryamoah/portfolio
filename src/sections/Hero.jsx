@@ -32,7 +32,7 @@ export function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
             >
-              Contact Mary
+              Contact Mary Abenawa Techiesiwa Amoah
             </a>
           </div>
           <div className="mt-10 grid max-w-2xl grid-cols-3 gap-3">

@@ -16,7 +16,7 @@ export function Contact() {
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-800">Professional focus</p>
           <h3 className="mt-5 text-3xl font-semibold">{profile.email}</h3>
           <p className="mt-4 leading-7 text-slate-800">
-            Mary is positioned for conversations about SOC analyst work, security automation, incident response process design, threat intelligence workflows, executive reporting, and cybersecurity instruction.
+            Mary Abenawa Techiesiwa Amoah is positioned for conversations about SOC analyst work, security automation, incident response process design, threat intelligence workflows, executive reporting, and cybersecurity instruction.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {profile.links.map((link) => {

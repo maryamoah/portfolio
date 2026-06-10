@@ -8,7 +8,7 @@ export function About() {
       <SectionHeader
         eyebrow="About"
         title="Cybersecurity operations, automation, and education with clear analyst judgment."
-        description="Mary Amoah’s portfolio centers on practical SOC work: detecting events, enriching evidence, documenting incidents, automating repetitive steps safely, and teaching cybersecurity in a way learners can apply."
+        description="Mary Abenawa Techiesiwa Amoah’s portfolio centers on practical SOC work: detecting events, enriching evidence, documenting incidents, automating repetitive steps safely, and teaching cybersecurity in a way learners can apply."
       />
       <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
         <GlassCard>
@@ -16,7 +16,7 @@ export function About() {
           <h3 className="mt-4 text-3xl font-semibold text-white">{profile.name}</h3>
           <p className="mt-2 text-slate-300">{profile.role}</p>
           <p className="mt-6 text-sm leading-7 text-slate-400">
-            Based in {profile.location}, Mary focuses on security operations workflows that connect SIEM alerts,
+            Based in {profile.location}, Mary Abenawa Techiesiwa Amoah focuses on security operations workflows that connect SIEM alerts,
             incident response, threat intelligence, firewall containment, executive reporting, and practical
             cybersecurity education. Her work emphasizes structured investigation, careful escalation, and
             communication that helps both technical and non-technical stakeholders act on risk.

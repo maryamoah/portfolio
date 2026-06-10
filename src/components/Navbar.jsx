@@ -23,7 +23,7 @@ export function Navbar() {
           <span className="grid h-10 w-10 place-items-center rounded-2xl border border-cyan-300/30 bg-cyan-300/10 shadow-glow">
             <Shield className="h-5 w-5 text-cyan-200" aria-hidden="true" />
           </span>
-          <span className="font-semibold tracking-wide">Mary Amoah</span>
+          <span className="font-semibold tracking-wide">Mary Abenawa Techiesiwa Amoah</span>
         </a>
         <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 lg:flex">
           {navItems.slice(1).map((item) => (

@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 
 export const profile = {
-  name: 'Mary Amoah',
+  name: 'Mary Abenawa Techiesiwa Amoah',
   role: 'Cybersecurity Analyst, SOC Automation Builder & Cybersecurity Instructor',
   location: 'United States',
   summary:
