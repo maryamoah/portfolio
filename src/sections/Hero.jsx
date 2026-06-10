@@ -16,7 +16,7 @@ export function Hero() {
         >
           <Badge>{profile.availability}</Badge>
           <h1 className="mt-7 max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
-            Security-minded portfolio for resilient digital systems.
+            Cybersecurity analyst building practical SOC workflows.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
             {profile.summary}
@@ -55,7 +55,7 @@ export function Hero() {
             <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-5">
               <div>
                 <p className="text-sm text-slate-400">Current focus</p>
-                <p className="mt-1 font-semibold text-white">Risk-informed security operations</p>
+                <p className="mt-1 font-semibold text-white">AI-assisted SOC operations and cybersecurity education</p>
               </div>
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300/10">
                 <LockKeyhole className="h-6 w-6 text-cyan-200" />
@@ -63,9 +63,9 @@ export function Hero() {
             </div>
             <div className="space-y-4">
               {[
-                'Document controls clearly for engineering and audit teams.',
-                'Prioritize signal quality, incident context, and responsible escalation.',
-                'Build secure-by-default habits into cloud and application workflows.',
+                'Deploy and monitor Wazuh SIEM workflows with analyst-ready dashboards.',
+                'Connect TheHive, Cortex, OpenCTI, n8n, and firewall actions into repeatable response processes.',
+                'Teach cybersecurity through practical labs that build investigation confidence and clear reporting habits.',
               ].map((item) => (
                 <div key={item} className="flex gap-3 rounded-2xl bg-white/[0.04] p-4">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-cyan-300" />

@@ -9,14 +9,14 @@ export function Contact() {
       <SectionHeader
         eyebrow="Contact"
         title="Let’s talk about secure systems, thoughtful operations, and practical risk reduction."
-        description="Use the links below to connect. Placeholder contact details can be swapped for production profiles before launch."
+        description="Connect about cybersecurity analyst roles, SOC automation projects, incident response workflows, threat intelligence integration, dashboards, or cybersecurity education."
       />
       <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
         <GlassCard className="bg-cyan-300 text-slate-950">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-800">Primary contact</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-800">Professional focus</p>
           <h3 className="mt-5 text-3xl font-semibold">{profile.email}</h3>
           <p className="mt-4 leading-7 text-slate-800">
-            Send a concise message about the role, project, or collaboration. Mary will follow up with availability and next steps.
+            Mary is positioned for conversations about SOC analyst work, security automation, incident response process design, threat intelligence workflows, executive reporting, and cybersecurity instruction.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {profile.links.map((link) => {

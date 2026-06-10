@@ -4,15 +4,22 @@ import { GlassCard } from '../components/GlassCard';
 import { SectionHeader } from '../components/SectionHeader';
 import { projects } from '../data/portfolio';
 
+const caseStudyFields = [
+  ['Problem', 'problem'],
+  ['Solution', 'solution'],
+  ['My role', 'role'],
+  ['Outcome', 'outcome'],
+];
+
 export function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
       <SectionHeader
-        eyebrow="Featured Projects"
-        title="Portfolio work presented with context, decisions, and outcomes."
-        description="Placeholder projects demonstrate the intended format for detailed future case studies."
+        eyebrow="Featured Case Studies"
+        title="Detailed SOC, SIEM, automation, and reporting work with clear outcomes."
+        description="Each case study explains the operational problem, the solution design, Mary’s role, tools used, and the value created for analysts, learners, or decision-makers."
       />
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project, index) => {
           const Icon = project.icon;
           return (
@@ -25,11 +32,23 @@ export function Projects() {
               </div>
               <p className="mt-7 text-sm font-medium text-cyan-300">{project.category}</p>
               <h3 className="mt-3 text-2xl font-semibold text-white">{project.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-400">{project.description}</p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <Badge key={tag}>{tag}</Badge>
+
+              <div className="mt-6 space-y-4">
+                {caseStudyFields.map(([label, key]) => (
+                  <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">{label}</p>
+                    <p className="mt-2 text-sm leading-7 text-slate-300">{project[key]}</p>
+                  </div>
                 ))}
+              </div>
+
+              <div className="mt-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Tools used</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.tools.map((tool) => (
+                    <Badge key={tool}>{tool}</Badge>
+                  ))}
+                </div>
               </div>
             </GlassCard>
           );
