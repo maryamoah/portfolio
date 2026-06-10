@@ -17,7 +17,7 @@ export function Projects() {
       <SectionHeader
         eyebrow="Featured Case Studies"
         title="Detailed SOC, SIEM, automation, and reporting work with clear outcomes."
-        description="Each case study explains the operational problem, the solution design, Mary’s role, tools used, and the value created for analysts, learners, or decision-makers."
+        description="Each case study explains the operational problem, the solution design, Mary Abenawa Techiesiwa Amoah’s role, tools used, and the value created for analysts, learners, or decision-makers."
       />
       <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project, index) => {

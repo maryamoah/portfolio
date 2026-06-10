@@ -8,7 +8,7 @@ export function Skills() {
       <SectionHeader
         eyebrow="Skills"
         title="Security capabilities organized around real operating needs."
-        description="A focused snapshot of Mary’s hands-on capabilities across SOC operations, automation, SIEM monitoring, incident response, threat intelligence, network defense, and instruction."
+        description="A focused snapshot of Mary Abenawa Techiesiwa Amoah’s hands-on capabilities across SOC operations, automation, SIEM monitoring, incident response, threat intelligence, network defense, and instruction."
       />
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {skills.map((skill, index) => {

@@ -21,7 +21,7 @@ function App() {
         <Contact />
       </main>
       <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-500">
-        <p>© {new Date().getFullYear()} Mary Amoah. Built with React, Vite, Tailwind CSS, and Framer Motion.</p>
+        <p>© {new Date().getFullYear()} Mary Abenawa Techiesiwa Amoah. Built with React, Vite, Tailwind CSS, and Framer Motion.</p>
       </footer>
     </div>
   );
