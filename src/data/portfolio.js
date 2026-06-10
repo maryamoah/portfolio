@@ -5,8 +5,8 @@ import {
   Code2,
   Database,
   FileCheck,
-  Github,
-  Linkedin,
+  GitBranch,
+  Link,
   Mail,
   Radio,
   ShieldCheck,
@@ -22,8 +22,8 @@ export const profile = {
   email: 'hello@example.com',
   availability: 'Open to security analyst and cloud security roles',
   links: [
-    { label: 'GitHub', href: 'https://github.com/', icon: Github },
-    { label: 'LinkedIn', href: 'https://linkedin.com/', icon: Linkedin },
+    { label: 'GitHub', href: 'https://github.com/', icon: GitBranch },
+    { label: 'LinkedIn', href: 'https://linkedin.com/', icon: Link },
     { label: 'Email', href: 'mailto:hello@example.com', icon: Mail },
   ],
 };
