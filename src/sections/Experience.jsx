@@ -8,7 +8,7 @@ export function Experience() {
       <SectionHeader
         eyebrow="Experience"
         title="A growing track record of security-focused project delivery."
-        description="Use this area to replace placeholders with real roles, measurable outcomes, and links to supporting evidence."
+        description="Mary’s experience combines analyst investigation habits, cybersecurity instruction, and portfolio-built SOC automation workflows that demonstrate practical security operations delivery."
       />
       <div className="relative space-y-6 before:absolute before:left-4 before:top-3 before:h-[calc(100%-1.5rem)] before:w-px before:bg-cyan-300/20 md:before:left-1/2">
         {experience.map((item, index) => (

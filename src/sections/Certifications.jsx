@@ -9,7 +9,7 @@ export function Certifications() {
       <SectionHeader
         eyebrow="Certifications"
         title="Learning milestones aligned to security and cloud fundamentals."
-        description="Replace these placeholders with verified certifications, badges, dates, and credential links."
+        description="Portfolio evidence and learning milestones aligned to Mary’s SOC operations, automation, threat intelligence, and cybersecurity education focus."
       />
       <div className="grid gap-4 md:grid-cols-2">
         {certifications.map((cert, index) => (

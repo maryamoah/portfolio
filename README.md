@@ -1,6 +1,6 @@
 # Mary Amoah Portfolio
 
-A production-ready cybersecurity-inspired portfolio built with Vite, React, Tailwind CSS, Framer Motion, and Lucide React icons. The current content is intentionally placeholder-based so it can be replaced with verified experience, project, certification, and contact details before launch.
+A production-ready cybersecurity portfolio for Mary Amoah, built with Vite, React, Tailwind CSS, Framer Motion, and Lucide React icons. The site highlights cybersecurity analyst experience, instructor work, SOC automation, SIEM monitoring, incident response workflows, threat intelligence, firewall automation, executive dashboards, and research interests.
 
 ## Tech Stack
 
@@ -17,8 +17,8 @@ A production-ready cybersecurity-inspired portfolio built with Vite, React, Tail
 src/
   components/  Reusable UI building blocks
   sections/    Page sections for the one-page portfolio
-  data/        Placeholder profile, skills, projects, and contact content
-  assets/      Static assets for future images or documents
+  data/        Mary Amoah profile, skills, case studies, research interests, and contact content
+  assets/      Static assets for images or documents
   hooks/       Reusable React hooks
 ```
 
@@ -72,4 +72,4 @@ To deploy:
 
 ## Content Updates
 
-Most visible copy is managed in `src/data/portfolio.js`. Update the placeholder profile, skills, experience, projects, certifications, and contact links there before publishing.
+Most visible copy is managed in `src/data/portfolio.js`, including Mary’s profile, skills, experience, detailed case studies, research interests, portfolio evidence, and contact cards.
