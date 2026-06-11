@@ -3,8 +3,10 @@ import { About } from './sections/About';
 import { Certifications } from './sections/Certifications';
 import { Contact } from './sections/Contact';
 import { Experience } from './sections/Experience';
+import { GitHubProjects } from './sections/GitHubProjects';
 import { Hero } from './sections/Hero';
 import { Projects } from './sections/Projects';
+import { Research } from './sections/Research';
 import { Skills } from './sections/Skills';
 
 function App() {
@@ -16,7 +18,9 @@ function App() {
         <About />
         <Skills />
         <Experience />
+        <GitHubProjects />
         <Projects />
+        <Research />
         <Certifications />
         <Contact />
       </main>

@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
 import { SectionHeader } from '../components/SectionHeader';
@@ -13,11 +13,11 @@ const caseStudyFields = [
 
 export function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+    <section id="case-studies" className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
       <SectionHeader
-        eyebrow="Featured Case Studies"
-        title="Detailed SOC, SIEM, automation, and reporting work with clear outcomes."
-        description="Each case study explains the operational problem, the solution design, Mary Abenawa Techiesiwa Amoah’s role, tools used, and the value created for analysts, learners, or decision-makers."
+        eyebrow="Detailed Case Studies"
+        title="Detailed SOC, SIEM, automation, AI/ML, forensics, instruction, and VAPT work."
+        description="Each case study includes the problem, solution, Mary Abenawa Techiesiwa Amoah’s role, tools used, and a careful outcome statement without overclaiming results."
       />
       <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project, index) => {
@@ -28,7 +28,7 @@ export function Projects() {
                 <div className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300/10">
                   <Icon className="h-6 w-6 text-cyan-200" />
                 </div>
-                <ExternalLink className="h-5 w-5 text-slate-500 transition group-hover:text-cyan-200" />
+                <FileText className="h-5 w-5 text-slate-500 transition group-hover:text-cyan-200" />
               </div>
               <p className="mt-7 text-sm font-medium text-cyan-300">{project.category}</p>
               <h3 className="mt-3 text-2xl font-semibold text-white">{project.title}</h3>
