@@ -21,7 +21,7 @@ export function Certifications() {
               <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">{cert.issuer}</p>
                 <h3 className="mt-2 text-lg font-semibold leading-7 text-white">{cert.name}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-400">{cert.status}</p>
+                <p className="mt-3 text-sm leading-6 text-slate-200">{cert.status}</p>
               </div>
             </div>
           </GlassCard>

@@ -7,10 +7,10 @@ export function Skills() {
     <section id="skills" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Skills"
-        title="Skills and Tools Organized by Operating Need"
-        description="A grouped snapshot of tools and capabilities across SOC operations, SIEM monitoring, incident response, automation, threat intelligence, AI/ML security analytics, and instruction."
+        title="Capabilities by Security Need"
+        description="A concise view of Mary’s capabilities across operations, detection, intelligence, automation, applied research, forensics, education, and advisory work."
       />
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {skills.map((skill, index) => {
           const Icon = skill.icon;
           return (
@@ -21,7 +21,7 @@ export function Skills() {
               <h3 className="text-xl font-semibold text-white">{skill.title}</h3>
               <ul className="mt-5 space-y-3">
                 {skill.items.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-slate-300">
+                  <li key={item} className="flex items-center gap-3 text-sm text-slate-200">
                     <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" />
                     {item}
                   </li>
