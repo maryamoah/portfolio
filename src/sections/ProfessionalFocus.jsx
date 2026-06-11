@@ -6,7 +6,7 @@ export function ProfessionalFocus() {
   return (
     <section id="professional-focus" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
-        eyebrow="Specializations"
+        eyebrow="Areas of Focus"
         title="Areas of Focus"
         description="Three focused areas show how Mary approaches operational workflows, intelligence integration, and applied security research."
       />

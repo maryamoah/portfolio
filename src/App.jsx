@@ -4,7 +4,6 @@ import { Consulting } from './sections/Consulting';
 import { Contact } from './sections/Contact';
 import { Experience } from './sections/Experience';
 import { Hero } from './sections/Hero';
-import { Instruction } from './sections/Instruction';
 import { ProfessionalFocus } from './sections/ProfessionalFocus';
 import { Projects } from './sections/Projects';
 import { Research } from './sections/Research';

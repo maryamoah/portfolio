@@ -8,8 +8,8 @@ export function Consulting() {
     <section id="consulting" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Services"
-        title="How I Can Help"
-        description="Consulting and professional services for teams that need clearer security operations, detection, reporting, automation, and training workflows."
+        title="Practical Security Support"
+        description="Focused support areas that complement Mary’s operations, automation, education, and research work."
       />
       <GlassCard className="overflow-hidden bg-cyan-300 text-slate-950">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

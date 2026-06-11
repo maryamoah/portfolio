@@ -78,14 +78,14 @@ export const coreFocus = [
 export const professionalFocus = coreFocus;
 
 export const consultingServices = [
-  'Security Operations Engineering',
-  'SIEM Engineering & Detection',
-  'Threat Intelligence Integration',
-  'Security Automation',
-  'Incident Response Workflow Design',
-  'Executive Security Reporting',
-  'Vulnerability Assessment Support',
-  'Cybersecurity Training & Workshops',
+  'Operational readiness reviews',
+  'Detection and reporting roadmaps',
+  'Automation governance planning',
+  'Threat intelligence process alignment',
+  'Assessment finding remediation support',
+  'Investigation runbook development',
+  'Cybersecurity lab and workshop planning',
+  'Management-ready security communication',
 ];
 
 export const skills = [
@@ -99,7 +99,7 @@ export const skills = [
       'Decoder development',
       'Security use case development',
       'Correlation logic',
-      'Alert tuning',
+      'Alert tuning and optimization',
       'Dashboard engineering',
       'Security reporting',
       'MITRE ATT&CK mapping',
@@ -216,10 +216,10 @@ export const githubProjects = [
     tools: ['Linux', 'MITRE ATT&CK', 'Threat hunting', 'Lab design'],
   },
   {
-    repo: 'threatbot',
-    category: 'Threat Intelligence Automation',
-    description: 'Threat intelligence notification concept for indicator context and security team updates.',
-    tools: ['Threat intelligence', 'Automation bot', 'Security notifications', 'indicator context'],
+    repo: 'ai-soc-investigation-assistant',
+    category: 'AI-Assisted Security Operations',
+    description: 'Human-reviewed security operations investigation workflow for triage prompts, case notes, and next-step guidance.',
+    tools: ['AI assistance', 'security operations triage', 'Case notes', 'Analyst workflow'],
   },
   {
     repo: 'incident-evidence-packager',
@@ -234,10 +234,10 @@ export const githubProjects = [
     tools: ['Python', 'Forensic timelines', 'Metadata', 'Digital forensics'],
   },
   {
-    repo: 'ai-log-explainer',
-    category: 'AI Log Analysis',
-    description: 'AI-assisted log explanation workflow for analyst notes and security documentation.',
-    tools: ['AI assistance', 'Log analysis', 'security operations documentation', 'Analyst support'],
+    repo: 'hash-verify-cli',
+    category: 'Evidence Integrity',
+    description: 'Command-line utility for verifying SHA256 hashes during evidence review.',
+    tools: ['CLI', 'SHA256 verification', 'Integrity verification', 'Forensics'],
   },
   {
     repo: 'ioc-n8n',
@@ -252,10 +252,22 @@ export const githubProjects = [
     tools: ['Security utility', 'Credential validation', 'AD concepts', 'Risk review'],
   },
   {
-    repo: 'telegram-leak-monitor',
-    category: 'Leak Intelligence',
-    description: 'Monitoring and automation concept for leak intelligence review and security notifications.',
-    tools: ['Python', 'Threat intelligence', 'Monitoring', 'Automation'],
+    repo: 'ai-log-explainer',
+    category: 'AI Log Analysis',
+    description: 'AI-assisted log explanation workflow for analyst notes and security documentation.',
+    tools: ['AI assistance', 'Log analysis', 'security operations documentation', 'Analyst support'],
+  },
+  {
+    repo: 'ioc-n8n',
+    category: 'IOC Automation',
+    description: 'n8n workflow for indicator enrichment, context gathering, and analyst review.',
+    tools: ['n8n', 'REST API integrations', 'IOC enrichment', 'Workflow automation'],
+  },
+  {
+    repo: 'threatbot',
+    category: 'Threat Intelligence Automation',
+    description: 'Threat intelligence notification concept for indicator context and security team updates.',
+    tools: ['Threat intelligence', 'Automation bot', 'Security notifications', 'indicator context'],
   },
 ];
 
@@ -275,26 +287,27 @@ export const projects = [
       'Threat intelligence visibility',
       'Security map visualization',
       'Asset inventory visibility',
-      'Vulnerability tracking',
+      'Vulnerability management tracking',
       'SLA monitoring',
-      'Compliance reporting',
+      'Compliance-oriented reporting',
       'Report lifecycle management',
       'Operational readiness monitoring',
       'Security metrics and KPIs',
     ],
     aiReporting: [
       'Automated monthly reporting',
-      'Ollama integration',
+      'Local LLM integration',
+      'Ollama deployment',
       'Qwen models',
       'AI-generated report narratives',
       'Automated chart generation',
-      'Security trend summaries',
-      'Executive-friendly reporting',
+      'Automated security trend summaries',
+      'Executive-friendly reporting outputs',
     ],
     tools: ['Security operations dashboards', 'Threat intelligence visibility', 'Asset visibility', 'Local AI reporting', 'Ollama', 'Qwen models'],
   },
   {
-    title: 'AI-Assisted SOC Triage & Investigation',
+    title: 'AI-Assisted Security Operations Triage and Investigation',
     category: 'Security operations automation',
     icon: Bot,
     problem: 'Security operations analysts often spend time gathering alert context, drafting notes, checking indicators, and deciding what to review next.',
@@ -424,14 +437,9 @@ export const researchInterests = [
 ];
 
 export const instructionHighlights = [
-  'Cybersecurity lab development',
-  'Technical mentoring',
-  'Security monitoring exercises',
-  'Threat intelligence training',
-  'SIEM training',
-  'Curriculum support',
-  'Student guidance',
-  'Practical cybersecurity workshops',
+  'Builds practical labs for security operations triage, SIEM dashboards, incident response, threat intelligence, vulnerability assessment and security testing practice, and digital forensics support.',
+  'Uses clear objectives, scenario prompts, evidence expectations, and reflection questions so learners understand both tools and judgment.',
+  'Connects technical tasks to reporting habits, escalation language, risk communication, and defensible documentation.',
 ];
 
 export const certifications = [
