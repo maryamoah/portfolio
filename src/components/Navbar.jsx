@@ -6,9 +6,11 @@ const navItems = [
   { label: 'Hero', href: '#hero', id: 'hero' },
   { label: 'About', href: '#about', id: 'about' },
   { label: 'Skills', href: '#skills', id: 'skills' },
-  { label: 'Experience', href: '#experience', id: 'experience' },
-  { label: 'Projects', href: '#projects', id: 'projects' },
-  { label: 'Certifications', href: '#certifications', id: 'certifications' },
+  { label: 'Work', href: '#experience', id: 'experience' },
+  { label: 'GitHub', href: '#github-projects', id: 'github-projects' },
+  { label: 'Cases', href: '#case-studies', id: 'case-studies' },
+  { label: 'Research', href: '#research', id: 'research' },
+
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
@@ -30,7 +32,7 @@ export function Navbar() {
             <a
               key={item.id}
               href={item.href}
-              className={`rounded-full px-4 py-2 text-sm transition ${
+              className={`rounded-full px-3 py-2 text-xs transition xl:px-4 xl:text-sm ${
                 activeId === item.id
                   ? 'bg-cyan-300/15 text-cyan-100'
                   : 'text-slate-300 hover:bg-white/10 hover:text-white'

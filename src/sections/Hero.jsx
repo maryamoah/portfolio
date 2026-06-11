@@ -16,17 +16,17 @@ export function Hero() {
         >
           <Badge>{profile.availability}</Badge>
           <h1 className="mt-7 max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
-            Cybersecurity analyst building practical SOC workflows.
+            Mary Abenawa Techiesiwa Amoah — cybersecurity analyst, instructor, and SOC automation builder.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
             {profile.summary}
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <a
-              href="#projects"
+              href="#github-projects"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
             >
-              View featured work <ArrowRight className="h-4 w-4" />
+              View GitHub projects <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#contact"
@@ -55,7 +55,7 @@ export function Hero() {
             <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-5">
               <div>
                 <p className="text-sm text-slate-400">Current focus</p>
-                <p className="mt-1 font-semibold text-white">AI-assisted SOC operations and cybersecurity education</p>
+                <p className="mt-1 font-semibold text-white">Cybersecurity Analyst | Cybersecurity Instructor | SOC Automation | AI/ML Security Research</p>
               </div>
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300/10">
                 <LockKeyhole className="h-6 w-6 text-cyan-200" />
@@ -63,9 +63,9 @@ export function Hero() {
             </div>
             <div className="space-y-4">
               {[
-                'Deploy and monitor Wazuh SIEM workflows with analyst-ready dashboards.',
-                'Connect TheHive, Cortex, OpenCTI, n8n, and firewall actions into repeatable response processes.',
-                'Teach cybersecurity through practical labs that build investigation confidence and clear reporting habits.',
+                'Support SOC operations, incident response, SIEM dashboards, threat intelligence, and careful escalation workflows.',
+                'Build n8n, REST API, Slack, Palo Alto, FortiGate, TheHive, Cortex, and OpenCTI automation patterns with human review gates.',
+                'Explore AI/ML security research with Python, Jupyter Notebook, Isolation Forest, forensic timelines, and practical cybersecurity labs.',
               ].map((item) => (
                 <div key={item} className="flex gap-3 rounded-2xl bg-white/[0.04] p-4">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-cyan-300" />

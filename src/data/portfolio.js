@@ -1,18 +1,21 @@
 import {
   Activity,
   Award,
-  BarChart3,
+  Binary,
   BookOpenCheck,
   Bot,
   Briefcase,
+  Bug,
   Database,
   FileCheck,
+  Fingerprint,
   GitBranch,
   GraduationCap,
   Link,
   Mail,
   Network,
   Radio,
+  SearchCheck,
   ShieldAlert,
   ShieldCheck,
   Terminal,
@@ -21,71 +24,83 @@ import {
 
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
-  role: 'Cybersecurity Analyst, SOC Automation Builder & Cybersecurity Instructor',
+  role: 'Cybersecurity Analyst | Cybersecurity Instructor | SOC Automation | AI/ML Security Research',
   location: 'United States',
   summary:
-    'I design practical security operations workflows that combine SIEM monitoring, incident response, threat intelligence, firewall enforcement, executive reporting, and hands-on cybersecurity education.',
-  email: 'Cybersecurity analyst · SOC automation · cybersecurity education',
-  availability: 'Cybersecurity analyst · SOC automation · security education',
+    'I build and document practical cybersecurity workflows across SOC operations, SIEM engineering, incident response, threat intelligence, SOC automation, AI/ML security analytics, VAPT, digital forensics support, and hands-on cybersecurity instruction.',
+  email: 'Cybersecurity analyst · instructor · SOC automation · AI/ML security research',
+  availability: 'SOC operations · AI/ML security research · cybersecurity instruction',
   links: [
-    { label: 'Case studies', href: '#projects', icon: GitBranch },
-    { label: 'Experience', href: '#experience', icon: Link },
-    { label: 'Contact', href: '#contact', icon: Mail },
+    { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
+    { label: 'Case studies', href: '#case-studies', icon: Link },
+    { label: 'Research interests', href: '#research', icon: Mail },
   ],
   focusAreas: [
-    'SOC alert triage and incident response workflows',
-    'Wazuh SIEM deployment, endpoint monitoring, and rule tuning',
-    'TheHive, Cortex, OpenCTI, n8n, and firewall automation',
-    'Cybersecurity instruction, lab design, and executive communication',
+    'SOC operations, alert triage, SIEM dashboards, and incident response documentation',
+    'Cybersecurity instruction, practical lab design, learner mentoring, and assessment support',
+    'Threat intelligence, OpenCTI integration, IOC enrichment, and MITRE ATT&CK mapping',
+    'SOC automation, n8n workflows, REST APIs, Slack notifications, and firewall response patterns',
+    'AI/ML for cybersecurity, interpretable anomaly detection, and security telemetry research',
+    'VAPT practice, digital forensics support, SHA256 evidence integrity, and forensic timelines',
   ],
 };
 
 export const metrics = [
-  { value: 'SOC', label: 'Triage, detection, enrichment, and response workflows' },
-  { value: 'SIEM', label: 'Wazuh monitoring, dashboards, alert review, and tuning' },
-  { value: 'EDU', label: 'Cybersecurity lessons, labs, mentoring, and learner support' },
+  { value: 'SOC', label: 'Operations, triage, enrichment, escalation, and response workflow design' },
+  { value: 'AI/ML', label: 'Isolation Forest experiments and interpretable security telemetry analytics' },
+  { value: 'EDU', label: 'Cybersecurity instruction, guided labs, practical exercises, and learner support' },
 ];
 
 export const skills = [
   {
-    title: 'Security Operations',
+    title: 'SOC Operations',
     icon: ShieldCheck,
-    items: ['Alert triage', 'Incident escalation', 'Log analysis', 'Runbook development', 'Case documentation'],
+    items: ['Alert triage', 'Log analysis', 'Case notes', 'Escalation support', 'Analyst runbooks'],
   },
   {
-    title: 'SOC Automation',
-    icon: Workflow,
-    items: ['n8n workflows', 'AI-assisted summaries', 'API integrations', 'IP blocking logic', 'Notification pipelines'],
-  },
-  {
-    title: 'SIEM & Detection',
-    icon: Radio,
-    items: ['Wazuh deployment', 'Endpoint agents', 'Rule tuning', 'Executive dashboards', 'Compliance reporting'],
-  },
-  {
-    title: 'Incident Response',
-    icon: ShieldAlert,
-    items: ['TheHive cases', 'Cortex analyzers', 'IOC enrichment', 'Evidence handling', 'Post-incident lessons'],
+    title: 'Cybersecurity Instruction',
+    icon: GraduationCap,
+    items: ['Lab development', 'Lesson planning', 'Tool walkthroughs', 'Assessment support', 'Learner mentoring'],
   },
   {
     title: 'Threat Intelligence',
     icon: Database,
-    items: ['OpenCTI integration', 'IOC context', 'Threat actor mapping', 'Indicator scoring', 'Analyst briefings'],
+    items: ['OpenCTI workflows', 'IOC enrichment', 'VirusTotal', 'AbuseIPDB', 'MITRE ATT&CK mapping'],
   },
   {
-    title: 'Network Security',
-    icon: Network,
-    items: ['Palo Alto concepts', 'Firewall policy', 'Blocklists', 'Segmentation', 'Safe containment'],
+    title: 'Incident Response',
+    icon: ShieldAlert,
+    items: ['TheHive cases', 'Cortex analyzers', 'Evidence notes', 'Containment logic', 'Post-incident review'],
   },
   {
-    title: 'Security Education',
-    icon: GraduationCap,
-    items: ['Beginner-friendly labs', 'Lesson planning', 'Tool walkthroughs', 'Assessment design', 'Career mentoring'],
+    title: 'SIEM Engineering',
+    icon: Radio,
+    items: ['Wazuh deployment', 'Endpoint agents', 'Rule tuning', 'SIEM dashboards', 'Monitoring workflows'],
+  },
+  {
+    title: 'SOC Automation',
+    icon: Workflow,
+    items: ['n8n workflows', 'REST APIs', 'Slack alerts', 'Palo Alto actions', 'FortiGate workflows'],
+  },
+  {
+    title: 'AI/ML for Cybersecurity',
+    icon: Binary,
+    items: ['Jupyter Notebook', 'Isolation Forest', 'Anomaly detection', 'Telemetry features', 'Explainable outputs'],
+  },
+  {
+    title: 'VAPT',
+    icon: Bug,
+    items: ['Security assessment practice', 'Finding validation', 'Risk notes', 'Remediation guidance', 'Report writing'],
+  },
+  {
+    title: 'Digital Forensics Support',
+    icon: Fingerprint,
+    items: ['SHA256 hashing', 'Evidence packaging', 'Forensic timelines', 'Metadata review', 'Integrity checks'],
   },
   {
     title: 'Technical Toolkit',
     icon: Terminal,
-    items: ['Linux', 'Python basics', 'REST APIs', 'Git', 'Documentation'],
+    items: ['Linux', 'Python', 'JavaScript', 'REST APIs', 'Documentation'],
   },
 ];
 
@@ -95,119 +110,232 @@ export const experience = [
     company: 'Security Operations & Portfolio Lab Work',
     period: 'Current focus',
     highlights: [
-      'Investigates security alerts by reviewing event timelines, endpoint details, user activity, network indicators, and available threat intelligence before deciding whether to close, escalate, or contain.',
-      'Builds repeatable analyst runbooks for phishing, suspicious authentication, malware indicators, policy violations, vulnerability findings, and firewall response actions.',
-      'Uses Wazuh, TheHive, Cortex, OpenCTI, n8n, and firewall workflows to demonstrate an end-to-end SOC process from detection to enrichment, case management, containment, and reporting.',
-      'Communicates findings in plain language for technical teams and leadership, emphasizing business impact, severity, recommended action, and evidence quality.',
+      'Works on SOC operations workflows that review alerts, endpoint details, authentication events, network indicators, SIEM dashboards, and threat intelligence before closure, escalation, or containment recommendations.',
+      'Develops repeatable investigation notes for phishing, suspicious authentication, malware indicators, policy violations, vulnerability findings, and firewall response actions.',
+      'Uses Wazuh, TheHive, Cortex, OpenCTI, n8n, Python, JavaScript, Linux, REST APIs, VirusTotal, AbuseIPDB, Slack, Palo Alto, FortiGate, and MITRE ATT&CK concepts in practical portfolio workflows.',
+      'Supports digital forensics workflows with SHA256 hashing, evidence packaging, forensic timelines, metadata review, and integrity-preserving documentation.',
     ],
   },
   {
     role: 'Cybersecurity Instructor',
-    company: 'Security Education & Mentoring',
+    company: 'Security Education & Lab Development',
     period: 'Current focus',
     highlights: [
-      'Creates approachable cybersecurity lessons that connect foundational security concepts to real analyst workflows, including SIEM monitoring, incident response, threat intelligence, and network defense.',
-      'Designs hands-on labs that help learners practice investigation habits: asking clear questions, validating evidence, documenting assumptions, and explaining recommendations.',
-      'Breaks down complex tools such as Wazuh, TheHive, Cortex, OpenCTI, and n8n into guided exercises that support beginners while still modeling professional SOC practices.',
-      'Researches how AI-assisted instruction and structured lab environments can improve confidence, accessibility, and job readiness for cybersecurity learners.',
+      'Designs cybersecurity instruction that connects foundational security concepts to realistic SOC operations, SIEM monitoring, incident response, threat intelligence, VAPT, and network defense scenarios.',
+      'Builds guided labs that help learners practice investigation questions, evidence validation, tool usage, documentation, escalation judgment, and plain-language reporting.',
+      'Breaks down tools such as Wazuh, TheHive, Cortex, OpenCTI, n8n, Jupyter Notebook, and Linux into practical exercises that support beginner and early-career learners.',
+      'Explores research and PhD interests in AI-assisted SOC operations, machine learning for security telemetry, human-AI collaboration, cybersecurity education, and practical lab design.',
     ],
   },
   {
-    role: 'SOC Automation Builder',
+    role: 'SOC Automation and AI/ML Security Research Builder',
     company: 'Independent Cybersecurity Projects',
-    period: 'Portfolio case studies',
+    period: 'GitHub and case study portfolio',
     highlights: [
-      'Develops SOC automation workflows that enrich alerts, summarize context, reduce repetitive analyst steps, and preserve human review for high-risk decisions.',
-      'Connects SIEM detections with case management, threat intelligence, AI-assisted triage, dashboards, notifications, and firewall blocking workflows.',
-      'Documents each workflow with the problem, solution architecture, analyst role, tools used, outcomes, limitations, and safe escalation points.',
+      'Built and documented automation concepts that enrich alerts, explain logs, package incident evidence, create forensic timelines, verify hashes, monitor leak intelligence, and support controlled firewall blocking workflows.',
+      'Developed AI/ML security analytics experiments using Isolation Forest and Jupyter Notebook to explore interpretable anomaly detection for heterogeneous security telemetry.',
+      'Documents each case study with the problem, solution, Mary Abenawa Techiesiwa Amoah’s role, tools used, outcome, limitations, and human review points without inventing production metrics.',
     ],
+  },
+];
+
+export const githubProjects = [
+  {
+    repo: 'ai-anomaly-security',
+    category: 'AI/ML Security Analytics',
+    description:
+      'Interpretable anomaly detection for heterogeneous security telemetry using Isolation Forest.',
+    tools: ['Python', 'Jupyter Notebook', 'Isolation Forest', 'Security telemetry'],
+  },
+  {
+    repo: 'attack-hunting-lab',
+    category: 'Threat Hunting Lab',
+    description: 'Security lab for attack investigation and threat hunting.',
+    tools: ['Linux', 'MITRE ATT&CK', 'Threat hunting', 'Lab design'],
+  },
+  {
+    repo: 'ai-soc-investigation-assistant',
+    category: 'AI-Assisted SOC',
+    description: 'AI-assisted SOC investigation workflow.',
+    tools: ['AI assistance', 'SOC triage', 'Case notes', 'Analyst workflow'],
+  },
+  {
+    repo: 'incident-evidence-packager',
+    category: 'Digital Forensics Support',
+    description:
+      'Packages incident response and digital forensics evidence into verifiable integrity-preserving bundles.',
+    tools: ['Python', 'SHA256 hashing', 'Evidence integrity', 'Incident response'],
+  },
+  {
+    repo: 'evidence-timeline-builder',
+    category: 'Forensic Timelines',
+    description: 'Reconstructs chronological timelines from forensic evidence metadata.',
+    tools: ['Python', 'Forensic timelines', 'Metadata', 'Digital forensics'],
+  },
+  {
+    repo: 'hash-verify-cli',
+    category: 'Evidence Integrity',
+    description: 'Verifies SHA256 hashes for forensic evidence integrity.',
+    tools: ['CLI', 'SHA256 hashing', 'Integrity verification', 'Forensics'],
+  },
+  {
+    repo: 'telegram-leak-monitor',
+    category: 'Leak Intelligence',
+    description: 'Monitoring/security automation project for Telegram leak intelligence.',
+    tools: ['Python', 'Threat intelligence', 'Monitoring', 'Automation'],
+  },
+  {
+    repo: 'validator',
+    category: 'Identity Security',
+    description: 'AD credential validation utility without an AD service account.',
+    tools: ['Security utility', 'Credential validation', 'AD concepts', 'Risk review'],
+  },
+  {
+    repo: 'ai-log-explainer',
+    category: 'AI Log Analysis',
+    description: 'AI-powered log explanation project.',
+    tools: ['AI assistance', 'Log analysis', 'SOC documentation', 'Analyst support'],
+  },
+  {
+    repo: 'ioc-n8n',
+    category: 'IOC Automation',
+    description: 'IOC automation workflow using n8n.',
+    tools: ['n8n', 'REST APIs', 'IOC enrichment', 'Workflow automation'],
+  },
+  {
+    repo: 'threatbot',
+    category: 'Threat Intelligence Automation',
+    description: 'Threat intelligence/security automation bot.',
+    tools: ['Threat intelligence', 'Automation bot', 'Security notifications', 'IOC context'],
   },
 ];
 
 export const projects = [
   {
-    title: 'Wazuh SIEM Deployment & Monitoring',
+    title: 'AI-Assisted SOC Triage and Investigation',
+    category: 'SOC Automation',
+    icon: Bot,
+    problem:
+      'SOC analysts can spend significant time collecting alert context, drafting notes, checking indicators, and deciding what to review next.',
+    solution:
+      'Built an AI-assisted workflow concept that organizes alert details, proposes investigation questions, drafts a triage summary, and keeps the analyst responsible for validation and final decisions.',
+    role:
+      'Mary Abenawa Techiesiwa Amoah designed the workflow stages, prompt structure, review checkpoints, documentation approach, and escalation notes for human-in-the-loop SOC triage.',
+    tools: ['n8n', 'Python', 'JavaScript', 'REST APIs', 'Slack', 'MITRE ATT&CK', 'SIEM dashboards'],
+    outcome:
+      'Developed a repeatable triage pattern that supports clearer analyst notes, more consistent evidence review, and careful escalation without claiming autonomous decision-making.',
+  },
+  {
+    title: 'Wazuh SIEM Deployment and Monitoring',
     category: 'SIEM Engineering',
     icon: Activity,
     problem:
-      'A SOC needs centralized visibility into endpoint activity, authentication events, suspicious behavior, and compliance signals without relying on scattered logs or manual review.',
+      'Security teams need centralized visibility into endpoint events, authentication activity, suspicious behavior, compliance signals, and trends shown through SIEM dashboards.',
     solution:
-      'Designed a Wazuh-based monitoring workflow that organizes agent enrollment, log collection, alert review, rule tuning, dashboard visibility, and escalation documentation.',
+      'Designed a Wazuh monitoring workflow covering agent enrollment, log collection, alert review, dashboard organization, rule tuning concepts, and analyst-ready reporting.',
     role:
-      'Configured the analyst workflow, mapped priority alerts to investigation questions, documented tuning recommendations, and translated technical findings into dashboard-ready summaries.',
-    tools: ['Wazuh', 'Linux', 'Endpoint agents', 'Dashboards', 'Detection rules'],
+      'Configured the portfolio workflow, documented monitoring steps, mapped alert review paths, and described how dashboards can support SOC operations and incident response.',
+    tools: ['Wazuh', 'Linux', 'SIEM dashboards', 'MITRE ATT&CK', 'Rule tuning', 'Log analysis'],
     outcome:
-      'Created a repeatable SIEM operations model that improves visibility, reduces alert ambiguity, and gives analysts a consistent path from detection to investigation and reporting.',
+      'Built a practical SIEM engineering case study that demonstrates how Wazuh can support monitoring, triage, documentation, and security communication.',
   },
   {
     title: 'TheHive + Cortex Incident Response Workflow',
     category: 'Incident Response',
     icon: ShieldAlert,
     problem:
-      'Analysts often lose time moving between alerts, enrichment tools, notes, and status updates when investigating suspicious indicators or potential incidents.',
+      'Incident response can become inconsistent when alerts, enrichment results, task ownership, evidence notes, and closure decisions are tracked in disconnected places.',
     solution:
-      'Built a case-management workflow using TheHive for incident tracking and Cortex analyzers for enrichment so IOCs, tasks, evidence, and recommendations stay connected.',
+      'Developed a workflow that turns validated alerts into TheHive cases, enriches observables with Cortex analyzers, records evidence, assigns tasks, and preserves investigation context.',
     role:
-      'Defined case templates, analyst tasks, severity guidance, enrichment steps, evidence notes, and closure criteria for phishing, malware, and suspicious IP investigations.',
-    tools: ['TheHive', 'Cortex', 'IOC enrichment', 'Case templates', 'Runbooks'],
+      'Defined case templates, analyst notes, enrichment steps, severity review, closure criteria, and communication guidance for structured incident response support.',
+    tools: ['TheHive', 'Cortex', 'VirusTotal', 'AbuseIPDB', 'REST APIs', 'Runbooks', 'Incident timelines'],
     outcome:
-      'Improved investigation consistency by giving each case a clear timeline, enrichment record, owner, next action, and executive-friendly summary of risk and response.',
+      'Supported more consistent incident handling by giving each case a clear owner, evidence trail, enrichment record, timeline, and recommended next action.',
   },
   {
     title: 'OpenCTI Threat Intelligence Integration',
     category: 'Threat Intelligence',
     icon: Database,
     problem:
-      'Alerts are harder to prioritize when indicators lack context about related malware, threat actors, campaigns, tactics, or confidence levels.',
+      'Alerts are harder to prioritize when IOCs lack context about malware, infrastructure, tactics, techniques, campaigns, source confidence, or relevance to an investigation.',
     solution:
-      'Integrated an OpenCTI-centered intelligence process that enriches suspicious indicators and connects them to threat context before escalation or containment decisions.',
+      'Integrated an OpenCTI-centered process for collecting, organizing, and summarizing threat context before analyst escalation or response decisions.',
     role:
-      'Modeled how analysts should collect IOCs, validate source confidence, summarize threat context, and attach intelligence notes to incident records and dashboards.',
-    tools: ['OpenCTI', 'STIX concepts', 'Threat intel feeds', 'TheHive', 'Analyst briefings'],
+      'Modeled how analysts should collect indicators, validate source confidence, map context to MITRE ATT&CK, and attach threat notes to incident records and reports.',
+    tools: ['OpenCTI', 'MITRE ATT&CK', 'VirusTotal', 'AbuseIPDB', 'TheHive', 'Threat intelligence feeds'],
     outcome:
-      'Added context-driven prioritization so analysts can distinguish commodity noise from indicators that deserve escalation, blocking, or additional monitoring.',
+      'Created a context-driven prioritization approach that helps distinguish routine noise from indicators that deserve escalation, monitoring, or containment review.',
   },
   {
-    title: 'n8n AI-Assisted SOC Triage Workflow',
-    category: 'SOC Automation',
-    icon: Bot,
-    problem:
-      'High alert volume can slow triage when analysts must manually gather context, draft notes, classify severity, and notify stakeholders for every event.',
-    solution:
-      'Created an n8n workflow concept that receives alerts, enriches key fields, uses AI to draft a triage summary, routes notifications, and keeps the analyst in control of final decisions.',
-    role:
-      'Designed the workflow stages, decision points, prompt structure, review requirements, and documentation needed to make AI assistance useful without bypassing analyst judgment.',
-    tools: ['n8n', 'AI summarization', 'Webhooks', 'APIs', 'Slack or email alerts'],
-    outcome:
-      'Reduced repetitive triage work in the workflow design while preserving evidence review, human approval, escalation logic, and clear audit notes.',
-  },
-  {
-    title: 'Palo Alto / Firewall IP Blocking Automation',
-    category: 'Network Defense',
+    title: 'Firewall IP Blocking Automation using Palo Alto/FortiGate workflows',
+    category: 'Network Defense Automation',
     icon: Network,
     problem:
-      'Confirmed malicious IPs can continue generating noise or risk when containment depends on manual firewall updates and delayed handoffs.',
+      'Validated malicious IP addresses can keep generating risk or alert volume when firewall updates depend entirely on manual handoffs.',
     solution:
-      'Designed a safe blocking workflow that takes validated indicators, checks approval criteria, updates a firewall blocklist, and records the action in the incident timeline.',
+      'Designed a controlled automation pattern that checks indicator validation, approval criteria, expiration notes, rollback needs, and audit records before firewall blocklist updates.',
     role:
-      'Defined validation gates, false-positive checks, expiration logic, rollback notes, and documentation so automated blocking supports containment without creating unnecessary outages.',
-    tools: ['Palo Alto concepts', 'Firewall APIs', 'n8n', 'TheHive', 'Blocklists'],
+      'Defined validation gates, false-positive checks, human approval points, Slack notifications, documentation fields, and safe containment logic for Palo Alto and FortiGate-style workflows.',
+    tools: ['Palo Alto', 'FortiGate', 'n8n', 'REST APIs', 'Slack', 'TheHive', 'Firewall blocklists'],
     outcome:
-      'Created a controlled containment pattern that shortens response time for malicious infrastructure while maintaining accountability, review, and operational safety.',
+      'Developed a cautious containment workflow that supports faster response while preserving review, accountability, rollback planning, and operational safety.',
   },
   {
-    title: 'Executive Security Dashboards & Reporting',
-    category: 'Security Reporting',
-    icon: BarChart3,
+    title: 'AI/ML Security Analytics with Isolation Forest',
+    category: 'AI/ML for Cybersecurity',
+    icon: Binary,
     problem:
-      'Leadership needs concise security visibility, but raw SOC alerts and technical logs rarely explain risk, trend, operational workload, or business impact clearly.',
+      'Heterogeneous security telemetry can contain subtle outliers that are difficult to prioritize with rules alone, especially when analysts need interpretable evidence.',
     solution:
-      'Built a reporting structure that turns SOC activity into metrics, trend summaries, incident narratives, control gaps, and recommended priorities for executives.',
+      'Explored an Isolation Forest workflow for anomaly detection, feature review, notebook-based experimentation, and analyst-readable explanations of suspicious telemetry patterns.',
     role:
-      'Selected dashboard themes, defined stakeholder-friendly metrics, wrote plain-language summaries, and connected technical findings to risk reduction decisions.',
-    tools: ['Wazuh dashboards', 'Reporting templates', 'KPIs', 'Incident metrics', 'Risk summaries'],
+      'Developed the experiment structure, documented assumptions, reviewed model outputs, and emphasized interpretability, analyst validation, and limits of ML-assisted security analytics.',
+    tools: ['Python', 'Jupyter Notebook', 'Isolation Forest', 'Security telemetry', 'AI/ML', 'Data analysis'],
     outcome:
-      'Made SOC work easier to communicate by showing what happened, why it matters, what changed, and where leadership can support remediation or investment.',
+      'Built a research-oriented project that demonstrates how anomaly detection can support investigation questions without replacing analyst judgment or overclaiming detection performance.',
+  },
+  {
+    title: 'Digital Forensics Evidence Packaging and Timeline Building',
+    category: 'Digital Forensics Support',
+    icon: Fingerprint,
+    problem:
+      'Incident evidence can lose value when files, hashes, metadata, collection notes, and timelines are not packaged in a repeatable integrity-preserving way.',
+    solution:
+      'Developed supporting workflows that package incident evidence, verify SHA256 hashes, record metadata, and reconstruct chronological forensic timelines from evidence details.',
+    role:
+      'Built and documented evidence packaging, hash verification, metadata review, and timeline-building practices to support incident response and digital forensics handoffs.',
+    tools: ['Python', 'SHA256 hashing', 'Forensic timelines', 'Metadata', 'Linux', 'Incident evidence'],
+    outcome:
+      'Created digital forensics support utilities that make evidence handling clearer, more verifiable, and easier to explain during response review.',
+  },
+  {
+    title: 'Cybersecurity Instructor and Lab Development',
+    category: 'Cybersecurity Instruction',
+    icon: BookOpenCheck,
+    problem:
+      'Learners need practical cybersecurity labs that connect theory to real SOC tasks without overwhelming them with disconnected tools or unclear expectations.',
+    solution:
+      'Designed guided labs and teaching materials around alert triage, SIEM monitoring, incident response, threat intelligence, VAPT practice, digital forensics support, and reporting.',
+    role:
+      'Mary Abenawa Techiesiwa Amoah developed lesson structure, lab flow, reflection prompts, assessment ideas, and tool walkthroughs that emphasize confidence and careful judgment.',
+    tools: ['Wazuh', 'TheHive', 'Cortex', 'OpenCTI', 'Linux', 'Jupyter Notebook', 'MITRE ATT&CK'],
+    outcome:
+      'Supported practical learning by turning complex security workflows into approachable exercises with clear objectives, evidence expectations, and reporting habits.',
+  },
+  {
+    title: 'VAPT and Security Assessment Practice',
+    category: 'Vulnerability Assessment and Penetration Testing',
+    icon: SearchCheck,
+    problem:
+      'Organizations and learners need disciplined security assessment practice that validates findings, explains risk, and recommends remediation without exaggerating impact.',
+    solution:
+      'Worked on a VAPT practice approach for scoping, reconnaissance notes, finding validation, evidence capture, severity explanation, remediation guidance, and reporting.',
+    role:
+      'Documented assessment steps, mapped findings to business risk, practiced concise reporting, and connected vulnerability observations to incident response and monitoring recommendations.',
+    tools: ['Linux', 'VAPT methodology', 'Risk reporting', 'Remediation notes', 'MITRE ATT&CK', 'Security assessment'],
+    outcome:
+      'Built a careful security assessment practice area that emphasizes evidence quality, clear communication, responsible wording, and practical remediation support.',
   },
 ];
 
@@ -216,43 +344,69 @@ export const researchInterests = [
     title: 'AI-assisted SOC operations',
     icon: Bot,
     description:
-      'Exploring how AI can help analysts summarize alerts, enrich context, draft case notes, recommend next questions, and reduce fatigue while preserving human accountability.',
+      'Exploring how AI can help summarize alerts, draft case notes, recommend next investigation questions, and reduce repetitive SOC work while preserving human accountability.',
   },
   {
-    title: 'Cybersecurity education',
-    icon: BookOpenCheck,
+    title: 'Machine learning for security telemetry',
+    icon: Binary,
     description:
-      'Studying how structured labs, tool walkthroughs, plain-language instruction, and confidence-building exercises can make cybersecurity careers more accessible.',
+      'Studying how machine learning can support analysis of endpoint, network, identity, and application telemetry without hiding uncertainty from analysts.',
   },
   {
-    title: 'Human-centered security reporting',
+    title: 'Interpretable anomaly detection',
+    icon: SearchCheck,
+    description:
+      'Investigating Isolation Forest and related approaches for highlighting unusual activity with explanations that analysts can inspect and challenge.',
+  },
+  {
+    title: 'Human-AI collaboration in cybersecurity',
     icon: FileCheck,
     description:
-      'Improving the way SOC teams translate technical evidence into decisions that executives, IT teams, learners, and non-security stakeholders can act on.',
+      'Researching how humans and AI assistants can share SOC tasks safely through review checkpoints, confidence notes, transparent prompts, and audit-friendly outputs.',
+  },
+  {
+    title: 'Cybersecurity education and practical lab design',
+    icon: BookOpenCheck,
+    description:
+      'Designing labs that help learners practice real investigation habits, tool usage, evidence validation, and plain-language reporting.',
+  },
+  {
+    title: 'Threat intelligence automation',
+    icon: Database,
+    description:
+      'Exploring automation for IOC collection, enrichment, source confidence review, MITRE ATT&CK mapping, alert context, and analyst briefings.',
+  },
+  {
+    title: 'Digital forensics workflow automation',
+    icon: Fingerprint,
+    description:
+      'Developing repeatable approaches for evidence packaging, SHA256 hash verification, metadata review, and forensic timeline generation.',
   },
 ];
 
 export const certifications = [
-  { name: 'Security operations labs', issuer: 'Portfolio evidence', status: 'Wazuh, TheHive, Cortex, OpenCTI, n8n' },
-  { name: 'Cybersecurity instruction', issuer: 'Teaching practice', status: 'Lessons, labs, mentoring, and learner support' },
-  { name: 'Threat intelligence workflow', issuer: 'Portfolio evidence', status: 'IOC enrichment and analyst briefing process' },
-  { name: 'SOC automation workflow', issuer: 'Portfolio evidence', status: 'AI-assisted triage and firewall containment design' },
+  { name: 'Security operations portfolio', issuer: 'Portfolio evidence', status: 'SOC operations, incident response, SIEM dashboards, and case documentation' },
+  { name: 'Cybersecurity instruction practice', issuer: 'Teaching and lab design', status: 'Lessons, guided labs, mentoring, and assessment support' },
+  { name: 'Threat intelligence workflow', issuer: 'Portfolio evidence', status: 'OpenCTI, IOC enrichment, VirusTotal, AbuseIPDB, and MITRE ATT&CK' },
+  { name: 'SOC automation workflow', issuer: 'Portfolio evidence', status: 'n8n, REST APIs, Slack, Palo Alto, FortiGate, and analyst review gates' },
+  { name: 'AI/ML security analytics research', issuer: 'Portfolio evidence', status: 'Jupyter Notebook, Python, Isolation Forest, and interpretable anomaly detection' },
+  { name: 'Digital forensics support utilities', issuer: 'Portfolio evidence', status: 'Evidence packaging, SHA256 hashing, forensic timelines, and metadata review' },
 ];
 
 export const contactCards = [
   {
     title: 'Cybersecurity analyst roles',
-    detail: 'Connect about SOC analyst, security operations, incident response, SIEM monitoring, and threat intelligence opportunities.',
+    detail: 'Connect about SOC operations, alert triage, incident response, SIEM monitoring, threat intelligence, VAPT, and security assessment support.',
     icon: Briefcase,
   },
   {
-    title: 'SOC automation projects',
-    detail: 'Discuss workflows that connect alerts, enrichment, TheHive cases, OpenCTI context, n8n automation, and firewall response.',
+    title: 'SOC automation and AI/ML projects',
+    detail: 'Discuss workflows that connect alerts, enrichment, AI-assisted investigation, n8n automation, Slack, firewall response, and interpretable anomaly detection.',
     icon: Workflow,
   },
   {
-    title: 'Cybersecurity education',
-    detail: 'Collaborate on beginner-friendly labs, curriculum, workshops, mentoring, and practical security training experiences.',
+    title: 'Cybersecurity instruction and research',
+    detail: 'Collaborate on practical labs, curriculum, workshops, mentoring, PhD-aligned research interests, and digital forensics workflow automation.',
     icon: Award,
   },
 ];
