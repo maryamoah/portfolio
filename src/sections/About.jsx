@@ -1,6 +1,7 @@
+import { Award } from 'lucide-react';
 import { GlassCard } from '../components/GlassCard';
 import { SectionHeader } from '../components/SectionHeader';
-import { profile } from '../data/portfolio';
+import { certifications, profile } from '../data/portfolio';
 
 const roles = [
   {
@@ -54,6 +55,26 @@ export function About() {
           </div>
         </GlassCard>
       </div>
+
+      <GlassCard delay={0.1} className="mt-6 border-white/10 bg-slate-900/90">
+        <div className="mb-5 flex items-center gap-3">
+          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-cyan-300/10">
+            <Award className="h-5 w-5 text-cyan-200" />
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Evidence</p>
+            <h3 className="text-xl font-semibold text-white">Documented Portfolio Capability Areas</h3>
+          </div>
+        </div>
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {certifications.map((cert) => (
+            <div key={cert.name} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <p className="text-sm font-semibold text-white">{cert.name}</p>
+              <p className="mt-2 text-xs leading-5 text-slate-200">{cert.status}</p>
+            </div>
+          ))}
+        </div>
+      </GlassCard>
     </section>
   );
 }

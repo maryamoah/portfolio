@@ -30,7 +30,7 @@ export const profile = {
   summary:
     'I work across security operations, threat intelligence, incident response, cybersecurity instruction, security automation, and AI-driven security research. My focus is building practical solutions that improve visibility, investigation, reporting, and security decision-making.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
-  availability: 'Cybersecurity Analyst • Consultant • Instructor',
+  availability: 'Cybersecurity Specialist • Researcher • Consultant • Instructor',
   links: [
     { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
     { label: 'Case studies', href: '#case-studies', icon: Link },
