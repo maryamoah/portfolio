@@ -1,26 +1,32 @@
 import { Navbar } from './components/Navbar';
 import { About } from './sections/About';
 import { Certifications } from './sections/Certifications';
+import { Consulting } from './sections/Consulting';
 import { Contact } from './sections/Contact';
 import { Experience } from './sections/Experience';
 import { GitHubProjects } from './sections/GitHubProjects';
 import { Hero } from './sections/Hero';
+import { Instruction } from './sections/Instruction';
+import { ProfessionalFocus } from './sections/ProfessionalFocus';
 import { Projects } from './sections/Projects';
 import { Research } from './sections/Research';
 import { Skills } from './sections/Skills';
 
 function App() {
   return (
-    <div className="min-h-screen bg-ink text-slate-100">
+    <div className="min-h-screen overflow-x-hidden bg-ink text-slate-100">
       <Navbar />
       <main>
         <Hero />
         <About />
-        <Skills />
+        <ProfessionalFocus />
+        <Consulting />
         <Experience />
-        <GitHubProjects />
         <Projects />
+        <GitHubProjects />
         <Research />
+        <Instruction />
+        <Skills />
         <Certifications />
         <Contact />
       </main>

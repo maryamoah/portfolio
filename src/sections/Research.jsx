@@ -4,7 +4,7 @@ import { researchInterests } from '../data/portfolio';
 
 export function Research() {
   return (
-    <section id="research" className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+    <section id="research" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Research / PhD Interests"
         title="Human-centered AI, telemetry analytics, and practical cybersecurity education."

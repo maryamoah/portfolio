@@ -4,7 +4,7 @@ import { skills } from '../data/portfolio';
 
 export function Skills() {
   return (
-    <section id="skills" className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+    <section id="skills" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Skills"
         title="Security capabilities organized around real operating needs."

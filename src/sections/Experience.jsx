@@ -4,7 +4,7 @@ import { experience } from '../data/portfolio';
 
 export function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+    <section id="experience" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Experience"
         title="A growing track record of security-focused project delivery."

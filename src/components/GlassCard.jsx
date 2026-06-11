@@ -7,7 +7,7 @@ export function GlassCard({ children, className = '', delay = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.5, delay }}
-      className={`rounded-3xl border border-white/10 bg-panel p-6 shadow-card backdrop-blur-xl ${className}`}
+      className={`min-w-0 rounded-3xl border border-white/10 bg-panel p-5 shadow-card backdrop-blur-xl sm:p-6 ${className}`}
     >
       {children}
     </motion.div>
