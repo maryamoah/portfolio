@@ -1,0 +1,23 @@
+Mary Abenawa Techiesiwa Amoah
+Cybersecurity Analyst, Consultant, and Instructor
+
+Contact
+Email: techiesiwaamoah@gmail.com
+GitHub: https://github.com/maryamoah
+LinkedIn: https://www.linkedin.com/in/mary-amoah
+
+Professional Focus
+Mary works across security operations, threat intelligence, incident response, SIEM engineering, cybersecurity instruction, security automation, vulnerability assessment, digital forensics workflows, and AI & Machine Learning security research.
+
+Specializations
+- Security Operations
+- Threat Intelligence
+- Security Automation
+- AI & Machine Learning Security Research
+- Vulnerability Assessment & Security Testing
+- Digital Forensics
+
+Capabilities
+- Designing security operations workflows that simplify triage, escalation, investigation, and reporting.
+- Improving threat intelligence, incident response, and automation processes through practical integrations.
+- Exploring interpretable machine learning and AI-assisted investigation for security telemetry and analyst workflows.

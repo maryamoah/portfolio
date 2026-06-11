@@ -30,7 +30,7 @@ function App() {
         <Certifications />
         <Contact />
       </main>
-      <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-500">
+      <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-300">
         <p>© {new Date().getFullYear()} Mary Abenawa Techiesiwa Amoah. Built with React, Vite, Tailwind CSS, and Framer Motion.</p>
       </footer>
     </div>

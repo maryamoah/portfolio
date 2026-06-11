@@ -1,14 +1,10 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, LockKeyhole } from 'lucide-react';
 import { Badge } from '../components/Badge';
-import { metrics, profile } from '../data/portfolio';
+import { coreFocus, metrics, profile } from '../data/portfolio';
 
 export function Hero() {
-  const focusPoints = [
-    'Designing SOC workflows that make triage, escalation, and reporting easier to follow.',
-    'Improving threat intelligence and incident response handoffs with practical automation.',
-    'Exploring AI-assisted investigation and interpretable anomaly detection for security telemetry.',
-  ];
+  const focusPoints = coreFocus;
 
   return (
     <section id="hero" className="relative isolate overflow-hidden pt-28 sm:pt-32 md:pt-40">
@@ -28,7 +24,7 @@ export function Hero() {
           <h1 className="mt-5 max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl xl:text-6xl">
             {profile.headline}
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
             {profile.summary}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -42,14 +38,14 @@ export function Hero() {
               href="#consulting"
               className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10 sm:px-6 sm:text-base"
             >
-              How Mary Can Help
+              Explore Services
             </a>
           </div>
           <div className="mt-9 grid max-w-3xl gap-3 sm:grid-cols-3">
             {metrics.map((metric) => (
               <div key={metric.label} className="rounded-2xl border border-white/10 bg-white/[0.05] p-4">
                 <p className="text-2xl font-semibold text-white">{metric.value}</p>
-                <p className="mt-1 text-xs leading-5 text-slate-300">{metric.label}</p>
+                <p className="mt-1 text-xs leading-5 text-slate-200">{metric.label}</p>
               </div>
             ))}
           </div>
@@ -74,7 +70,7 @@ export function Hero() {
               {focusPoints.map((item) => (
                 <div key={item} className="flex gap-3 rounded-2xl bg-white/[0.05] p-4">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-cyan-300" />
-                  <p className="text-sm leading-6 text-slate-300">{item}</p>
+                  <p className="text-sm leading-6 text-slate-200">{item}</p>
                 </div>
               ))}
             </div>

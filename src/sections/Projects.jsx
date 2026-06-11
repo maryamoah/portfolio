@@ -28,7 +28,7 @@ export function Projects() {
                 <div className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300/10">
                   <Icon className="h-6 w-6 text-cyan-200" />
                 </div>
-                <FileText className="h-5 w-5 text-slate-500 transition group-hover:text-cyan-200" />
+                <FileText className="h-5 w-5 text-slate-300 transition group-hover:text-cyan-200" />
               </div>
               <p className="mt-7 text-sm font-medium text-cyan-300">{project.category}</p>
               <h3 className="mt-3 text-xl font-semibold text-white sm:text-2xl">{project.title}</h3>
@@ -43,7 +43,7 @@ export function Projects() {
               </div>
 
               <div className="mt-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Tools used</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-300">Tools used</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {project.tools.map((tool) => (
                     <Badge key={tool}>{tool}</Badge>
