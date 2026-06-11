@@ -21,7 +21,6 @@ export function About() {
         <GlassCard>
           <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Profile</p>
           <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">{profile.name}</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">{profile.role}</p>
           <p className="mt-6 text-sm leading-7 text-slate-400">
             Mary’s consulting approach is practical and measured: improve the workflow, keep humans
             accountable for decisions, and make security findings easier to understand and act on.

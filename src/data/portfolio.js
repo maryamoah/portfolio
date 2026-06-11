@@ -25,24 +25,24 @@ import {
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
   shortName: 'Mary Amoah',
-  role: 'Cybersecurity Analyst · Consultant · Instructor · SOC Automation · AI/ML Security Research',
+  role: 'Cybersecurity Analyst · Consultant · Instructor · SOC automation · AI/ML security research',
   headline:
     'Cybersecurity consultant building practical SOC, AI, and threat intelligence workflows.',
   summary:
-    'Mary Abenawa Techiesiwa Amoah helps teams improve practical security workflows for SOC operations, threat intelligence, incident response, automation, training, and AI/ML security research.',
+    'I help teams improve security operations through SIEM monitoring, threat intelligence, incident response workflows, automation, reporting, cybersecurity training, and AI/ML security research.',
   contactFocus: 'Cybersecurity consulting · SOC workflows · security education',
-  availability: 'Cybersecurity analyst · consultant · instructor',
+  availability: 'Cybersecurity Consultant',
   links: [
-    { label: 'GitHub Projects', href: '#github-projects', icon: GitBranch },
-    { label: 'Case Studies', href: '#case-studies', icon: Link },
-    { label: 'Research Interests', href: '#research', icon: Mail },
+    { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
+    { label: 'Case studies', href: '#case-studies', icon: Link },
+    { label: 'Research interests', href: '#research', icon: Mail },
   ],
 };
 
 export const metrics = [
-  { value: 'SOC', label: 'Triage, enrichment, escalation, response workflow design' },
-  { value: 'IR', label: 'TheHive, Cortex, evidence notes, timelines, reporting' },
-  { value: 'AI/ML', label: 'Isolation Forest, notebooks, telemetry analysis, interpretability' },
+  { value: 'SOC', label: 'Triage, enrichment, escalation, and reporting workflows' },
+  { value: 'IR', label: 'Incident response handoffs, evidence notes, and timelines' },
+  { value: 'AI/ML', label: 'Security telemetry analysis and interpretable research' },
 ];
 
 export const professionalFocus = [
@@ -245,7 +245,7 @@ export const githubProjects = [
 export const projects = [
   {
     title: 'AI-Assisted SOC Triage and Investigation',
-    category: 'SOC Automation',
+    category: 'SOC automation',
     icon: Bot,
     problem: 'SOC analysts often spend time gathering alert context, drafting notes, checking indicators, and deciding what to review next.',
     approach: 'Designed a human-reviewed workflow that organizes alert details, proposes investigation questions, drafts a triage summary, and keeps final decisions with the analyst.',

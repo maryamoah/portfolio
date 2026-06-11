@@ -7,7 +7,7 @@ export function Hero() {
   const focusPoints = [
     'Designing SOC workflows that make triage, escalation, and reporting easier to follow.',
     'Improving threat intelligence and incident response handoffs with practical automation.',
-    'Researching AI-assisted investigation and interpretable anomaly detection for security telemetry.',
+    'Exploring AI-assisted investigation and interpretable anomaly detection for security telemetry.',
   ];
 
   return (
@@ -24,9 +24,6 @@ export function Hero() {
           <Badge>{profile.availability}</Badge>
           <p className="mt-5 text-base font-semibold leading-7 text-cyan-100 sm:text-lg">
             {profile.name}
-          </p>
-          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300 sm:text-base">
-            {profile.role}
           </p>
           <h1 className="mt-5 max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl xl:text-6xl">
             {profile.headline}
@@ -67,8 +64,7 @@ export function Hero() {
           <div className="rounded-[1.25rem] border border-cyan-300/15 bg-slate-950/85 p-5 sm:rounded-[1.5rem] sm:p-6">
             <div className="mb-6 flex items-start justify-between gap-4 border-b border-white/10 pb-5">
               <div className="min-w-0">
-                <p className="text-sm text-slate-400">Current positioning</p>
-                <p className="mt-1 text-base font-semibold leading-7 text-white">{profile.role}</p>
+                <p className="text-base font-semibold leading-7 text-white">Core Focus</p>
               </div>
               <div className="grid h-11 w-11 flex-none place-items-center rounded-2xl bg-cyan-300/10 sm:h-12 sm:w-12">
                 <LockKeyhole className="h-6 w-6 text-cyan-200" />
