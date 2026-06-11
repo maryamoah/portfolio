@@ -5,9 +5,9 @@ import { metrics, profile } from '../data/portfolio';
 
 export function Hero() {
   const focusPoints = [
-    'SOC operations, SIEM monitoring, incident response workflows, and threat intelligence enrichment.',
-    'Consulting support for automation, executive reporting, VAPT remediation guidance, and security training.',
-    'AI/ML security research with Python, notebooks, Isolation Forest, interpretable ML, and log analysis.',
+    'Designing SOC workflows that make triage, escalation, and reporting easier to follow.',
+    'Improving threat intelligence and incident response handoffs with practical automation.',
+    'Researching AI-assisted investigation and interpretable anomaly detection for security telemetry.',
   ];
 
   return (
@@ -22,10 +22,13 @@ export function Hero() {
           className="min-w-0"
         >
           <Badge>{profile.availability}</Badge>
-          <p className="mt-5 max-w-3xl text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200 sm:tracking-[0.28em]">
+          <p className="mt-5 text-base font-semibold leading-7 text-cyan-100 sm:text-lg">
+            {profile.name}
+          </p>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300 sm:text-base">
             {profile.role}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl xl:text-7xl">
+          <h1 className="mt-5 max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl xl:text-6xl">
             {profile.headline}
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">

@@ -16,7 +16,7 @@ export function Projects() {
     <section id="case-studies" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Detailed Case Studies"
-        title="Case studies across SOC, SIEM, automation, AI/ML, forensics, instruction, and VAPT practice."
+        title="Case Studies Across Security Operations and Research"
         description="Each case study includes the problem, approach, Mary’s role, tools used, and a careful outcome statement without inventing metrics or overclaiming impact."
       />
       <div className="grid gap-6 lg:grid-cols-2">

@@ -7,8 +7,8 @@ export function Research() {
     <section id="research" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Research / PhD Interests"
-        title="Human-centered AI, telemetry analytics, and practical cybersecurity education."
-        description="Mary Abenawa Techiesiwa Amoah’s research interests focus on careful, explainable, analyst-centered ways to improve SOC work, threat intelligence automation, digital forensics workflows, and practical cybersecurity learning."
+        title="Human-Centered AI, Telemetry Analytics, and Cybersecurity Education"
+        description="Mary Abenawa Techiesiwa Amoah’s research interests focus on explainable, analyst-centered ways to improve SOC work, threat intelligence automation, digital forensics workflows, and practical cybersecurity learning."
       />
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {researchInterests.map((interest, index) => {

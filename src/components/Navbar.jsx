@@ -36,9 +36,8 @@ export function Navbar() {
           <span className="grid h-10 w-10 flex-none place-items-center rounded-2xl border border-cyan-300/30 bg-cyan-300/10 shadow-glow">
             <Shield className="h-5 w-5 text-cyan-200" aria-hidden="true" />
           </span>
-          <span className="truncate text-sm font-semibold tracking-wide sm:text-base">
-            <span className="sm:hidden">{profile.shortName}</span>
-            <span className="hidden sm:inline">{profile.name}</span>
+          <span className="whitespace-nowrap text-sm font-semibold tracking-wide sm:text-base">
+            {profile.shortName}
           </span>
         </a>
 

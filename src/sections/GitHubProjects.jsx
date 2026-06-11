@@ -9,8 +9,8 @@ export function GitHubProjects() {
     <section id="github-projects" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="GitHub Projects"
-        title="Repository-backed projects across SOC automation, AI/ML security, threat intelligence, and forensics."
-        description="A focused view of Mary Abenawa Techiesiwa Amoah’s GitHub project areas, written carefully around what each repository is designed to support without inventing production metrics."
+        title="Repository-Backed Security Projects"
+        description="A focused view of project areas written around intended use, careful boundaries, and portfolio evidence without inventing production metrics."
       />
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {githubProjects.map((project, index) => (

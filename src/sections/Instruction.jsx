@@ -8,8 +8,8 @@ export function Instruction() {
     <section id="instruction" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Cybersecurity Instruction"
-        title="Teaching that connects tools, evidence, judgment, and reporting."
-        description="The instruction work focuses on practical learning paths that help learners understand how security workflows are investigated, documented, and communicated."
+        title="Cybersecurity Instruction and Lab Development"
+        description="Mary’s instruction work focuses on practical learning paths that help learners investigate, document, and communicate security work clearly."
       />
       <div className="grid gap-5 md:grid-cols-3">
         {instructionHighlights.map((highlight, index) => (

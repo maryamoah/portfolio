@@ -8,13 +8,13 @@ export function Consulting() {
     <section id="consulting" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="How I Can Help"
-        title="Consulting support for teams improving security workflows."
-        description="Mary helps teams design, improve, and operationalize cybersecurity workflows across SOC processes, monitoring, enrichment, automation, assessment support, reporting, and training."
+        title="Consulting Support for Security Teams"
+        description="Mary helps teams improve the practical workflows that support monitoring, investigation, automation, assessment support, reporting, and training."
       />
       <GlassCard className="overflow-hidden bg-cyan-300 text-slate-950">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {consultingServices.map((service) => (
-            <div key={service} className="rounded-2xl bg-white/75 p-4 shadow-sm">
+            <div key={service} className="rounded-2xl bg-white/80 p-4 shadow-sm">
               <CheckCircle2 className="h-5 w-5 text-slate-900" />
               <p className="mt-3 text-sm font-semibold leading-6 text-slate-900">{service}</p>
             </div>

@@ -8,8 +8,8 @@ export function Certifications() {
     <section id="certifications" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Certifications"
-        title="Documented learning evidence and portfolio-backed capability areas."
-        description="This section avoids inventing credentials. It groups Mary’s documented security practice into clean evidence cards aligned to operations, automation, instruction, research, and forensics."
+        title="Documented Learning Evidence and Portfolio Capability Areas"
+        description="This section avoids inventing credentials and groups Mary’s documented security practice into clean evidence cards."
       />
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {certifications.map((cert, index) => (

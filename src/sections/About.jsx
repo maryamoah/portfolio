@@ -3,10 +3,10 @@ import { SectionHeader } from '../components/SectionHeader';
 import { profile } from '../data/portfolio';
 
 const aboutDetails = [
-  'Designs practical cybersecurity workflows for SOC operations, SIEM monitoring, incident response, threat intelligence enrichment, and automation.',
-  'Supports security assessment work through careful VAPT practice, vulnerability identification, reporting, remediation guidance, and defensive validation.',
-  'Builds cybersecurity instruction around realistic labs, evidence handling, investigation notes, and communication that learners can apply.',
-  'Explores AI-assisted SOC operations, machine learning for security telemetry, interpretable anomaly detection, and digital forensics workflow automation.',
+  'Builds practical workflows for triage, escalation, response documentation, and reporting.',
+  'Supports security assessment work with careful validation, clear findings, and remediation guidance.',
+  'Designs practical labs that help learners connect investigation habits to real security tools.',
+  'Explores AI-assisted investigation, telemetry analysis, and digital forensics workflow automation.',
 ];
 
 export function About() {
@@ -14,8 +14,8 @@ export function About() {
     <section id="about" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="About"
-        title="A credible security profile across operations, consulting, teaching, and research."
-        description="Mary Abenawa Techiesiwa Amoah’s portfolio is written around practical evidence: how alerts are investigated, how workflows are documented, how automation stays accountable, and how learners build real security judgment."
+        title="Cybersecurity Work Grounded in Practical Operations"
+        description="Mary Abenawa Techiesiwa Amoah focuses on evidence-based security work: clear investigations, accountable automation, useful documentation, and practical learning experiences."
       />
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
         <GlassCard>
@@ -23,9 +23,8 @@ export function About() {
           <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">{profile.name}</h3>
           <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">{profile.role}</p>
           <p className="mt-6 text-sm leading-7 text-slate-400">
-            Mary focuses on structured investigation, careful escalation, analyst review, and clear
-            communication. Her consulting angle is practical: help teams improve the workflows that
-            connect detection, enrichment, response, reporting, training, and risk reduction.
+            Mary’s consulting approach is practical and measured: improve the workflow, keep humans
+            accountable for decisions, and make security findings easier to understand and act on.
           </p>
         </GlassCard>
         <GlassCard delay={0.08}>
