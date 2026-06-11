@@ -8,7 +8,7 @@ export function Research() {
       <SectionHeader
         eyebrow="Research / PhD Interests"
         title="Human-Centered AI, Telemetry Analytics, and Cybersecurity Education"
-        description="Mary Abenawa Techiesiwa Amoah’s research interests focus on explainable, analyst-centered ways to improve SOC work, threat intelligence automation, digital forensics workflows, and practical cybersecurity learning."
+        description="Mary Abenawa Techiesiwa Amoah’s research interests focus on explainable, analyst-centered ways to improve security operations work, threat intelligence automation, digital forensics workflows, and practical cybersecurity learning."
       />
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {researchInterests.map((interest, index) => {
@@ -19,7 +19,7 @@ export function Research() {
                 <Icon className="h-6 w-6 text-cyan-200" />
               </div>
               <h3 className="text-xl font-semibold text-white">{interest.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-400">{interest.description}</p>
+              <p className="mt-4 text-sm leading-7 text-slate-200">{interest.description}</p>
             </GlassCard>
           );
         })}

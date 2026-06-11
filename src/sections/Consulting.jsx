@@ -7,9 +7,9 @@ export function Consulting() {
   return (
     <section id="consulting" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
-        eyebrow="How I Can Help"
-        title="Consulting Support for Security Teams"
-        description="Mary helps teams improve the practical workflows that support monitoring, investigation, automation, assessment support, reporting, and training."
+        eyebrow="Services"
+        title="Practical Security Support"
+        description="Focused support areas that complement Mary’s operations, automation, education, and research work."
       />
       <GlassCard className="overflow-hidden bg-cyan-300 text-slate-950">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
