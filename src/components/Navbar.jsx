@@ -6,15 +6,10 @@ import { useScrollSpy } from '../hooks/useScrollSpy';
 const navItems = [
   { label: 'Hero', href: '#hero', id: 'hero' },
   { label: 'About', href: '#about', id: 'about' },
-  { label: 'Focus', href: '#professional-focus', id: 'professional-focus' },
-  { label: 'Services', href: '#consulting', id: 'consulting' },
   { label: 'Experience', href: '#experience', id: 'experience' },
-  { label: 'Cases', href: '#case-studies', id: 'case-studies' },
-  { label: 'GitHub', href: '#github-projects', id: 'github-projects' },
+  { label: 'Projects', href: '#case-studies', id: 'case-studies' },
   { label: 'Research', href: '#research', id: 'research' },
-  { label: 'Instruction', href: '#instruction', id: 'instruction' },
   { label: 'Skills', href: '#skills', id: 'skills' },
-  { label: 'Certs', href: '#certifications', id: 'certifications' },
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
@@ -45,7 +40,7 @@ export function Navbar() {
           aria-label="Navigate portfolio sections"
           value={activeId || 'hero'}
           onChange={handleMobileNav}
-          className="max-w-[9rem] rounded-full border border-white/10 bg-slate-950 px-3 py-2 text-xs font-semibold text-slate-100 outline-none ring-cyan-300/30 focus:ring-2 lg:hidden"
+          className="max-w-[10rem] rounded-full border border-white/10 bg-slate-950 px-3 py-2 text-xs font-semibold text-slate-100 outline-none ring-cyan-300/30 focus:ring-2 lg:hidden"
         >
           {navItems.map((item) => (
             <option key={item.id} value={item.id}>

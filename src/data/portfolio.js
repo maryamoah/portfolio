@@ -26,11 +26,11 @@ export const profile = {
   shortName: 'Mary Amoah',
   role: 'Cybersecurity Analyst, Consultant, Instructor, and Security Automation Engineer',
   headline:
-    'Building practical cybersecurity solutions through security operations, automation, threat intelligence, and applied AI.',
+    'Building practical cybersecurity solutions through automation, threat intelligence, and applied AI.',
   summary:
-    'I work across security operations, threat intelligence, incident response, security information and event management (SIEM) engineering, cybersecurity instruction, security automation, vulnerability assessment, digital forensics workflows, and artificial intelligence (AI) and machine learning research. My focus is building practical solutions that improve visibility, investigation, response, reporting, and security decision-making.',
+    'I work across security operations, threat intelligence, incident response, cybersecurity instruction, security automation, and AI-driven security research. My focus is building practical solutions that improve visibility, investigation, reporting, and security decision-making.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
-  availability: 'Cybersecurity Analyst, Consultant, Instructor, and Security Automation Engineer',
+  availability: 'Cybersecurity Specialist • Consultant • Instructor • Researcher',
   links: [
     { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
     { label: 'Case studies', href: '#case-studies', icon: Link },
@@ -94,15 +94,16 @@ export const skills = [
     icon: Radio,
     items: [
       'Detection engineering',
-      'Custom rule development',
-      'Log parser and decoder development',
+      'Custom detection rules',
+      'Log parser development',
+      'Decoder development',
       'Security use case development',
+      'Correlation logic',
       'Alert tuning and optimization',
       'Dashboard engineering',
-      'MITRE ATT&CK mapping',
-      'Security monitoring strategy',
       'Security reporting',
-      'Wazuh',
+      'MITRE ATT&CK mapping',
+      'Detection validation',
     ],
   },
   {
@@ -272,7 +273,7 @@ export const projects = [
     featured: true,
     problem: 'Security teams and management needed a centralized platform for monitoring operations, reporting, visibility, and performance tracking.',
     approach: 'Designed and helped shape a platform that combines operational monitoring, reporting, asset visibility, threat intelligence, and management dashboards into a single security operations experience.',
-    role: 'Mary focused on requirements gathering, security workflow design, feature planning, reporting architecture, dashboard architecture, security operations alignment, platform improvement recommendations, and user experience recommendations for analysts and management.',
+    role: 'Mary focused on requirements gathering, security workflow design, feature planning, dashboard engineering, reporting architecture, dashboard architecture, security operations alignment, platform improvement recommendations, and user experience recommendations for analysts and management.',
     capabilities: [
       'Executive dashboards',
       'Analyst dashboards',
@@ -289,7 +290,7 @@ export const projects = [
     ],
     aiReporting: [
       'Automated monthly reporting',
-      'Local large language model integration',
+      'Local LLM integration',
       'Ollama deployment',
       'Qwen models',
       'AI-generated report narratives',
@@ -447,20 +448,20 @@ export const certifications = [
 export const contactCards = [
   {
     title: 'Email',
-    detail: 'techiesiwaamoah@gmail.com',
+    detail: 'Send an email',
     href: 'mailto:techiesiwaamoah@gmail.com',
     icon: Mail,
   },
   {
     title: 'GitHub',
-    detail: 'github.com/maryamoah',
+    detail: 'View GitHub profile',
     href: 'https://github.com/maryamoah',
     icon: GitBranch,
     external: true,
   },
   {
     title: 'LinkedIn',
-    detail: 'linkedin.com/in/mary-amoah',
+    detail: 'Connect on LinkedIn',
     href: 'https://www.linkedin.com/in/mary-amoah',
     icon: Link,
     external: true,
