@@ -10,19 +10,14 @@ export function Contact() {
     <section id="contact" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Contact"
-        title="Connect With Mary"
-        description="Use the links below for cybersecurity operations, automation, instruction, research, or assessment conversations."
+        title="Contact and Professional Links"
+        description="Email Mary directly, review her GitHub work, connect on LinkedIn, or download the resume summary."
       />
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <GlassCard className="border-cyan-200/25 bg-slate-900/95 text-white">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200 sm:tracking-[0.3em]">Contact</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200 sm:tracking-[0.3em]">Direct Access</p>
           <h3 className="mt-5 text-2xl font-semibold leading-tight text-white sm:text-3xl">{profile.name}</h3>
-          <p className="mt-3 text-base leading-7 text-slate-100">{profile.role}</p>
-          <p className="mt-4 leading-7 text-slate-200">
-            Reach out for practical work around security operations, threat intelligence,
-            incident response, automation, cybersecurity education, applied research,
-            vulnerability assessment, or digital forensics workflow development.
-          </p>
+          <p className="mt-3 text-base leading-7 text-slate-100">{profile.contactFocus}</p>
           <a
             href={resumeLink.href}
             download

@@ -6,35 +6,23 @@ const roles = [
   {
     title: 'Practitioner',
     detail:
-      'Applies security operations, threat intelligence, incident response, security information and event management engineering, and digital forensics workflows to practical investigation needs.',
+      'Approaches investigations with evidence review, triage discipline, escalation judgment, and clear documentation habits.',
   },
   {
-    title: 'Builder',
+    title: 'Security Automation Engineer',
     detail:
-      'Creates security automation, dashboarding, enrichment, reporting, and evidence-handling workflows that improve visibility and response decisions.',
+      'Designs governed automation patterns that preserve human review while reducing repetitive enrichment and reporting work.',
   },
   {
     title: 'Educator',
     detail:
-      'Develops cybersecurity education materials, labs, mentoring support, and workshops that make investigation habits easier to learn.',
+      'Turns security workflows into labs, workshops, mentoring exercises, and learner-friendly investigation scenarios.',
   },
   {
     title: 'Researcher',
     detail:
-      'Explores artificial intelligence and machine learning security research, interpretable anomaly detection, vulnerability assessment, and security testing support.',
+      'Studies interpretable analysis methods, anomaly detection, and AI-assisted analyst workflows with attention to limitations.',
   },
-];
-
-const domains = [
-  'Security Operations',
-  'Threat Intelligence',
-  'Incident Response',
-  'SIEM Engineering',
-  'Security Automation',
-  'Cybersecurity Education',
-  'AI & Machine Learning Security Research',
-  'Vulnerability Assessment & Security Testing',
-  'Digital Forensics Workflow Development',
 ];
 
 export function About() {
@@ -42,28 +30,18 @@ export function About() {
     <section id="about" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="About"
-        title="Practitioner, Builder, Educator, and Researcher"
-        description="Mary Abenawa Techiesiwa Amoah focuses on practical cybersecurity work that improves investigations, automation, learning, and security decision-making."
+        title="Practitioner, Security Automation Engineer, Educator, and Researcher"
+        description="Mary Abenawa Techiesiwa Amoah combines investigation practice, governed automation, practical teaching, and applied research."
       />
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
         <GlassCard className="border-cyan-200/20 bg-slate-900/95">
           <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Profile</p>
           <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">{profile.name}</h3>
           <p className="mt-6 text-sm leading-7 text-slate-200">
-            Mary works at the intersection of analyst practice, workflow building, cybersecurity
-            education, and applied security research. Her portfolio emphasizes clear investigation
-            steps, accountable automation, evidence-aware reporting, and readable security guidance.
+            Her portfolio emphasizes how security work is planned, documented, reviewed, and
+            communicated. The through-line is practical execution: clear investigation steps,
+            accountable automation, evidence-aware reporting, and readable recommendations.
           </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {domains.map((domain) => (
-              <span
-                key={domain}
-                className="rounded-full border border-cyan-200/20 bg-cyan-300/10 px-3 py-1 text-xs font-semibold text-cyan-100"
-              >
-                {domain}
-              </span>
-            ))}
-          </div>
         </GlassCard>
         <GlassCard delay={0.08} className="border-white/10 bg-slate-900/90">
           <div className="grid gap-4 md:grid-cols-2">

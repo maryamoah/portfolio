@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, LockKeyhole } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Badge } from '../components/Badge';
-import { coreFocus, metrics, profile } from '../data/portfolio';
+import { metrics, profile, specializations } from '../data/portfolio';
 
 export function Hero() {
-  const focusPoints = coreFocus;
-
   return (
     <section id="hero" className="relative isolate overflow-hidden pt-28 sm:pt-32 md:pt-40">
       <div className="absolute inset-0 -z-10 bg-radial-grid" />
@@ -32,13 +30,13 @@ export function Hero() {
               href="#case-studies"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 sm:px-6 sm:text-base"
             >
-              View Case Studies <ArrowRight className="h-4 w-4" />
+              View Featured Case Study <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#consulting"
+              href="#contact"
               className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10 sm:px-6 sm:text-base"
             >
-              Explore Services
+              Contact Mary
             </a>
           </div>
           <div className="mt-9 grid max-w-3xl gap-3 sm:grid-cols-3">
@@ -60,18 +58,23 @@ export function Hero() {
           <div className="rounded-[1.25rem] border border-cyan-300/15 bg-slate-950/85 p-5 sm:rounded-[1.5rem] sm:p-6">
             <div className="mb-6 flex items-start justify-between gap-4 border-b border-white/10 pb-5">
               <div className="min-w-0">
-                <p className="text-base font-semibold leading-7 text-white">Core Focus</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Specializations</p>
+                <p className="mt-3 text-base leading-7 text-slate-200">
+                  Practical cybersecurity work spanning operations, automation, research, testing, and investigation support.
+                </p>
               </div>
               <div className="grid h-11 w-11 flex-none place-items-center rounded-2xl bg-cyan-300/10 sm:h-12 sm:w-12">
-                <LockKeyhole className="h-6 w-6 text-cyan-200" />
+                <ShieldCheck className="h-6 w-6 text-cyan-200" />
               </div>
             </div>
-            <div className="space-y-4">
-              {focusPoints.map((item) => (
-                <div key={item} className="flex gap-3 rounded-2xl bg-white/[0.05] p-4">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-cyan-300" />
-                  <p className="text-sm leading-6 text-slate-200">{item}</p>
-                </div>
+            <div className="flex flex-wrap gap-2">
+              {specializations.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-cyan-200/20 bg-cyan-300/10 px-3 py-2 text-xs font-semibold text-cyan-100"
+                >
+                  {item}
+                </span>
               ))}
             </div>
           </div>

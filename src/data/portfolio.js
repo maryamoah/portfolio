@@ -24,19 +24,29 @@ import {
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
   shortName: 'Mary Amoah',
-  role: 'Cybersecurity Analyst, Consultant, and Instructor',
+  role: 'Cybersecurity Analyst, Consultant, Instructor, and Security Automation Engineer',
   headline:
     'Building practical cybersecurity solutions through security operations, automation, threat intelligence, and applied AI.',
   summary:
-    'I work across security operations, threat intelligence, incident response, security information and event management engineering, cybersecurity instruction, security automation, vulnerability assessment, digital forensics workflows, and artificial intelligence and machine learning security research. My focus is building practical solutions that improve visibility, investigation, response, and security decision-making.',
-  contactFocus: 'Security operations, automation, threat intelligence, education, and applied security research',
-  availability: 'Cybersecurity Analyst, Consultant, and Instructor',
+    'I work across security operations, threat intelligence, incident response, security information and event management (SIEM) engineering, cybersecurity instruction, security automation, vulnerability assessment, digital forensics workflows, and artificial intelligence (AI) and machine learning research. My focus is building practical solutions that improve visibility, investigation, response, reporting, and security decision-making.',
+  contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
+  availability: 'Cybersecurity Analyst, Consultant, Instructor, and Security Automation Engineer',
   links: [
     { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
     { label: 'Case studies', href: '#case-studies', icon: Link },
     { label: 'Research interests', href: '#research', icon: Mail },
   ],
 };
+
+
+export const specializations = [
+  'Security Operations',
+  'Threat Intelligence',
+  'Security Automation',
+  'AI & Machine Learning Research',
+  'Vulnerability Assessment & Security Testing',
+  'Digital Forensics',
+];
 
 export const metrics = [
   { value: 'Operations', label: 'Triage, escalation, investigation, and reporting workflows' },
@@ -45,66 +55,91 @@ export const metrics = [
 ];
 
 export const coreFocus = [
-  'Designing security operations workflows that simplify triage, escalation, investigation, and reporting.',
-  'Improving threat intelligence, incident response, and automation processes through practical integrations.',
-  'Exploring interpretable machine learning and AI-assisted investigation for security telemetry and analyst workflows.',
-];
-
-export const professionalFocus = [
   {
-    title: 'Operational Practitioner',
+    title: 'Security Operations Engineering',
     icon: ShieldCheck,
     description:
-      'Works across security operations, incident response, security information and event management engineering, and digital forensics workflow development.',
+      'Designing monitoring, investigation, reporting, and escalation workflows that help security teams operate effectively.',
   },
   {
-    title: 'Security Builder',
+    title: 'Threat Intelligence & Automation',
     icon: Workflow,
     description:
-      'Builds practical automation, threat intelligence integrations, dashboards, investigation flows, and defensible reporting patterns.',
+      'Integrating intelligence sources, enrichment pipelines, and automation workflows to improve investigation efficiency.',
   },
   {
-    title: 'Educator and Researcher',
-    icon: GraduationCap,
+    title: 'AI & Machine Learning Research',
+    icon: Binary,
     description:
-      'Develops cybersecurity labs while exploring artificial intelligence and machine learning methods for security telemetry and analyst workflows.',
+      'Exploring interpretable machine learning, anomaly detection, and AI-assisted analyst workflows for cybersecurity.',
   },
 ];
 
+export const professionalFocus = coreFocus;
+
 export const consultingServices = [
-  'Security operations workflow design',
-  'Security information and event management tuning',
-  'Threat intelligence integration',
-  'Incident response planning',
-  'Security automation review',
-  'Vulnerability assessment support',
-  'Cybersecurity lab development',
-  'Executive reporting',
+  'Operational readiness reviews',
+  'Detection and reporting roadmaps',
+  'Automation governance planning',
+  'Threat intelligence process alignment',
+  'Assessment finding remediation support',
+  'Investigation runbook development',
+  'Cybersecurity lab and workshop planning',
+  'Management-ready security communication',
 ];
 
 export const skills = [
   {
-    title: 'Security Operations & Incident Response',
-    icon: ShieldAlert,
-    items: ['Alert triage', 'Log analysis', 'Incident investigation', 'Case management', 'TheHive', 'Cortex'],
-  },
-  {
     title: 'SIEM Engineering & Detection',
     icon: Radio,
-    items: ['Wazuh', 'Detection engineering', 'Alert tuning', 'Dashboard development', 'MITRE ATT&CK mapping', 'Linux administration'],
+    items: [
+      'Detection engineering',
+      'Custom rule development',
+      'Log parser and decoder development',
+      'Security use case development',
+      'Alert tuning and optimization',
+      'Dashboard engineering',
+      'MITRE ATT&CK mapping',
+      'Security monitoring strategy',
+      'Security reporting',
+      'Wazuh',
+    ],
   },
   {
-    title: 'Threat Intelligence',
-    icon: Database,
-    items: ['OpenCTI', 'IOC enrichment', 'VirusTotal', 'AbuseIPDB', 'Threat context analysis', 'REST API integrations'],
+    title: 'Security Operations',
+    icon: ShieldAlert,
+    items: [
+      'Alert triage',
+      'Incident investigation',
+      'Threat hunting',
+      'Case management',
+      'Investigation workflows',
+      'Log analysis',
+      'TheHive',
+      'Cortex',
+    ],
   },
   {
     title: 'Security Automation',
     icon: Workflow,
-    items: ['Python', 'n8n', 'Workflow orchestration', 'Slack integrations', 'Firewall automation', 'Human review workflows'],
+    items: [
+      'Workflow orchestration',
+      'Threat intelligence enrichment',
+      'Security integrations',
+      'Automated response workflows',
+      'Human review workflows',
+      'Python',
+      'n8n',
+      'Slack integrations',
+    ],
   },
   {
-    title: 'AI & Machine Learning for Cybersecurity',
+    title: 'Threat Intelligence',
+    icon: Database,
+    items: ['OpenCTI', 'Indicator enrichment', 'VirusTotal', 'AbuseIPDB', 'Threat context analysis', 'REST API integrations'],
+  },
+  {
+    title: 'AI & Machine Learning Research',
     icon: Binary,
     items: ['Security telemetry analysis', 'Isolation Forest', 'Anomaly detection', 'Interpretable machine learning', 'scikit-learn', 'pandas', 'NumPy', 'Jupyter Notebook'],
   },
@@ -122,11 +157,6 @@ export const skills = [
     title: 'Cybersecurity Education',
     icon: BookOpenCheck,
     items: ['Lab development', 'Technical mentoring', 'Workshop delivery', 'Investigation training', 'Curriculum support'],
-  },
-  {
-    title: 'Security Strategy & Consulting',
-    icon: Briefcase,
-    items: ['Security operations workflow design', 'Process improvement', 'Threat intelligence integration', 'Incident response planning', 'Executive reporting'],
   },
 ];
 
@@ -154,7 +184,7 @@ export const experience = [
     ],
   },
   {
-    role: 'Security Operations Automation and AI & Machine Learning Security Researcher',
+    role: 'Security Automation Engineer and AI & Machine Learning Researcher',
     company: 'Independent Cybersecurity Projects',
     period: 'GitHub and case study portfolio',
     highlights: [
@@ -235,6 +265,40 @@ export const githubProjects = [
 ];
 
 export const projects = [
+  {
+    title: 'Security Operations Reporting & Management Platform',
+    category: 'Flagship Security Operations Platform',
+    icon: Activity,
+    featured: true,
+    problem: 'Security teams and management needed a centralized platform for monitoring operations, reporting, visibility, and performance tracking.',
+    approach: 'Designed and helped shape a platform that combines operational monitoring, reporting, asset visibility, threat intelligence, and management dashboards into a single security operations experience.',
+    role: 'Mary focused on requirements gathering, security workflow design, feature planning, reporting architecture, dashboard architecture, security operations alignment, platform improvement recommendations, and user experience recommendations for analysts and management.',
+    capabilities: [
+      'Executive dashboards',
+      'Analyst dashboards',
+      'Security event monitoring',
+      'Threat intelligence visibility',
+      'Security map visualization',
+      'Asset inventory visibility',
+      'Vulnerability management tracking',
+      'SLA monitoring',
+      'Compliance-oriented reporting',
+      'Report lifecycle management',
+      'Operational readiness monitoring',
+      'Security metrics and KPIs',
+    ],
+    aiReporting: [
+      'Automated monthly reporting',
+      'Local large language model integration',
+      'Ollama deployment',
+      'Qwen models',
+      'AI-generated report narratives',
+      'Automated chart generation',
+      'Automated security trend summaries',
+      'Executive-friendly reporting outputs',
+    ],
+    tools: ['Security operations dashboards', 'Threat intelligence visibility', 'Asset visibility', 'Local AI reporting', 'Ollama', 'Qwen models'],
+  },
   {
     title: 'AI-Assisted Security Operations Triage and Investigation',
     category: 'Security operations automation',
