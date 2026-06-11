@@ -1,8 +1,8 @@
-import { FileText, GitBranch } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
 import { SectionHeader } from '../components/SectionHeader';
-import { githubProjects, projects } from '../data/portfolio';
+import { projects } from '../data/portfolio';
 
 const featuredTitles = new Set([
   'Security Operations Reporting & Management Platform',
@@ -36,111 +36,74 @@ export function Projects() {
     <section id="case-studies" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Projects"
-        title="Featured Case Studies & GitHub Projects"
-        description="A unified view of Mary’s flagship security operations work and repository-backed portfolio projects."
+        title="Featured Case Studies"
+        description="Flagship cybersecurity projects framed around the problem, approach, role, capabilities, and implementation boundaries."
       />
 
-      <div>
-        <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Featured Case Studies</p>
-            <h3 className="mt-2 text-2xl font-semibold text-white">Applied Security Operations Work</h3>
-          </div>
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-2">
-          {featuredProjects.map((project, index) => {
-            const Icon = project.icon;
-            return (
-              <GlassCard
-                key={project.title}
-                delay={index * 0.06}
-                className={`group h-full ${project.featured ? 'border-cyan-200/30 bg-slate-900/95 lg:col-span-2' : ''}`}
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300/10">
-                    <Icon className="h-6 w-6 text-cyan-200" />
-                  </div>
-                  <FileText className="h-5 w-5 text-slate-300 transition group-hover:text-cyan-200" />
-                </div>
-                <p className="mt-7 text-sm font-medium text-cyan-300">{project.category}</p>
-                <h3 className="mt-3 text-xl font-semibold text-white sm:text-2xl">{project.title}</h3>
-
-                <div className={`mt-6 grid gap-4 ${project.featured ? 'lg:grid-cols-3' : ''}`}>
-                  {caseStudyFields.map(([label, key]) => (
-                    project[key] ? (
-                      <DetailBlock key={label} label={label}>
-                        <p>{project[key]}</p>
-                      </DetailBlock>
-                    ) : null
-                  ))}
-                </div>
-
-                {project.capabilities ? (
-                  <div className="mt-6 grid gap-4 lg:grid-cols-2">
-                    <DetailBlock label="Capabilities">
-                      <ul className="grid gap-2 sm:grid-cols-2">
-                        {project.capabilities.map((capability) => (
-                          <li key={capability} className="flex gap-2">
-                            <span className="mt-3 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300" />
-                            <span>{capability}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </DetailBlock>
-                    <DetailBlock label="AI-Assisted Reporting">
-                      <ul className="grid gap-2 sm:grid-cols-2">
-                        {project.aiReporting.map((item) => (
-                          <li key={item} className="flex gap-2">
-                            <span className="mt-3 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </DetailBlock>
-                  </div>
-                ) : null}
-
-                <div className="mt-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-300">Tools and capabilities</p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {project.tools.map((tool) => (
-                      <Badge key={`${project.title}-${tool}`}>{tool}</Badge>
-                    ))}
-                  </div>
-                </div>
-              </GlassCard>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="mt-16">
-        <div className="mb-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">GitHub Projects</p>
-          <h3 className="mt-2 text-2xl font-semibold text-white">Repository-Backed Security Projects</h3>
-        </div>
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {githubProjects.map((project, index) => (
-            <GlassCard key={project.repo} delay={index * 0.035} className="h-full">
-              <div className="mb-5 flex flex-wrap items-start justify-between gap-4">
+      <div className="grid gap-6 lg:grid-cols-2">
+        {featuredProjects.map((project, index) => {
+          const Icon = project.icon;
+          return (
+            <GlassCard
+              key={project.title}
+              delay={index * 0.06}
+              className={`group h-full ${project.featured ? 'border-cyan-200/30 bg-slate-900/95 lg:col-span-2' : ''}`}
+            >
+              <div className="flex items-start justify-between gap-4">
                 <div className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300/10">
-                  <GitBranch className="h-6 w-6 text-cyan-200" />
+                  <Icon className="h-6 w-6 text-cyan-200" />
                 </div>
-                <p className="max-w-full rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-100">
-                  {project.category}
-                </p>
+                <FileText className="h-5 w-5 text-slate-300 transition group-hover:text-cyan-200" />
               </div>
-              <h3 className="break-words font-mono text-lg font-semibold text-white sm:text-xl">{project.repo}</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-200">{project.description}</p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {project.tools.map((tool) => (
-                  <Badge key={`${project.repo}-${tool}`}>{tool}</Badge>
+              <p className="mt-7 text-sm font-medium text-cyan-300">{project.category}</p>
+              <h3 className="mt-3 text-xl font-semibold text-white sm:text-2xl">{project.title}</h3>
+
+              <div className={`mt-6 grid gap-4 ${project.featured ? 'lg:grid-cols-3' : ''}`}>
+                {caseStudyFields.map(([label, key]) => (
+                  project[key] ? (
+                    <DetailBlock key={label} label={label}>
+                      <p>{project[key]}</p>
+                    </DetailBlock>
+                  ) : null
                 ))}
               </div>
+
+              {project.capabilities ? (
+                <div className="mt-6 grid gap-4 lg:grid-cols-2">
+                  <DetailBlock label="Capabilities">
+                    <ul className="grid gap-2 sm:grid-cols-2">
+                      {project.capabilities.map((capability) => (
+                        <li key={capability} className="flex gap-2">
+                          <span className="mt-3 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300" />
+                          <span>{capability}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </DetailBlock>
+                  <DetailBlock label="AI-Assisted Reporting">
+                    <ul className="grid gap-2 sm:grid-cols-2">
+                      {project.aiReporting.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="mt-3 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </DetailBlock>
+                </div>
+              ) : null}
+
+              <div className="mt-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-300">Tools and capabilities</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.tools.map((tool) => (
+                    <Badge key={`${project.title}-${tool}`}>{tool}</Badge>
+                  ))}
+                </div>
+              </div>
             </GlassCard>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );
