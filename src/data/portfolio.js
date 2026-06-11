@@ -30,7 +30,7 @@ export const profile = {
   summary:
     'I work across security operations, threat intelligence, incident response, cybersecurity instruction, security automation, and AI-driven security research. My focus is building practical solutions that improve visibility, investigation, reporting, and security decision-making.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
-  availability: 'Cybersecurity Specialist • Consultant • Instructor • Researcher',
+  availability: 'Cybersecurity Specialist • Researcher • Consultant • Instructor',
   links: [
     { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
     { label: 'Case studies', href: '#case-studies', icon: Link },
@@ -204,6 +204,12 @@ export const githubProjects = [
     tools: ['Python', 'Jupyter Notebook', 'scikit-learn', 'pandas', 'Isolation Forest'],
   },
   {
+    repo: 'ai-soc-investigation-assistant',
+    category: 'AI-Assisted Security Operations',
+    description: 'Human-reviewed security operations investigation workflow for triage prompts, case notes, and next-step guidance.',
+    tools: ['AI assistance', 'security operations triage', 'Case notes', 'Analyst workflow'],
+  },
+  {
     repo: 'attack-hunting-lab',
     category: 'Threat Hunting Lab',
     description: 'Security lab for attack investigation, threat hunting practice, and MITRE ATT&CK mapping.',
@@ -234,10 +240,10 @@ export const githubProjects = [
     tools: ['CLI', 'SHA256 verification', 'Integrity verification', 'Forensics'],
   },
   {
-    repo: 'telegram-leak-monitor',
-    category: 'Leak Intelligence',
-    description: 'Monitoring and automation concept for leak intelligence review and security notifications.',
-    tools: ['Python', 'Threat intelligence', 'Monitoring', 'Automation'],
+    repo: 'ioc-n8n',
+    category: 'IOC Automation',
+    description: 'n8n workflow for indicator enrichment, context gathering, and analyst review.',
+    tools: ['n8n', 'REST API integrations', 'IOC enrichment', 'Workflow automation'],
   },
   {
     repo: 'validator',
@@ -311,7 +317,7 @@ export const projects = [
     outcome: 'Created a repeatable triage pattern for clearer notes, consistent evidence review, and careful escalation without claiming autonomous decision-making.',
   },
   {
-    title: 'Wazuh SIEM Deployment and Monitoring',
+    title: 'Wazuh SIEM Deployment & Monitoring',
     category: 'SIEM Engineering',
     icon: Activity,
     problem: 'Security teams need centralized visibility into endpoint events, authentication activity, suspicious behavior, and compliance signals.',

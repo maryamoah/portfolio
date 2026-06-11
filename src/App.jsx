@@ -1,5 +1,6 @@
 import { Navbar } from './components/Navbar';
 import { About } from './sections/About';
+import { Consulting } from './sections/Consulting';
 import { Contact } from './sections/Contact';
 import { Experience } from './sections/Experience';
 import { Hero } from './sections/Hero';
@@ -20,6 +21,8 @@ function App() {
         <Projects />
         <Research />
         <Skills />
+        <Consulting />
+        <Instruction />
         <Contact />
       </main>
       <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-300">

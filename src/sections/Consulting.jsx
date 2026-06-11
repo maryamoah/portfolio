@@ -14,7 +14,7 @@ export function Consulting() {
       <GlassCard className="overflow-hidden bg-cyan-300 text-slate-950">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {consultingServices.map((service) => (
-            <div key={service} className="rounded-2xl bg-white/80 p-4 shadow-sm">
+            <div key={service} className="rounded-2xl bg-white/85 p-4 shadow-sm">
               <CheckCircle2 className="h-5 w-5 text-slate-900" />
               <p className="mt-3 text-sm font-semibold leading-6 text-slate-900">{service}</p>
             </div>
