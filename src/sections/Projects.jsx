@@ -6,18 +6,18 @@ import { projects } from '../data/portfolio';
 
 const caseStudyFields = [
   ['Problem', 'problem'],
-  ['Solution', 'solution'],
+  ['Approach', 'approach'],
   ['My role', 'role'],
   ['Outcome', 'outcome'],
 ];
 
 export function Projects() {
   return (
-    <section id="case-studies" className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+    <section id="case-studies" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Detailed Case Studies"
-        title="Detailed SOC, SIEM, automation, AI/ML, forensics, instruction, and VAPT work."
-        description="Each case study includes the problem, solution, Mary Abenawa Techiesiwa Amoah’s role, tools used, and a careful outcome statement without overclaiming results."
+        title="Case Studies Across Security Operations and Research"
+        description="Each case study includes the problem, approach, Mary’s role, tools used, and a careful outcome statement without inventing metrics or overclaiming impact."
       />
       <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project, index) => {
@@ -31,7 +31,7 @@ export function Projects() {
                 <FileText className="h-5 w-5 text-slate-500 transition group-hover:text-cyan-200" />
               </div>
               <p className="mt-7 text-sm font-medium text-cyan-300">{project.category}</p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">{project.title}</h3>
+              <h3 className="mt-3 text-xl font-semibold text-white sm:text-2xl">{project.title}</h3>
 
               <div className="mt-6 space-y-4">
                 {caseStudyFields.map(([label, key]) => (

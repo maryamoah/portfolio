@@ -4,11 +4,11 @@ import { experience } from '../data/portfolio';
 
 export function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+    <section id="experience" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
         eyebrow="Experience"
-        title="A growing track record of security-focused project delivery."
-        description="Mary Abenawa Techiesiwa Amoah’s experience combines analyst investigation habits, cybersecurity instruction, and portfolio-built SOC automation workflows that demonstrate practical security operations delivery."
+        title="Security-Focused Project Delivery"
+        description="Mary Abenawa Techiesiwa Amoah combines analyst investigation habits, cybersecurity instruction, consulting-oriented workflow design, and portfolio-built automation projects."
       />
       <div className="relative space-y-6 before:absolute before:left-4 before:top-3 before:h-[calc(100%-1.5rem)] before:w-px before:bg-cyan-300/20 md:before:left-1/2">
         {experience.map((item, index) => (
