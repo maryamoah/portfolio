@@ -26,11 +26,11 @@ export const profile = {
   shortName: 'Mary Amoah',
   role: 'Cybersecurity Analyst, Consultant, Instructor, Security Automation Engineer, and AI & Machine Learning Security Researcher',
   headline:
-    'Designing security operations platforms, automation workflows, and applied AI security research.',
+    'Designing security operations platforms, automation workflows, intelligence pipelines, and applied AI security research.',
   summary:
     'I work across security operations engineering, SOAR-style automation, threat and vulnerability intelligence, reporting analytics, cybersecurity instruction, vulnerability assessment, and AI-driven security research. My focus is building practical systems that improve visibility, investigation, reporting, containment, and security decision-making.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
-  availability: 'Cybersecurity Analyst • Consultant • Instructor',
+  availability: 'Cybersecurity Analyst • Consultant • Instructor • Automation Engineer • AI Security Researcher',
   links: [
     { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
     { label: 'Case studies', href: '#case-studies', icon: Link },
@@ -91,6 +91,12 @@ export const coreFocus = [
     icon: Bug,
     description:
       'Supporting web application testing, vulnerability identification, validation, remediation guidance, defensive validation, and AI-assisted testing experiments.',
+  },
+  {
+    title: 'Cybersecurity Education',
+    icon: BookOpenCheck,
+    description:
+      'Developing labs, monitoring exercises, threat intelligence training, SIEM workshops, mentoring paths, and curriculum support for practical learning.',
   },
 ];
 
