@@ -2,26 +2,19 @@ import { FileText, GitBranch } from 'lucide-react';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
 import { SectionHeader } from '../components/SectionHeader';
-import { githubProjects, projects, researchInterests } from '../data/portfolio';
+import { githubProjects, projects } from '../data/portfolio';
 
 const featuredTitles = new Set([
   'SOC Reporting & Management Platform',
-  'Automated Threat Containment & IP Enforcement',
+  'Security Automation & SOAR Platform',
   'AI-Assisted SOC Triage & Investigation',
   'Automated Vulnerability Intelligence & Security Newsletter',
   'AI-Assisted Penetration Testing Environment',
   'Wazuh SIEM Engineering & Detection',
   'TheHive + Cortex Incident Response Workflow',
-  'OpenCTI Threat Intelligence Integration',
+  'Threat Intelligence & Intelligence Distribution Platform',
 ]);
 
-const researchTitles = new Set([
-  'AI & Machine Learning Security Analytics with Isolation Forest',
-  'Digital Forensics Evidence Packaging and Timeline Building',
-  'Cybersecurity Instructor and Lab Development',
-  'Vulnerability Assessment and Security Testing Practice',
-  'Threat Intelligence Automation & Distribution',
-]);
 
 const caseStudyFields = [
   ['Problem', 'problem'],
@@ -113,7 +106,6 @@ function ProjectCard({ project, index, compact = false }) {
 
 export function Projects() {
   const featuredProjects = projects.filter((project) => featuredTitles.has(project.title));
-  const researchProjects = projects.filter((project) => researchTitles.has(project.title));
 
   return (
     <section id="case-studies" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
@@ -159,34 +151,6 @@ export function Projects() {
         </div>
       </div>
 
-      <div id="research" className="mt-20">
-        <div className="mb-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Security Research & Experiments</p>
-          <h3 className="mt-2 text-2xl font-semibold text-white">AI & Security Research Direction</h3>
-          <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-300">
-            Concise research themes connect AI-assisted SOC operations, interpretable anomaly detection, human-AI collaboration, telemetry analysis, education, and forensics automation.
-          </p>
-        </div>
-        <div className="grid gap-5 lg:grid-cols-2">
-          {researchProjects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} compact />
-          ))}
-        </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {researchInterests.map((interest, index) => {
-            const Icon = interest.icon;
-            return (
-              <GlassCard key={interest.title} delay={index * 0.03} className="h-full bg-white/[0.035]">
-                <div className="mb-4 grid h-10 w-10 place-items-center rounded-2xl bg-cyan-300/10">
-                  <Icon className="h-5 w-5 text-cyan-200" />
-                </div>
-                <h4 className="font-semibold text-white">{interest.title}</h4>
-                <p className="mt-3 text-sm leading-7 text-slate-200">{interest.description}</p>
-              </GlassCard>
-            );
-          })}
-        </div>
-      </div>
     </section>
   );
 }

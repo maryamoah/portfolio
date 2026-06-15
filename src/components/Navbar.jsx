@@ -5,9 +5,10 @@ import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const navItems = [
   { label: 'About', href: '#about', id: 'about' },
+  { label: 'Work', href: '#selected-work', id: 'selected-work' },
   { label: 'Experience', href: '#experience', id: 'experience' },
-  { label: 'Projects', href: '#case-studies', id: 'case-studies' },
-  { label: 'Skills', href: '#skills', id: 'skills' },
+  { label: 'Expertise', href: '#core-expertise', id: 'core-expertise' },
+  { label: 'Research', href: '#research', id: 'research' },
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
