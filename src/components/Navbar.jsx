@@ -4,7 +4,6 @@ import { profile } from '../data/portfolio';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const navItems = [
-  { label: 'Hero', href: '#hero', id: 'hero' },
   { label: 'About', href: '#about', id: 'about' },
   { label: 'Experience', href: '#experience', id: 'experience' },
   { label: 'Projects', href: '#case-studies', id: 'case-studies' },
@@ -38,7 +37,7 @@ export function Navbar() {
 
         <select
           aria-label="Navigate portfolio sections"
-          value={activeId || 'hero'}
+          value={activeId || 'about'}
           onChange={handleMobileNav}
           className="max-w-[10rem] rounded-full border border-white/10 bg-slate-950 px-3 py-2 text-xs font-semibold text-slate-100 outline-none ring-cyan-300/30 focus:ring-2 lg:hidden"
         >
@@ -50,7 +49,7 @@ export function Navbar() {
         </select>
 
         <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 lg:flex">
-          {navItems.slice(1).map((item) => (
+          {navItems.map((item) => (
             <a
               key={item.id}
               href={item.href}
