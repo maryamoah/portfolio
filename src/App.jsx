@@ -6,6 +6,7 @@ import { FeaturedWork } from './sections/FeaturedWork';
 import { Hero } from './sections/Hero';
 import { ProfessionalFocus } from './sections/ProfessionalFocus';
 import { Projects } from './sections/Projects';
+import { Research } from './sections/Research';
 import { Skills } from './sections/Skills';
 
 function App() {
@@ -15,11 +16,12 @@ function App() {
       <main>
         <Hero />
         <FeaturedWork />
-        <About />
-        <ProfessionalFocus />
         <Experience />
-        <Projects />
+        <ProfessionalFocus />
         <Skills />
+        <Research />
+        <About />
+        <Projects />
         <Contact />
       </main>
       <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-300">
