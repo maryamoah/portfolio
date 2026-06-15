@@ -6,9 +6,9 @@ export function ProfessionalFocus() {
   return (
     <section id="professional-focus" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
-        eyebrow="Areas of Focus"
+        eyebrow="Specializations"
         title="Areas of Focus"
-        description="Three focused areas show how Mary approaches operational workflows, intelligence integration, and applied security research."
+        description="Six focus areas show how Mary approaches security operations, automation, intelligence, reporting, applied AI, and security testing."
       />
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
         {professionalFocus.map((focus, index) => {
