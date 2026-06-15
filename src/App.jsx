@@ -2,10 +2,10 @@ import { Navbar } from './components/Navbar';
 import { About } from './sections/About';
 import { Contact } from './sections/Contact';
 import { Experience } from './sections/Experience';
+import { FeaturedWork } from './sections/FeaturedWork';
 import { Hero } from './sections/Hero';
 import { ProfessionalFocus } from './sections/ProfessionalFocus';
 import { Projects } from './sections/Projects';
-import { Research } from './sections/Research';
 import { Skills } from './sections/Skills';
 
 function App() {
@@ -14,11 +14,11 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <FeaturedWork />
         <About />
         <ProfessionalFocus />
         <Experience />
         <Projects />
-        <Research />
         <Skills />
         <Contact />
       </main>
