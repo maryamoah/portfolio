@@ -1,36 +1,36 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Badge } from '../components/Badge';
-import { metrics, profile, specializations } from '../data/portfolio';
+import { profile } from '../data/portfolio';
 
 export function Hero() {
   return (
-    <section id="hero" className="relative isolate overflow-hidden pt-28 sm:pt-32 md:pt-40">
+    <section id="hero" className="relative isolate overflow-hidden pt-24 sm:pt-28 md:pt-32">
       <div className="absolute inset-0 -z-10 bg-radial-grid" />
       <div className="absolute left-1/2 top-28 -z-10 h-56 w-56 -translate-x-1/2 rounded-full bg-cyan-300/10 blur-3xl sm:h-72 sm:w-72" />
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 sm:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-28">
+      <div className="mx-auto max-w-5xl px-5 pb-12 pt-4 text-center sm:pb-16 lg:px-8 lg:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="min-w-0"
+          className="mx-auto min-w-0"
         >
           <Badge>{profile.availability}</Badge>
           <p className="mt-5 text-base font-semibold leading-7 text-cyan-100 sm:text-lg">
             {profile.name}
           </p>
-          <h1 className="mt-5 max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl xl:text-6xl">
+          <h1 className="mx-auto mt-5 max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             {profile.headline}
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-200 sm:text-lg">
             {profile.summary}
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
             <a
-              href="#case-studies"
+              href="#featured-work"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 sm:px-6 sm:text-base"
             >
-              View Featured Case Study <ArrowRight className="h-4 w-4" />
+              View Featured Work <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#contact"
@@ -38,45 +38,6 @@ export function Hero() {
             >
               Contact Mary
             </a>
-          </div>
-          <div className="mt-9 grid max-w-3xl gap-3 sm:grid-cols-3">
-            {metrics.map((metric) => (
-              <div key={metric.label} className="rounded-2xl border border-white/10 bg-white/[0.05] p-4">
-                <p className="text-2xl font-semibold text-white">{metric.value}</p>
-                <p className="mt-1 text-xs leading-5 text-slate-200">{metric.label}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="min-w-0 rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-3 shadow-card backdrop-blur-xl sm:rounded-[2rem] sm:p-4"
-        >
-          <div className="rounded-[1.25rem] border border-cyan-300/15 bg-slate-950/85 p-5 sm:rounded-[1.5rem] sm:p-6">
-            <div className="mb-6 flex items-start justify-between gap-4 border-b border-white/10 pb-5">
-              <div className="min-w-0">
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Specializations</p>
-                <p className="mt-3 text-base leading-7 text-slate-200">
-                  Practical cybersecurity work spanning operations, automation, research, testing, and investigation support.
-                </p>
-              </div>
-              <div className="grid h-11 w-11 flex-none place-items-center rounded-2xl bg-cyan-300/10 sm:h-12 sm:w-12">
-                <ShieldCheck className="h-6 w-6 text-cyan-200" />
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {specializations.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-cyan-200/20 bg-cyan-300/10 px-3 py-2 text-xs font-semibold text-cyan-100"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>
