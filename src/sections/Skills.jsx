@@ -24,6 +24,14 @@ function FocusCard({ focus, index }) {
   );
 }
 
+const coreExpertise = [
+  'Security Operations Engineering',
+  'Security Automation & SOAR',
+  'SIEM Engineering',
+  'Threat Intelligence',
+  'AI Security Research',
+];
+
 export function Skills() {
   const [showMoreFocus, setShowMoreFocus] = useState(false);
 
