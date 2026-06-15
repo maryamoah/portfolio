@@ -4,10 +4,10 @@ import { profile } from '../data/portfolio';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const navItems = [
-  { label: 'Work', href: '#featured-work', id: 'featured-work' },
+  { label: 'About', href: '#about', id: 'about' },
+  { label: 'Work', href: '#selected-work', id: 'selected-work' },
   { label: 'Experience', href: '#experience', id: 'experience' },
-  { label: 'Focus', href: '#professional-focus', id: 'professional-focus' },
-  { label: 'Skills', href: '#skills', id: 'skills' },
+  { label: 'Expertise', href: '#core-expertise', id: 'core-expertise' },
   { label: 'Research', href: '#research', id: 'research' },
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];

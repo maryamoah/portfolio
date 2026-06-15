@@ -24,13 +24,13 @@ import {
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
   shortName: 'Mary Amoah',
-  role: 'Cybersecurity Analyst, Security Automation Engineer, Consultant, Instructor, and AI Security Researcher',
+  role: 'Cybersecurity Analyst, Security Automation Engineer, Consultant, and Instructor',
   headline:
     'Designing security operations platforms, automation workflows, threat intelligence pipelines, and AI-assisted cybersecurity systems.',
   summary:
-    'Mary builds practical SOC reporting, SOAR, threat intelligence, and AI-assisted security workflows that help teams operate, automate, research, and teach cybersecurity clearly.',
+    'Building practical cybersecurity solutions that improve visibility, investigation, response, reporting, and security decision-making.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
-  availability: 'Cybersecurity Analyst • Security Automation Engineer',
+  availability: 'Cybersecurity Analyst • Security Automation Engineer • Consultant • Instructor',
   links: [
     { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
     { label: 'Case studies', href: '#case-studies', icon: Link },
@@ -85,16 +85,16 @@ export const professionalFocus = coreFocus.slice(0, 3);
 
 export const additionalFocus = [
   {
-    title: 'Security Reporting & Analytics',
-    icon: Activity,
-    description:
-      'Engineering dashboards, metrics, KPIs, trend summaries, SLA views, compliance-oriented reports, and executive-ready security narratives.',
-  },
-  {
     title: 'Threat Intelligence Engineering',
     icon: Database,
     description:
       'Building IOC enrichment, CVE monitoring, OpenCTI workflows, MITRE ATT&CK mapping, and intelligence distribution through Slack, email, and newsletters.',
+  },
+  {
+    title: 'Security Reporting & Analytics',
+    icon: Activity,
+    description:
+      'Engineering dashboards, metrics, KPIs, trend summaries, SLA views, compliance-oriented reports, and executive-ready security narratives.',
   },
   {
     title: 'Vulnerability Assessment & Security Testing',

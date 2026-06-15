@@ -7,15 +7,15 @@ export function Hero() {
   return (
     <section id="hero" className="relative isolate overflow-hidden pt-20 sm:pt-24">
       <div className="absolute inset-0 -z-10 bg-radial-grid" />
-      <div className="absolute left-1/2 top-20 -z-10 h-44 w-44 -translate-x-1/2 rounded-full bg-cyan-300/10 blur-3xl sm:h-60 sm:w-60" />
-      <div className="mx-auto max-w-5xl px-5 pb-8 pt-3 text-center sm:pb-10 lg:px-8 lg:pb-12">
+      <div className="absolute left-1/2 top-20 -z-10 h-40 w-40 -translate-x-1/2 rounded-full bg-cyan-300/10 blur-3xl sm:h-56 sm:w-56" />
+      <div className="mx-auto max-w-5xl px-5 pb-8 pt-2 text-center sm:pb-10 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="mx-auto min-w-0"
         >
-          <Badge>{profile.availability}</Badge>
+          <Badge>{profile.role}</Badge>
           <p className="mt-4 text-sm font-semibold leading-6 text-cyan-100 sm:text-base">
             {profile.name}
           </p>
@@ -27,10 +27,10 @@ export function Hero() {
           </p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
             <a
-              href="#featured-work"
+              href="#selected-work"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
             >
-              View Featured Work <ArrowRight className="h-4 w-4" />
+              View Selected Work <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#contact"

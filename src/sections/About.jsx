@@ -5,50 +5,46 @@ import { profile } from '../data/portfolio';
 const roles = [
   {
     title: 'Practitioner',
-    detail: 'Works from evidence, triage discipline, escalation judgment, and clear communication.',
+    detail: 'Works from evidence, triage, investigation notes, and clear response decisions.',
   },
   {
     title: 'Engineer',
-    detail: 'Designs platforms, dashboards, automation workflows, integrations, and reporting architecture.',
+    detail: 'Designs platforms, dashboards, automations, integrations, and reporting workflows.',
   },
   {
     title: 'Educator',
-    detail: 'Turns complex SOC, SIEM, intelligence, and testing workflows into practical labs and mentoring.',
+    detail: 'Turns security operations concepts into practical labs and learner-ready exercises.',
   },
   {
     title: 'Researcher',
-    detail: 'Explores AI-assisted operations, interpretable telemetry analysis, and human-AI collaboration.',
+    detail: 'Explores AI-assisted SOC work, interpretable analysis, and local LLM workflows.',
   },
 ];
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
+    <section id="about" className="mx-auto max-w-7xl px-5 py-14 sm:py-16 lg:px-8">
       <SectionHeader
         eyebrow="About"
-        title="Practitioner, Engineer, Educator, and Researcher"
-        description="A concise profile of the working style behind the projects: practical, systems-minded, teachable, and research-aware."
+        title="A cybersecurity builder with an operations mindset"
+        description="Mary connects security operations, automation, intelligence, reporting, education, and research into practical systems."
       />
-      <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr]">
-        <GlassCard className="border-cyan-200/20 bg-slate-900/95">
-          <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Profile</p>
-          <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">{profile.name}</h3>
-          <p className="mt-6 text-sm leading-7 text-slate-200">
-            Mary designs and explains cybersecurity systems that help teams monitor, investigate,
-            automate, report, research, and learn with stronger structure and clearer judgment.
-          </p>
-        </GlassCard>
-        <GlassCard delay={0.08} className="border-white/10 bg-slate-900/90">
-          <div className="grid gap-4 md:grid-cols-2">
+      <GlassCard className="border-cyan-200/20 bg-slate-900/95">
+        <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">{profile.name}</p>
+            <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">Designs, builds, automates, researches, and teaches cybersecurity systems.</h3>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
             {roles.map((role) => (
               <div key={role.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                 <h4 className="text-base font-semibold text-white">{role.title}</h4>
-                <p className="mt-3 text-sm leading-7 text-slate-200">{role.detail}</p>
+                <p className="mt-3 text-sm leading-6 text-slate-200">{role.detail}</p>
               </div>
             ))}
           </div>
-        </GlassCard>
-      </div>
+        </div>
+      </GlassCard>
     </section>
   );
 }
