@@ -30,13 +30,13 @@ export function About() {
   return (
     <section id="about" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
       <SectionHeader
-        eyebrow="Profile"
-        title="About Mary"
+        eyebrow="About"
+        title="Practitioner, Security Automation Engineer, Educator, and Researcher"
         description="Mary Abenawa Techiesiwa Amoah combines investigation practice, governed automation, practical teaching, and applied research."
       />
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
         <GlassCard className="border-cyan-200/20 bg-slate-900/95">
-          <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Professional Profile</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Profile</p>
           <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">{profile.name}</h3>
           <p className="mt-6 text-sm leading-7 text-slate-200">
             Her portfolio emphasizes how security work is planned, documented, reviewed, and
