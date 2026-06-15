@@ -6,11 +6,14 @@ import { githubProjects, projects } from '../data/portfolio';
 
 const featuredTitles = new Set([
   'Security Operations Reporting & Management Platform',
-  'AI-Assisted SOC Triage & Investigation',
+  'AI-Assisted Security Operations Triage and Investigation',
   'Wazuh SIEM Deployment & Monitoring',
   'TheHive + Cortex Incident Response Workflow',
   'OpenCTI Threat Intelligence Integration',
-  'Firewall IP Blocking Automation',
+  'Automated Threat Containment & IP Enforcement',
+  'Automated Vulnerability Intelligence & Security Newsletter',
+  'Threat Intelligence Automation & Distribution',
+  'AI-Assisted Penetration Testing Environment',
 ]);
 
 const caseStudyFields = [
@@ -86,7 +89,7 @@ export function Projects() {
                 </div>
 
                 {project.capabilities ? (
-                  <div className="mt-6 grid gap-4 lg:grid-cols-2">
+                  <div className={`mt-6 grid gap-4 ${project.aiReporting ? 'lg:grid-cols-2' : ''}`}>
                     <DetailBlock label="Capabilities">
                       <ul className="grid gap-2 sm:grid-cols-2">
                         {project.capabilities.map((capability) => (
@@ -97,16 +100,18 @@ export function Projects() {
                         ))}
                       </ul>
                     </DetailBlock>
-                    <DetailBlock label="AI-Assisted Reporting">
-                      <ul className="grid gap-2 sm:grid-cols-2">
-                        {project.aiReporting.map((item) => (
-                          <li key={item} className="flex gap-2">
-                            <span className="mt-3 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </DetailBlock>
+                    {project.aiReporting ? (
+                      <DetailBlock label="AI-Assisted Reporting">
+                        <ul className="grid gap-2 sm:grid-cols-2">
+                          {project.aiReporting.map((item) => (
+                            <li key={item} className="flex gap-2">
+                              <span className="mt-3 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </DetailBlock>
+                    ) : null}
                   </div>
                 ) : null}
 
