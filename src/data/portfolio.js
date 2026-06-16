@@ -126,6 +126,23 @@ export const featuredWork = [
     icon: Activity,
     summary: 'Elevates SOC leadership decisions with unified analyst visibility, readiness metrics, risk reporting, and AI-assisted monthly narratives.',
     highlights: ['Aligned executive and analyst dashboards', 'Improved geographic and operational visibility', 'Correlated threat intelligence and asset context', 'Consolidated vulnerability tracking and SLA awareness', 'Delivered compliance, KPI, and readiness reporting', 'Enabled analyst-reviewed Ollama and Qwen narratives', 'Accelerated charting and trend summaries'],
+    caseStudy: {
+      problem:
+        'SOC leaders and analysts needed a single management layer for executive dashboards, analyst dashboards, security map context, SLA monitoring, asset visibility, vulnerability tracking, compliance reporting, and KPI review instead of disconnected operational views.',
+      approach:
+        'Designed a dark, dashboard-centered SOC reporting experience that consolidates operational metrics, vulnerability trends, asset context, security map insights, compliance status, SLA posture, and automated charts into management-ready views.',
+      role:
+        'Led the platform concept, reporting architecture, dashboard requirements, KPI model, AI-assisted reporting workflow, and analyst review path for leadership and SOC users.',
+      capabilities: [
+        'Executive dashboards for leadership-ready security posture, KPI, compliance, and risk reporting.',
+        'Analyst dashboards with SLA monitoring, asset visibility, vulnerability tracking, and operational readiness views.',
+        'Security map and asset context for geographic and environment-level visibility.',
+        'Ollama and Qwen workflows for AI-generated monthly narratives that remain analyst-reviewed.',
+        'Automated charts and trend summaries for recurring monthly security reporting.',
+      ],
+      outcome:
+        'Improved SOC reporting consistency by combining KPIs, compliance reporting, vulnerability status, asset visibility, SLA performance, automated charts, and AI-generated monthly narratives into a single analyst-reviewed platform concept.',
+    },
   },
   {
     title: 'Security Automation & SOAR Platform',
@@ -133,6 +150,23 @@ export const featuredWork = [
     icon: Network,
     summary: 'Reduces response friction by orchestrating Wazuh, TheHive, Cortex, firewalls, Slack, and intelligence feeds through governed approval checkpoints.',
     highlights: ['Wazuh, TheHive, Cortex, Palo Alto, FortiGate, Slack', 'Reduced containment effort through analyst-approved blocking and release workflows', 'Improved investigation context through enrichment and intelligence correlation', 'Preserved analyst accountability through review checkpoints', 'Standardized response actions with audit visibility', 'Improved containment speed while reducing analyst workload'],
+    caseStudy: {
+      problem:
+        'Security teams needed faster containment and release actions without bypassing analyst judgment, losing audit visibility, or forcing responders to manually move data between Wazuh, TheHive, Cortex, Palo Alto, FortiGate, Slack, and enrichment sources.',
+      approach:
+        'Built governed SOAR workflows that connect alert context, threat intelligence enrichment, analyst approval workflows, firewall orchestration, case updates, and Slack notifications into repeatable response paths.',
+      role:
+        'Engineered the automation design, approval checkpoints, enrichment flow, response logic, notification model, and audit trail requirements across SIEM, case management, firewall, and collaboration tooling.',
+      capabilities: [
+        'Automated IP blocking after analyst approval using Wazuh alerts, TheHive cases, Cortex responders, and Palo Alto or FortiGate enforcement points.',
+        'Automated IP unblocking through controlled release workflows with clear analyst confirmation.',
+        'Threat intelligence enrichment before containment decisions to improve response confidence.',
+        'Slack notifications for analyst review, approval status, and operational awareness.',
+        'Audit visibility across enrichment, approval, block, unblock, and case-management actions.',
+      ],
+      outcome:
+        'Reduced manual response friction while preserving analyst approval, audit visibility, and repeatable containment governance across Wazuh, TheHive, Cortex, Palo Alto, FortiGate, Slack, and enrichment workflows.',
+    },
   },
   {
     title: 'Threat Intelligence & Intelligence Distribution Platform',
@@ -140,6 +174,23 @@ export const featuredWork = [
     icon: Database,
     summary: 'Turns threat and vulnerability intelligence into analyst context, MITRE alignment, recurring reporting, and stakeholder awareness.',
     highlights: ['Operationalized OpenCTI threat workflows', 'Improved IOC context with VirusTotal and AbuseIPDB', 'MITRE ATT&CK mapping', 'Converted vulnerability intelligence into recurring stakeholder reporting', 'Delivered intelligence into Slack and email workflows', 'Scaled intelligence distribution across analyst channels'],
+    caseStudy: {
+      problem:
+        'Threat and vulnerability intelligence needed to move from scattered indicators and CVE notes into enriched, contextual, and recurring intelligence that analysts and stakeholders could consume through operational channels.',
+      approach:
+        'Designed an intelligence distribution workflow around OpenCTI, IOC enrichment, CVE monitoring, MITRE ATT&CK context, weekly newsletters, and delivery into Slack and email.',
+      role:
+        'Owned the intelligence workflow design, enrichment criteria, reporting cadence, stakeholder distribution model, and analyst-facing context requirements.',
+      capabilities: [
+        'OpenCTI workflows for structuring threat knowledge and analyst-ready intelligence records.',
+        'IOC enrichment using VirusTotal and AbuseIPDB for additional reputation and abuse context.',
+        'MITRE ATT&CK mapping to connect indicators, techniques, and defensive relevance.',
+        'CVE monitoring that turns vulnerability changes into recurring awareness and action items.',
+        'Weekly newsletters with Slack delivery and email delivery for broader intelligence distribution.',
+      ],
+      outcome:
+        'Improved intelligence reach by combining OpenCTI, IOC enrichment, VirusTotal, AbuseIPDB, MITRE ATT&CK, CVE monitoring, weekly newsletters, Slack delivery, and email delivery into a consistent distribution process.',
+    },
   },
 ];
 
