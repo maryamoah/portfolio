@@ -4,7 +4,7 @@ import { experience } from '../data/portfolio';
 
 export function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
+    <section id="experience" className="mx-auto max-w-7xl px-5 py-12 sm:py-14 lg:px-8">
       <SectionHeader
         eyebrow="Experience"
         title="Security Practice, Education, and Research"
@@ -18,7 +18,7 @@ export function Experience() {
                 <p className="text-sm text-cyan-300">{item.period}</p>
                 <h3 className="mt-3 text-2xl font-semibold text-white">{item.role}</h3>
                 <p className="mt-1 text-slate-200">{item.company}</p>
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-5 space-y-2">
                   {item.highlights.map((highlight) => (
                     <li key={highlight} className="text-sm leading-6 text-slate-200">
                       • {highlight}

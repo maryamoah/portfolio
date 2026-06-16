@@ -4,11 +4,11 @@ import { profile } from '../data/portfolio';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const navItems = [
+  { label: 'Featured', href: '#featured-projects', id: 'featured-projects' },
   { label: 'About', href: '#about', id: 'about' },
-  { label: 'Work', href: '#selected-work', id: 'selected-work' },
   { label: 'Experience', href: '#experience', id: 'experience' },
-  { label: 'Expertise', href: '#core-expertise', id: 'core-expertise' },
-  { label: 'Research', href: '#research', id: 'research' },
+  { label: 'Skills', href: '#core-expertise', id: 'core-expertise' },
+  { label: 'Projects', href: '#additional-projects', id: 'additional-projects' },
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
@@ -37,7 +37,7 @@ export function Navbar() {
 
         <select
           aria-label="Navigate portfolio sections"
-          value={activeId || 'about'}
+          value={activeId || 'featured-projects'}
           onChange={handleMobileNav}
           className="max-w-[10rem] rounded-full border border-white/10 bg-slate-950 px-3 py-2 text-xs font-semibold text-slate-100 outline-none ring-cyan-300/30 focus:ring-2 lg:hidden"
         >
