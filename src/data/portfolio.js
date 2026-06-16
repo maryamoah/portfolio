@@ -24,11 +24,11 @@ import {
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
   shortName: 'Mary Amoah',
-  role: 'Cybersecurity Analyst, Security Automation Engineer, Consultant, and Instructor',
+  role: 'Senior Cybersecurity Engineer • SOC Automation • Threat Intelligence • AI Security Research',
   headline:
     'Designing security operations platforms, automation workflows, threat intelligence pipelines, and AI-assisted cybersecurity systems.',
   summary:
-    'Building practical cybersecurity solutions that improve visibility, investigation, response, reporting, and security decision-making.',
+    'Mary builds SOC platforms, automates response workflows, operationalizes threat intelligence, and applies AI to analyst-reviewed cybersecurity reporting.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
   availability: 'Cybersecurity Analyst • Security Automation Engineer • Consultant • Instructor',
   links: [
@@ -189,10 +189,10 @@ export const experience = [
     company: 'Security Operations, Automation, and Advisory Workflows',
     period: 'Current focus',
     highlights: [
-      'Designs security operations workflows for alert triage, SIEM monitoring, detection engineering, incident documentation, threat intelligence enrichment, escalation decisions, and response coordination.',
-      'Helps teams think through operational improvements such as repeatable runbooks, dashboard engineering, executive reporting, SLA visibility, automation boundaries, and human review checkpoints.',
-      'Develops detection use cases, custom rule concepts, parser and decoder planning, correlation logic, alert tuning, MITRE ATT&CK mapping, detection validation, and security reporting patterns.',
-      'Supports vulnerability assessment and security testing practice and security assessment work involving vulnerability identification, web/security testing fundamentals, reporting, remediation guidance, and defensive validation.',
+      'Deployed and documented Wazuh-centered SIEM workflows for endpoint visibility, alert triage, detection review, dashboarding, and security reporting.',
+      'Designed SOC management and reporting platform concepts that consolidate executive dashboards, analyst dashboards, asset visibility, threat intelligence, KPIs, SLAs, and AI-assisted monthly reporting.',
+      'Built automation patterns for TheHive, Cortex, Palo Alto, FortiGate, Slack, APIs, and analyst approval checkpoints to improve containment consistency without removing human review.',
+      'Operationalized OpenCTI, VirusTotal, AbuseIPDB, MITRE ATT&CK, and CVE distribution workflows so intelligence reaches cases, reports, Slack, email, and newsletters.',
     ],
   },
   {
@@ -200,10 +200,9 @@ export const experience = [
     company: 'Security Education and Practical Lab Development',
     period: 'Current focus',
     highlights: [
-      'Builds guided labs that connect foundational security concepts to security operations, SIEM monitoring, incident response, threat intelligence, vulnerability assessment and security testing practice, and digital forensics support.',
-      'Creates learner-friendly exercises for investigation questions, evidence validation, tool usage, documentation, escalation judgment, security monitoring, and plain-language reporting.',
-      'Supports student mentoring, technical workshops, SIEM training, threat intelligence training, curriculum support, and hands-on lab development for beginner and early-career learners.',
-      'Connects teaching work to research interests in cybersecurity education, practical lab design, AI-assisted security operations, and human-AI collaboration in cybersecurity.',
+      'Created practical labs for SIEM monitoring, incident response, threat intelligence, vulnerability assessment, digital forensics support, and plain-language reporting.',
+      'Trained learners on investigation questions, evidence validation, escalation judgment, tool usage, and defensible documentation habits.',
+      'Translated advanced SOC, TI, automation, and AI-assisted workflow concepts into approachable workshops for beginner and early-career security learners.',
     ],
   },
   {
@@ -211,9 +210,9 @@ export const experience = [
     company: 'Independent Cybersecurity Projects',
     period: 'GitHub and case study portfolio',
     highlights: [
-      'Builds portfolio projects for AI-assisted triage, IOC enrichment, malicious IP containment and release, CVE newsletters, firewall orchestration, evidence packaging, forensic timeline building, and threat intelligence automation.',
-      'Experiments with local LLMs, Ollama, Qwen models, AI log explanation, AI-assisted reporting, Pentagi deployment, and interpretable anomaly detection for security telemetry research.',
-      'Documents each case study with the problem, approach, role, tools, outcome, limitations, and human review points without inventing production metrics.',
+      'Engineered portfolio systems for IOC enrichment, malicious IP containment and release, vulnerability intelligence newsletters, evidence packaging, and forensic timeline building.',
+      'Experimented with Ollama, Qwen, local LLM reporting, AI log explanation, Pentagi, and Isolation Forest anomaly detection for analyst-reviewed cybersecurity workflows.',
+      'Documented project outcomes, review gates, limitations, and implementation tradeoffs for SOC engineering, security architecture, and PhD/research audiences.',
     ],
   },
 ];
