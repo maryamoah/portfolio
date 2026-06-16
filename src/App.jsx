@@ -19,7 +19,7 @@ function App() {
         <Contact />
       </main>
       <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-300">
-        <p>© {new Date().getFullYear()} Mary Abenawa Techiesiwa Amoah. Built with React, Vite, Tailwind CSS, and Framer Motion.</p>
+        <p>© 2026 Mary Abenawa Techiesiwa Amoah</p>
       </footer>
     </div>
   );
