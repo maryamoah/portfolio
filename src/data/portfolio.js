@@ -369,7 +369,7 @@ export const projects = [
   },
 
   {
-    title: 'Automated Vulnerability Intelligence & Security Newsletter',
+    title: 'Automated Vulnerability Intelligence Newsletter',
     category: 'Vulnerability Intelligence & Reporting Automation',
     icon: FileCheck,
     problem: 'Security stakeholders need recurring awareness of relevant CVEs and vulnerability trends without relying on manual feed checks or one-off messages.',

@@ -26,6 +26,7 @@ function FocusCard({ focus, index }) {
 
 export function Skills() {
   const [showMoreFocus, setShowMoreFocus] = useState(false);
+  const [showDetailedExpertise, setShowDetailedExpertise] = useState(false);
 
   return (
     <section id="core-expertise" className="mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8">
@@ -65,31 +66,44 @@ export function Skills() {
         </div>
       ) : null}
 
-      <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {skills.map((skill) => {
-          const Icon = skill.icon;
-          return (
-            <details key={skill.title} className="group rounded-3xl border border-white/10 bg-panel p-5 shadow-card backdrop-blur-xl open:border-cyan-200/30 open:bg-slate-900/95">
-              <summary className="flex cursor-pointer list-none items-center gap-4">
-                <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl bg-cyan-300/10">
-                  <Icon className="h-5 w-5 text-cyan-200" />
-                </span>
-                <span className="min-w-0 flex-1 font-semibold text-white">{skill.title}</span>
-                <span className="text-sm font-semibold text-cyan-200 group-open:hidden">Expand</span>
-                <span className="hidden text-sm font-semibold text-cyan-200 group-open:inline">Close</span>
-              </summary>
-              <ul className="mt-5 space-y-3">
-                {skill.items.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-slate-200">
-                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </details>
-          );
-        })}
+      <div className="mt-10 text-center">
+        <button
+          type="button"
+          onClick={() => setShowDetailedExpertise((value) => !value)}
+          className="rounded-full border border-cyan-200/25 bg-white/5 px-5 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/50 hover:bg-cyan-300/10"
+          aria-expanded={showDetailedExpertise}
+        >
+          {showDetailedExpertise ? 'Hide Detailed Expertise' : 'View Detailed Expertise'}
+        </button>
       </div>
+
+      {showDetailedExpertise ? (
+        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {skills.map((skill) => {
+            const Icon = skill.icon;
+            return (
+              <details key={skill.title} className="group rounded-3xl border border-white/10 bg-panel p-5 shadow-card backdrop-blur-xl open:border-cyan-200/30 open:bg-slate-900/95">
+                <summary className="flex cursor-pointer list-none items-center gap-4">
+                  <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl bg-cyan-300/10">
+                    <Icon className="h-5 w-5 text-cyan-200" />
+                  </span>
+                  <span className="min-w-0 flex-1 font-semibold text-white">{skill.title}</span>
+                  <span className="text-sm font-semibold text-cyan-200 group-open:hidden">Expand</span>
+                  <span className="hidden text-sm font-semibold text-cyan-200 group-open:inline">Close</span>
+                </summary>
+                <ul className="mt-5 space-y-3">
+                  {skill.items.map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-sm text-slate-200">
+                      <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            );
+          })}
+        </div>
+      ) : null}
     </section>
   );
 }

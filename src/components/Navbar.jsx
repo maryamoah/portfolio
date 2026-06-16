@@ -37,7 +37,7 @@ export function Navbar() {
 
         <select
           aria-label="Navigate portfolio sections"
-          value={activeId || 'featured-work'}
+          value={activeId || 'about'}
           onChange={handleMobileNav}
           className="max-w-[10rem] rounded-full border border-white/10 bg-slate-950 px-3 py-2 text-xs font-semibold text-slate-100 outline-none ring-cyan-300/30 focus:ring-2 lg:hidden"
         >
