@@ -3,7 +3,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
 import { SectionHeader } from '../components/SectionHeader';
-import { featuredWork, githubProjects, projects, researchInterests } from '../data/portfolio';
+import { featuredWork, githubProjects, impactHighlights, projects, researchInterests } from '../data/portfolio';
 
 const selectedTitles = featuredWork.map((project) => project.title);
 const additionalTitles = [
@@ -48,7 +48,7 @@ function ProjectPreview({ project, index }) {
     <GlassCard delay={index * 0.035} className="h-full bg-white/[0.035] p-5">
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">{project.category}</p>
       <h3 className="mt-3 text-lg font-semibold text-white">{project.title}</h3>
-      <p className="mt-3 text-sm leading-6 text-slate-200">{summary}</p>
+      <p className="mt-2 text-sm leading-6 text-slate-200">{summary}</p>
       <div className="mt-4 flex flex-wrap gap-2">
         {project.tools.slice(0, 5).map((tool) => <Badge key={`${project.title}-${tool}`}>{tool}</Badge>)}
       </div>
@@ -81,7 +81,7 @@ export function FeaturedWork() {
 
   return (
     <>
-      <section id="featured-projects" className="mx-auto max-w-7xl px-5 py-12 sm:py-14 lg:px-8">
+      <section id="featured-projects" className="mx-auto max-w-7xl px-5 py-10 sm:py-14 lg:px-8">
         <SectionHeader
           eyebrow="Featured Engineering Projects"
           title="Security platforms, automation, and intelligence systems"
@@ -91,10 +91,10 @@ export function FeaturedWork() {
           {selectedProjects.map((project, index) => {
             const Icon = project.icon;
             return (
-              <GlassCard key={project.title} delay={index * 0.05} className="relative h-full overflow-hidden border-cyan-200/25 bg-slate-900/95 p-5 sm:p-6">
+              <GlassCard key={project.title} delay={index * 0.05} className="relative h-full overflow-hidden border-cyan-200/25 bg-slate-900/95 p-4 sm:p-6">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-300 via-sky-400 to-cyan-200 opacity-80" />
                 <div className="grid h-11 w-11 place-items-center rounded-2xl bg-cyan-300/15"><Icon className="h-5 w-5 text-cyan-100" /></div>
-                <h3 className="mt-5 text-xl font-semibold tracking-tight text-white">{project.title}</h3>
+                <h3 className="mt-4 text-lg font-semibold tracking-tight text-white sm:text-xl">{project.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-200">{featuredWork[index].summary}</p>
                 <PillList items={featuredWork[index].highlights} />
                 <a href="#additional-projects" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100">
@@ -103,6 +103,23 @@ export function FeaturedWork() {
               </GlassCard>
             );
           })}
+        </div>
+      </section>
+
+
+      <section id="impact-highlights" className="mx-auto max-w-7xl px-5 py-8 sm:py-10 lg:px-8">
+        <SectionHeader
+          eyebrow="Impact Highlights"
+          title="Selected security outcomes"
+          description="Selected outcomes across security operations, automation, intelligence, and AI-assisted security workflows."
+        />
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          {impactHighlights.map((item, index) => (
+            <GlassCard key={item.title} delay={index * 0.025} className="h-full bg-white/[0.035] p-4 sm:p-4">
+              <p className="text-sm font-semibold text-white">{item.title}</p>
+              <p className="mt-2 text-xs leading-5 text-slate-300 sm:text-[0.8rem]">{item.description}</p>
+            </GlassCard>
+          ))}
         </div>
       </section>
 
