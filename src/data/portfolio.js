@@ -24,13 +24,13 @@ import {
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
   shortName: 'Mary Amoah',
-  role: 'Senior Cybersecurity Engineer • SOC Automation • Threat Intelligence • AI Security Research',
+  role: 'Senior Cybersecurity Engineer • Security Automation Engineer • SOC Platform Builder • Threat Intelligence Practitioner • AI Security Researcher',
   headline:
     'Designing security operations platforms, automation workflows, threat intelligence pipelines, and AI-assisted cybersecurity systems.',
   summary:
     'Mary builds SOC platforms, automates response workflows, operationalizes threat intelligence, and applies AI to analyst-reviewed cybersecurity reporting.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
-  availability: 'Cybersecurity Analyst • Security Automation Engineer • Consultant • Instructor',
+  availability: 'Senior Cybersecurity Engineer • Security Automation Engineer • Consultant • Instructor',
   links: [
     { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
     { label: 'Case studies', href: '#case-studies', icon: Link },
@@ -71,7 +71,7 @@ export const coreFocus = [
     title: 'AI & Machine Learning Security Research',
     icon: Binary,
     description:
-      'Experimenting with local LLMs, AI-assisted investigation, log explanations, anomaly detection, and interpretable security telemetry analysis.',
+      'Researching local LLMs, AI-assisted investigation, log explanations, anomaly detection, and interpretable security telemetry analysis.',
   },
   {
     title: 'Security Reporting & Analytics',
@@ -110,27 +110,36 @@ export const additionalFocus = [
   },
 ];
 
+export const impactHighlights = [
+  { title: '180+ Log Sources', description: 'Administered Wazuh SIEM environments supporting enterprise monitoring and investigation workflows.' },
+  { title: 'SOC Reporting Platform', description: 'Consolidated visibility, KPIs, risk, assets, and threat intelligence for analysts and executives.' },
+  { title: 'Security Automation', description: 'Reduced containment effort through analyst-approved enrichment, notification, and response workflows.' },
+  { title: 'Threat Intelligence Operations', description: 'Operationalized OpenCTI, CVE monitoring, IOC enrichment, and intelligence distribution processes.' },
+  { title: 'AI-Assisted Reporting', description: 'Applied local LLM workflows to analyst-reviewed reporting and security narrative generation.' },
+  { title: 'Cybersecurity Education', description: 'Delivered practical labs, workshops, and investigation exercises for learners and analysts.' },
+];
+
 export const featuredWork = [
   {
     title: 'SOC Reporting & Management Platform',
     category: 'Flagship Security Operations Platform',
     icon: Activity,
-    summary: 'The primary flagship: executive and analyst visibility for SOC performance, readiness, risk, metrics, and AI-assisted monthly reporting.',
-    highlights: ['Executive and analyst dashboards', 'Security map visualization', 'Threat intelligence and asset visibility', 'Vulnerability tracking and SLA monitoring', 'Compliance reporting, KPIs, and readiness monitoring', 'Ollama and Qwen AI-generated narratives', 'Automated charts and security trend summaries'],
+    summary: 'Elevates SOC leadership decisions with unified analyst visibility, readiness metrics, risk reporting, and AI-assisted monthly narratives.',
+    highlights: ['Aligned executive and analyst dashboards', 'Improved geographic and operational visibility', 'Correlated threat intelligence and asset context', 'Consolidated vulnerability tracking and SLA awareness', 'Delivered compliance, KPI, and readiness reporting', 'Enabled analyst-reviewed Ollama and Qwen narratives', 'Accelerated charting and trend summaries'],
   },
   {
     title: 'Security Automation & SOAR Platform',
     category: 'Security Automation & SOAR',
     icon: Network,
-    summary: 'A governed response platform connecting Wazuh, TheHive, Cortex, firewalls, Slack, and intelligence feeds with analyst approval checkpoints.',
-    highlights: ['Wazuh, TheHive, Cortex, Palo Alto, FortiGate, Slack', 'Automated IP blocking and unblocking', 'Threat intelligence, alert, and case enrichment', 'Analyst approval workflows and human review checkpoints', 'Audit visibility and consistent response actions', 'Faster containment with reduced analyst workload'],
+    summary: 'Reduces response friction by orchestrating Wazuh, TheHive, Cortex, firewalls, Slack, and intelligence feeds through governed approval checkpoints.',
+    highlights: ['Wazuh, TheHive, Cortex, Palo Alto, FortiGate, Slack', 'Reduced containment effort through analyst-approved blocking and release workflows', 'Improved investigation context through enrichment and intelligence correlation', 'Preserved analyst accountability through review checkpoints', 'Standardized response actions with audit visibility', 'Improved containment speed while reducing analyst workload'],
   },
   {
     title: 'Threat Intelligence & Intelligence Distribution Platform',
     category: 'Threat Intelligence Engineering',
     icon: Database,
-    summary: 'An intelligence pipeline for OpenCTI deployment, enrichment, MITRE mapping, CVE monitoring, and automated stakeholder distribution.',
-    highlights: ['OpenCTI deployment and threat workflows', 'IOC enrichment with VirusTotal and AbuseIPDB', 'MITRE ATT&CK mapping', 'CVE monitoring and weekly threat newsletters', 'Slack and email intelligence notifications', 'Automated intelligence distribution'],
+    summary: 'Turns threat and vulnerability intelligence into analyst context, MITRE alignment, recurring reporting, and stakeholder awareness.',
+    highlights: ['Operationalized OpenCTI threat workflows', 'Improved IOC context with VirusTotal and AbuseIPDB', 'MITRE ATT&CK mapping', 'Converted vulnerability intelligence into recurring stakeholder reporting', 'Delivered intelligence into Slack and email workflows', 'Scaled intelligence distribution across analyst channels'],
   },
 ];
 
@@ -159,7 +168,7 @@ export const skills = [
   {
     title: 'Security Automation & SOAR',
     icon: Workflow,
-    items: ['Python', 'n8n', 'Workflow orchestration', 'Threat intelligence enrichment', 'Automated IP blocking', 'Automated IP unblocking', 'Firewall orchestration', 'Palo Alto', 'FortiGate', 'Slack integrations', 'REST APIs'],
+    items: ['Python', 'n8n', 'Workflow orchestration', 'Intelligence correlation', 'Analyst-approved blocking', 'Analyst-approved release', 'Firewall orchestration', 'Palo Alto', 'FortiGate', 'Slack integrations', 'REST APIs'],
   },
   {
     title: 'Threat & Vulnerability Intelligence',
@@ -185,13 +194,13 @@ export const skills = [
 
 export const experience = [
   {
-    role: 'Cybersecurity Analyst and Consultant',
+    role: 'Senior Cybersecurity Engineer and Consultant',
     company: 'Security Operations, Automation, and Advisory Workflows',
     period: 'Current focus',
     highlights: [
-      'Deployed and documented Wazuh-centered SIEM workflows for endpoint visibility, alert triage, detection review, dashboarding, and security reporting.',
-      'Designed SOC management and reporting platform concepts that consolidate executive dashboards, analyst dashboards, asset visibility, threat intelligence, KPIs, SLAs, and AI-assisted monthly reporting.',
-      'Built automation patterns for TheHive, Cortex, Palo Alto, FortiGate, Slack, APIs, and analyst approval checkpoints to improve containment consistency without removing human review.',
+      'Engineered Wazuh-centered SIEM workflows that improved endpoint visibility, alert triage, detection review, dashboarding, and reporting quality.',
+      'Consolidated SOC management concepts into executive dashboards, analyst views, asset context, threat intelligence, KPIs, SLAs, and AI-assisted monthly reporting.',
+      'Implemented governed automation workflows that improved response consistency while preserving analyst review and accountability.',
       'Operationalized OpenCTI, VirusTotal, AbuseIPDB, MITRE ATT&CK, and CVE distribution workflows so intelligence reaches cases, reports, Slack, email, and newsletters.',
     ],
   },
@@ -200,19 +209,19 @@ export const experience = [
     company: 'Security Education and Practical Lab Development',
     period: 'Current focus',
     highlights: [
-      'Created practical labs for SIEM monitoring, incident response, threat intelligence, vulnerability assessment, digital forensics support, and plain-language reporting.',
-      'Trained learners on investigation questions, evidence validation, escalation judgment, tool usage, and defensible documentation habits.',
-      'Translated advanced SOC, TI, automation, and AI-assisted workflow concepts into approachable workshops for beginner and early-career security learners.',
+      'Delivered practical labs that connect SIEM monitoring, incident response, threat intelligence, vulnerability assessment, forensics support, and plain-language reporting.',
+      'Enabled stronger analyst judgment through investigation questions, evidence validation, escalation criteria, tool usage, and defensible documentation habits.',
+      'Translated advanced SOC, threat intelligence, automation, and AI-assisted workflow concepts into practical workshops for emerging security professionals.',
     ],
   },
   {
-    role: 'Security Automation Engineer and AI & Machine Learning Researcher',
+    role: 'Security Automation Engineer and AI Security Researcher',
     company: 'Independent Cybersecurity Projects',
     period: 'GitHub and case study portfolio',
     highlights: [
-      'Engineered portfolio systems for IOC enrichment, malicious IP containment and release, vulnerability intelligence newsletters, evidence packaging, and forensic timeline building.',
-      'Experimented with Ollama, Qwen, local LLM reporting, AI log explanation, Pentagi, and Isolation Forest anomaly detection for analyst-reviewed cybersecurity workflows.',
-      'Documented project outcomes, review gates, limitations, and implementation tradeoffs for SOC engineering, security architecture, and PhD/research audiences.',
+      'Engineered portfolio systems that improved IOC enrichment, malicious IP containment and release, vulnerability reporting, evidence packaging, and forensic timeline review.',
+      'Evaluated Ollama, Qwen, local LLM reporting, AI log explanation, Pentagi, and Isolation Forest anomaly detection for analyst-reviewed cybersecurity workflows.',
+      'Documented outcomes, review gates, limitations, and implementation tradeoffs for SOC engineering, security architecture, and PhD/research audiences.',
     ],
   },
 ];
@@ -221,7 +230,7 @@ export const githubProjects = [
   {
     repo: 'ai-anomaly-security',
     category: 'AI & Machine Learning Security Analytics',
-    description: 'Isolation Forest experiments for interpretable anomaly detection in security telemetry.',
+    description: 'Isolation Forest research for interpretable anomaly detection in security telemetry.',
     tools: ['Python', 'Jupyter Notebook', 'scikit-learn', 'pandas', 'Isolation Forest'],
   },
   {
@@ -287,14 +296,14 @@ export const projects = [
     icon: Activity,
     featured: true,
     problem: 'Security teams and management needed a centralized platform for monitoring operations, reporting, visibility, and performance tracking.',
-    approach: 'Designed and helped shape a platform that combines operational monitoring, reporting, asset visibility, threat intelligence, and management dashboards into a single security operations experience.',
+    approach: 'Consolidated operational monitoring, reporting, asset visibility, threat intelligence, and management dashboards into a single security operations experience.',
     role: 'Mary focused on requirements gathering, security workflow design, feature planning, dashboard engineering, reporting architecture, dashboard architecture, security operations alignment, platform improvement recommendations, and user experience recommendations for analysts and management.',
     capabilities: [
       'Executive dashboards',
       'Analyst dashboards',
       'Security event monitoring',
       'Threat intelligence visibility',
-      'Security map visualization',
+      'Improved geographic and operational visibility',
       'Asset inventory visibility',
       'Vulnerability management tracking',
       'SLA monitoring',
@@ -320,10 +329,10 @@ export const projects = [
     category: 'Security operations automation',
     icon: Bot,
     problem: 'Security operations analysts often spend time gathering alert context, drafting notes, checking indicators, and deciding what to review next.',
-    approach: 'Designed a human-reviewed workflow that organizes alert details, proposes investigation questions, drafts a triage summary, and keeps final decisions with the analyst.',
+    approach: 'Improved investigation readiness with a human-reviewed workflow that organizes alert details, proposes investigation questions, drafts triage summaries, and keeps final decisions with the analyst.',
     role: 'Mary defined the workflow stages, prompt structure, review checkpoints, documentation approach, and escalation notes.',
     tools: ['n8n', 'Python', 'REST API integrations', 'Slack', 'MITRE ATT&CK', 'SIEM dashboards'],
-    outcome: 'Created a repeatable triage pattern for clearer notes, consistent evidence review, and careful escalation without claiming autonomous decision-making.',
+    outcome: 'Improved triage consistency through clearer notes, repeatable evidence review, and careful escalation without claiming autonomous decision-making.',
   },
   {
     title: 'Wazuh SIEM Engineering & Detection',
@@ -333,7 +342,7 @@ export const projects = [
     approach: 'Outlined a Wazuh SIEM engineering workflow covering agent enrollment, log collection, detection rules, alert review, dashboard organization, decoder and parser planning, tuning concepts, and reporting.',
     role: 'Mary configured the portfolio workflow, documented monitoring steps, mapped alert review paths, and described dashboard usage for Security Operations and incident response work.',
     tools: ['Wazuh', 'Linux', 'SIEM dashboards', 'MITRE ATT&CK', 'Detection engineering', 'Rule tuning', 'Log analysis'],
-    outcome: 'Produced a practical SIEM engineering case study that shows how Wazuh can support monitoring, triage, documentation, and security communication.',
+    outcome: 'Demonstrated how Wazuh improves monitoring, triage, documentation, and security communication in a practical SIEM engineering case study.',
   },
   {
     title: 'TheHive + Cortex Incident Response Workflow',
@@ -350,19 +359,19 @@ export const projects = [
     category: 'Threat Intelligence',
     icon: Database,
     problem: 'Alerts are harder to prioritize when indicators lack context about malware, infrastructure, tactics, campaigns, source confidence, or relevance.',
-    approach: 'Created an OpenCTI-centered process for collecting, organizing, and summarizing threat context before analyst escalation or response decisions.',
+    approach: 'Operationalized an OpenCTI-centered process that collects, organizes, and summarizes threat context before analyst escalation or response decisions.',
     role: 'Mary modeled indicator collection, source confidence review, MITRE ATT&CK mapping, and attachment of threat notes to incident records and reports.',
     tools: ['OpenCTI', 'MITRE ATT&CK', 'VirusTotal', 'AbuseIPDB', 'TheHive', 'Threat intelligence'],
-    outcome: 'Created a context-driven prioritization approach that helps separate routine noise from indicators that deserve escalation, monitoring, or containment review.',
+    outcome: 'Improved prioritization by separating routine noise from indicators that deserve escalation, monitoring, or containment review.',
   },
   {
     title: 'Security Automation & SOAR Platform',
     category: 'Security Automation & SOAR',
     icon: Network,
     problem: 'Security teams require fast and consistent containment of malicious indicators while maintaining operational visibility and safe release paths.',
-    approach: 'Designed and implemented automated workflows for malicious IP containment and release, connecting IOC-driven decisions to firewall policy orchestration, enrichment, audit records, and notifications.',
+    approach: 'Reduced containment effort through analyst-approved automated blocking and release workflows that connect IOC decisions to firewall orchestration, enrichment, audit records, and notifications.',
     role: 'Mary owned workflow architecture, security automation engineering, integration development, firewall orchestration design, threat intelligence workflow design, testing, and validation.',
-    capabilities: ['Automated IP blocking', 'Automated IP unblocking', 'Threat intelligence enrichment', 'Analyst approval workflows', 'Alert enrichment', 'Case enrichment', 'Audit visibility', 'Human review checkpoints'],
+    capabilities: ['Analyst-approved blocking', 'Analyst-approved release', 'Intelligence correlation', 'Analyst approval workflows', 'Alert enrichment', 'Case enrichment', 'Audit visibility', 'Human review checkpoints'],
     tools: ['Wazuh', 'TheHive', 'Cortex', 'Palo Alto', 'FortiGate', 'Slack', 'Threat intelligence feeds', 'n8n', 'Python', 'REST APIs'],
     outcome: 'Supports faster containment, reduced analyst workload, consistent response actions, and improved response efficiency while preserving review and accountability.',
   },
@@ -372,7 +381,7 @@ export const projects = [
     category: 'Vulnerability Intelligence & Reporting Automation',
     icon: FileCheck,
     problem: 'Security stakeholders need recurring awareness of relevant CVEs and vulnerability trends without relying on manual feed checks or one-off messages.',
-    approach: 'Built an automation workflow that monitors vulnerability sources, aggregates CVE context, prepares weekly newsletter content, and distributes security updates through Slack and email channels.',
+    approach: 'Converted vulnerability intelligence into recurring stakeholder reporting by aggregating CVE context and distributing security updates through Slack and email channels.',
     role: 'Mary designed the workflow, intelligence processing, distribution architecture, reporting structure, and stakeholder notification model.',
     capabilities: ['CVE monitoring', 'Vulnerability intelligence aggregation', 'Weekly newsletter generation', 'Security trend summaries', 'Slack delivery', 'Email delivery', 'Automated stakeholder notifications', 'Vulnerability awareness workflows'],
     tools: ['Python', 'APIs', 'Slack', 'Email integrations', 'Vulnerability feeds', 'Automation workflows'],
@@ -383,32 +392,32 @@ export const projects = [
     category: 'Threat Intelligence Automation',
     icon: Database,
     problem: 'Indicator context and CVE updates lose value when enrichment, review notes, and delivery channels are disconnected from analyst workflows.',
-    approach: 'Connected OpenCTI-centered intelligence handling with IOC enrichment, VirusTotal and AbuseIPDB checks, and CVE-to-Slack and CVE-to-email distribution workflows.',
+    approach: 'Improved investigation context through automated enrichment, intelligence correlation, and CVE distribution across Slack and email workflows.',
     role: 'Mary designed enrichment pipelines, source-context handling, automated distribution flows, and analyst-facing intelligence summaries.',
-    capabilities: ['OpenCTI deployment', 'IOC enrichment', 'VirusTotal integration', 'AbuseIPDB integration', 'MITRE ATT&CK mapping', 'Threat intelligence workflows', 'CVE monitoring', 'Automated intelligence distribution', 'Slack notifications', 'Email notifications', 'Weekly threat newsletters'],
+    capabilities: ['OpenCTI deployment', 'IOC enrichment', 'VirusTotal integration', 'AbuseIPDB integration', 'MITRE ATT&CK mapping', 'Threat intelligence workflows', 'CVE monitoring', 'Scaled intelligence distribution across analyst channels', 'Slack notifications', 'Email notifications', 'Weekly threat newsletters'],
     tools: ['OpenCTI', 'VirusTotal', 'AbuseIPDB', 'Python', 'REST APIs', 'Slack', 'Email integrations'],
-    outcome: 'Created a distribution pattern that brings indicator and vulnerability context into the channels analysts and stakeholders already review.',
+    outcome: 'Improved operational awareness by bringing indicator and vulnerability context into the channels analysts and stakeholders already review.',
   },
   {
     title: 'AI-Assisted Penetration Testing Environment',
     category: 'AI-Assisted Security Testing',
     icon: Bug,
     problem: 'Security testing practice benefits from isolated environments where AI-assisted workflows can be deployed, integrated, and evaluated without overstating automation.',
-    approach: 'Deployed and integrated Pentagi with Ollama and local LLM components inside containerized Linux testing environments for experimentation with AI-assisted assessment workflows.',
-    role: 'Mary handled deployment, local LLM integration, containerized environment setup, workflow experimentation, and validation of where human review remains necessary.',
-    capabilities: ['Pentagi deployment', 'Ollama integration', 'Local LLM integration', 'Docker/containerized setup', 'AI-assisted security assessment workflows', 'Offensive security experimentation', 'Vulnerability validation support'],
+    approach: 'Evaluated Pentagi with Ollama and local LLM components inside containerized Linux testing environments for AI-assisted assessment workflows.',
+    role: 'Mary handled deployment, local LLM integration, containerized environment setup, workflow evaluation, and validation of where human review remains necessary.',
+    capabilities: ['Pentagi deployment', 'Ollama integration', 'Local LLM integration', 'Docker/containerized setup', 'AI-assisted security assessment workflows', 'Responsible offensive security evaluation', 'Vulnerability validation support'],
     tools: ['Pentagi', 'Ollama', 'Local LLM integration', 'Docker', 'Linux'],
-    outcome: 'Built a practical environment for evaluating AI-assisted penetration testing workflows, vulnerability validation support, and responsible offensive security experimentation.',
+    outcome: 'Established a practical environment for evaluating AI-assisted penetration testing workflows, vulnerability validation support, and responsible offensive security boundaries.',
   },
   {
     title: 'AI & Machine Learning Security Analytics with Isolation Forest',
     category: 'AI & Machine Learning for Cybersecurity',
     icon: Binary,
     problem: 'Heterogeneous security telemetry can contain subtle outliers that are difficult to prioritize with rules alone.',
-    approach: 'Explored Isolation Forest workflows for anomaly detection, feature review, notebook-based experimentation, and analyst-readable explanations.',
-    role: 'Mary developed the experiment structure, documented assumptions, reviewed model outputs, and emphasized interpretability, analyst validation, and limitations.',
+    approach: 'Evaluated Isolation Forest workflows for anomaly detection, feature review, notebook-based analysis, and analyst-readable explanations.',
+    role: 'Mary developed the research structure, documented assumptions, reviewed model outputs, and emphasized interpretability, analyst validation, and limitations.',
     tools: ['Python', 'Jupyter Notebook', 'scikit-learn', 'pandas', 'NumPy', 'Matplotlib', 'Isolation Forest'],
-    outcome: 'Built a research-oriented project showing how anomaly detection can support investigation questions without replacing analyst judgment.',
+    outcome: 'Advanced a research-oriented project showing how anomaly detection can support investigation questions without replacing analyst judgment.',
   },
   {
     title: 'Digital Forensics Evidence Packaging and Timeline Building',
@@ -418,14 +427,14 @@ export const projects = [
     approach: 'Developed supporting workflows that package incident evidence, verify SHA256 hashes, record metadata, and reconstruct chronological timelines.',
     role: 'Mary built and documented evidence packaging, hash verification, metadata review, and timeline-building practices for response and forensics handoffs.',
     tools: ['Python', 'SHA256 verification', 'Forensic timelines', 'Metadata', 'Linux', 'Incident evidence'],
-    outcome: 'Created digital forensics support utilities that make evidence handling clearer, more verifiable, and easier to explain during response review.',
+    outcome: 'Improved evidence handling with clearer packaging, verifiable hashes, metadata review, and response-ready timelines.',
   },
   {
     title: 'Cybersecurity Instructor and Lab Development',
     category: 'Cybersecurity Instruction',
     icon: BookOpenCheck,
     problem: 'Learners need practical cybersecurity labs that connect theory to real security operations tasks without overwhelming them with disconnected tools.',
-    approach: 'Designed guided labs around alert triage, SIEM monitoring, incident response, threat intelligence, vulnerability assessment and security testing practice, digital forensics support, and reporting.',
+    approach: 'Delivered guided labs around alert triage, SIEM monitoring, incident response, threat intelligence, vulnerability assessment, forensics support, and reporting.',
     role: 'Mary developed lesson structure, lab flow, reflection prompts, assessment ideas, and tool walkthroughs that emphasize confidence and careful judgment.',
     tools: ['Wazuh', 'TheHive', 'Cortex', 'OpenCTI', 'Linux', 'Jupyter Notebook', 'MITRE ATT&CK'],
     outcome: 'Turned complex security workflows into approachable exercises with clear objectives, evidence expectations, and reporting habits.',
@@ -438,7 +447,7 @@ export const projects = [
     approach: 'Practiced vulnerability identification, web/security testing fundamentals, evidence capture, severity explanation, reporting, remediation guidance, and defensive validation.',
     role: 'Mary documented assessment steps, mapped findings to risk, practiced concise reporting, and connected vulnerability observations to monitoring recommendations.',
     tools: ['Linux', 'vulnerability assessment and security testing practice', 'Risk reporting', 'Remediation notes', 'MITRE ATT&CK', 'Security assessment'],
-    outcome: 'Built a careful assessment practice area focused on evidence quality, responsible wording, remediation support, and defensive validation.',
+    outcome: 'Strengthened assessment practice through evidence quality, responsible wording, remediation support, and defensive validation.',
   },
 ];
 
@@ -493,20 +502,20 @@ export const certifications = [
 export const contactCards = [
   {
     title: 'Email',
-    detail: 'Send an email',
+    detail: 'Send message',
     href: 'mailto:techiesiwaamoah@gmail.com',
     icon: Mail,
   },
   {
     title: 'GitHub',
-    detail: 'View GitHub profile',
+    detail: 'View projects',
     href: 'https://github.com/maryamoah',
     icon: GitBranch,
     external: true,
   },
   {
     title: 'LinkedIn',
-    detail: 'Connect on LinkedIn',
+    detail: 'Connect',
     href: 'https://www.linkedin.com/in/mary-amoah',
     icon: Link,
     external: true,

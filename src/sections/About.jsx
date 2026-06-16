@@ -3,15 +3,15 @@ import { SectionHeader } from '../components/SectionHeader';
 import { profile } from '../data/portfolio';
 
 const roles = [
-  { title: 'Practitioner', detail: 'Turns alerts and evidence into defensible investigation, escalation, and response decisions.' },
-  { title: 'Engineer', detail: 'Builds SOC platforms, dashboards, integrations, and automation that reduce analyst friction.' },
-  { title: 'Educator', detail: 'Converts complex security workflows into practical labs, workshops, and mentoring paths.' },
-  { title: 'Researcher', detail: 'Applies local LLMs, anomaly detection, and explainable AI to cybersecurity operations.' },
+  { title: 'Practitioner', detail: 'Evidence-driven investigations and defensible response decisions.' },
+  { title: 'Engineer', detail: 'SOC platforms, automation workflows, dashboards, and integrations.' },
+  { title: 'Educator', detail: 'Practical labs, mentoring, and security skills development.' },
+  { title: 'Researcher', detail: 'AI-assisted security analysis and explainable cybersecurity workflows.' },
 ];
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-7xl px-5 py-12 sm:py-14 lg:px-8">
+    <section id="about" className="mx-auto max-w-7xl px-5 py-10 sm:py-14 lg:px-8">
       <SectionHeader
         eyebrow="About"
         title="A cybersecurity builder with an operations mindset"
@@ -25,9 +25,9 @@ export function About() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {roles.map((role) => (
-              <div key={role.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <div key={role.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-3 sm:p-4">
                 <h4 className="text-base font-semibold text-white">{role.title}</h4>
-                <p className="mt-2 text-sm leading-6 text-slate-200">{role.detail}</p>
+                <p className="mt-1 text-sm leading-5 text-slate-200">{role.detail}</p>
               </div>
             ))}
           </div>
