@@ -85,7 +85,7 @@ export function FeaturedWork() {
         <SectionHeader
           eyebrow="Featured Engineering Projects"
           title="Security platforms, automation, and intelligence systems"
-          description="Three senior-engineering project areas that show impact first and implementation details second."
+          description="Three engineering project areas that show impact first and implementation details second."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {selectedProjects.map((project, index) => {
@@ -125,9 +125,9 @@ export function FeaturedWork() {
 
       <section id="additional-projects" className="mx-auto max-w-7xl px-5 py-12 sm:py-14 lg:px-8">
         <SectionHeader
-          eyebrow="Additional Projects & Research"
-          title="Compact case studies and research experiments"
-          description="Preview cards stay short by default; details expand only when needed."
+          eyebrow="Technical Projects"
+          title="Technical project case studies"
+          description="Technical project previews stay short by default; details expand only when needed."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {visibleAdditional.map((project, index) => <ProjectPreview key={project.title} project={project} index={index} />)}

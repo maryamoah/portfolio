@@ -24,7 +24,7 @@ import {
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
   shortName: 'Mary Amoah',
-  role: 'Senior Cybersecurity Engineer • Security Automation Engineer • SOC Platform Builder • Threat Intelligence Practitioner • AI Security Researcher',
+  role: 'Cybersecurity Engineer • Security Automation Engineer • SOC Platform Builder • Threat Intelligence Practitioner • AI Security Researcher',
   headline:
     'Designing security operations platforms, automation workflows, threat intelligence pipelines, and AI-assisted cybersecurity systems.',
   summary:
