@@ -10,7 +10,7 @@ const allWorkTitles = [
   'AI-Assisted SOC Triage & Investigation',
   'Wazuh SIEM Engineering & Detection',
   'TheHive + Cortex Incident Response Workflow',
-  'Automated Vulnerability Intelligence & Security Newsletter',
+  'Automated Vulnerability Intelligence Newsletter',
   'AI-Assisted Penetration Testing Environment',
 ];
 
