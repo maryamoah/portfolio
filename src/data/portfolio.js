@@ -24,13 +24,13 @@ import {
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
   shortName: 'Mary Amoah',
-  role: 'Senior Cybersecurity Engineer • Security Automation Engineer • SOC Platform Builder • Threat Intelligence Practitioner • AI Security Researcher',
+  role: 'Cybersecurity Engineer • Security Automation Engineer • SOC Platform Builder • Threat Intelligence Practitioner • AI Security Researcher',
   headline:
     'Designing security operations platforms, automation workflows, threat intelligence pipelines, and AI-assisted cybersecurity systems.',
   summary:
     'Mary builds SOC platforms, automates response workflows, operationalizes threat intelligence, and applies AI to analyst-reviewed cybersecurity reporting.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
-  availability: 'Senior Cybersecurity Engineer • Security Automation Engineer • Consultant • Instructor',
+  availability: 'Cybersecurity Engineer • Security Automation Engineer • Consultant • Instructor',
   links: [
     { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
     { label: 'Case studies', href: '#case-studies', icon: Link },
@@ -158,43 +158,43 @@ export const skills = [
   {
     title: 'Security Operations & Incident Response',
     icon: ShieldAlert,
-    items: ['Alert triage', 'Incident investigation', 'Threat hunting', 'Case management', 'Investigation workflows', 'TheHive', 'Cortex'],
+    items: ['Alert Triage', 'Incident Investigation', 'Threat Hunting', 'Case Management', 'Investigation Workflows'],
   },
   {
     title: 'SIEM Engineering & Detection',
     icon: Radio,
-    items: ['Wazuh', 'Detection engineering', 'Custom detection rules', 'Log parser development', 'Decoder development', 'Security use case development', 'Correlation logic', 'Alert tuning', 'Dashboard engineering', 'MITRE ATT&CK mapping', 'Detection validation'],
+    items: ['Wazuh', 'Detection Engineering', 'Custom Detection Rules', 'Correlation Logic', 'Alert Tuning', 'Dashboard Engineering', 'MITRE ATT&CK Mapping'],
   },
   {
     title: 'Security Automation & SOAR',
     icon: Workflow,
-    items: ['Python', 'n8n', 'Workflow orchestration', 'Intelligence correlation', 'Analyst-approved blocking', 'Analyst-approved release', 'Firewall orchestration', 'Palo Alto', 'FortiGate', 'Slack integrations', 'REST APIs'],
+    items: ['Python', 'n8n', 'Workflow Orchestration', 'Firewall Automation', 'SOAR Workflows', 'Slack Integrations', 'REST APIs'],
   },
   {
     title: 'Threat & Vulnerability Intelligence',
     icon: Database,
-    items: ['OpenCTI', 'VirusTotal', 'AbuseIPDB', 'IOC enrichment', 'CVE monitoring', 'CVE-to-Slack workflows', 'CVE-to-email workflows', 'Weekly security newsletter'],
+    items: ['OpenCTI', 'Threat Intelligence Enrichment', 'CVE Monitoring', 'Intelligence Distribution'],
   },
   {
     title: 'AI & Machine Learning for Cybersecurity',
     icon: Binary,
-    items: ['Ollama', 'Qwen', 'Local LLM workflows', 'scikit-learn', 'pandas', 'NumPy', 'Jupyter Notebook', 'Isolation Forest', 'Anomaly detection', 'Security telemetry analysis', 'AI-assisted reporting'],
+    items: ['Ollama', 'Qwen', 'Local LLM Workflows', 'Isolation Forest', 'Security Telemetry Analysis', 'AI-Assisted Reporting'],
   },
   {
     title: 'Vulnerability Assessment & Security Testing',
     icon: Bug,
-    items: ['Burp Suite', 'Pentagi', 'Web application security testing', 'Vulnerability identification', 'Vulnerability validation', 'Security assessment support', 'Remediation guidance'],
+    items: ['Burp Suite', 'Pentagi', 'Web Application Testing', 'Vulnerability Validation', 'Remediation Guidance'],
   },
   {
     title: 'Cybersecurity Education',
     icon: BookOpenCheck,
-    items: ['Lab development', 'Technical mentoring', 'SIEM training', 'Threat intelligence training', 'Security monitoring exercises', 'Practical workshops'],
+    items: ['Lab Development', 'Technical Mentoring', 'SIEM Training', 'Threat Intelligence Training', 'Practical Workshops'],
   },
 ];
 
 export const experience = [
   {
-    role: 'Senior Cybersecurity Engineer and Consultant',
+    role: 'Cybersecurity Engineer and Consultant',
     company: 'Security Operations, Automation, and Advisory Workflows',
     period: 'Current focus',
     highlights: [

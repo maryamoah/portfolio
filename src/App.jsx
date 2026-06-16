@@ -2,7 +2,8 @@ import { Navbar } from './components/Navbar';
 import { About } from './sections/About';
 import { Contact } from './sections/Contact';
 import { Experience } from './sections/Experience';
-import { FeaturedWork } from './sections/FeaturedWork';
+import { FeaturedWork, TechnicalProjects } from './sections/FeaturedWork';
+import { Research } from './sections/Research';
 import { Hero } from './sections/Hero';
 import { Skills } from './sections/Skills';
 
@@ -15,11 +16,13 @@ function App() {
         <FeaturedWork />
         <About />
         <Experience />
+        <TechnicalProjects />
+        <Research />
         <Skills />
         <Contact />
       </main>
       <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-300">
-        <p>© {new Date().getFullYear()} Mary Abenawa Techiesiwa Amoah. Built with React, Vite, Tailwind CSS, and Framer Motion.</p>
+        <p>© 2026 Mary Abenawa Techiesiwa Amoah</p>
       </footer>
     </div>
   );
