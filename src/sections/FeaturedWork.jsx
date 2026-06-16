@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ChevronDown, X } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
 import { SectionHeader } from '../components/SectionHeader';
@@ -40,6 +41,56 @@ function DetailRow({ label, children }) {
   );
 }
 
+function FeaturedCaseStudy({ caseStudy, title, onClose }) {
+  const sectionLabels = [
+    ['Problem', caseStudy.problem],
+    ['Approach', caseStudy.approach],
+    ['My Role', caseStudy.role],
+  ];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, height: 0, y: -8 }}
+      animate={{ opacity: 1, height: 'auto', y: 0 }}
+      exit={{ opacity: 0, height: 0, y: -8 }}
+      transition={{ duration: 0.35, ease: 'easeInOut' }}
+      className="overflow-hidden"
+    >
+      <div className="mt-6 rounded-3xl border border-cyan-200/20 bg-white/[0.045] p-4 shadow-inner shadow-cyan-950/30 sm:p-5">
+        <div className="flex flex-col gap-3 border-b border-white/10 pb-4 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Expanded Case Study</p>
+            <h4 className="mt-2 text-base font-semibold text-white">{title}</h4>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-cyan-200/25 bg-slate-950/50 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/50 hover:bg-cyan-300/10"
+          >
+            Close details <X className="h-4 w-4" />
+          </button>
+        </div>
+        <div className="mt-4 grid gap-3">
+          {sectionLabels.map(([label, content]) => (
+            <DetailRow key={label} label={label}>{content}</DetailRow>
+          ))}
+          <DetailRow label="Capabilities">
+            <ul className="grid gap-2">
+              {caseStudy.capabilities.map((capability) => (
+                <li key={capability} className="flex gap-2">
+                  <span className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300" />
+                  <span>{capability}</span>
+                </li>
+              ))}
+            </ul>
+          </DetailRow>
+          <DetailRow label="Outcome">{caseStudy.outcome}</DetailRow>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 function ProjectPreview({ project, index }) {
   const [open, setOpen] = useState(false);
   const summary = project.outcome || project.approach;
@@ -75,6 +126,7 @@ function ProjectPreview({ project, index }) {
 
 export function FeaturedWork() {
   const [showMore, setShowMore] = useState(false);
+  const [activeFeaturedProject, setActiveFeaturedProject] = useState(null);
   const selectedProjects = useMemo(() => selectedTitles.map((title) => projects.find((project) => project.title === title)).filter(Boolean), []);
   const additionalProjects = useMemo(() => additionalTitles.map((title) => projects.find((project) => project.title === title)).filter(Boolean), []);
   const visibleAdditional = showMore ? additionalProjects : additionalProjects.slice(0, 3);
@@ -97,9 +149,23 @@ export function FeaturedWork() {
                 <h3 className="mt-4 text-lg font-semibold tracking-tight text-white sm:text-xl">{project.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-200">{featuredWork[index].summary}</p>
                 <PillList items={featuredWork[index].highlights} />
-                <a href="#additional-projects" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100">
-                  View Case Study <ArrowRight className="h-4 w-4" />
-                </a>
+                <button
+                  type="button"
+                  onClick={() => setActiveFeaturedProject((activeTitle) => (activeTitle === project.title ? null : project.title))}
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100"
+                  aria-expanded={activeFeaturedProject === project.title}
+                >
+                  View Case Study <ChevronDown className={`h-4 w-4 transition ${activeFeaturedProject === project.title ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence initial={false}>
+                  {activeFeaturedProject === project.title ? (
+                    <FeaturedCaseStudy
+                      caseStudy={featuredWork[index].caseStudy}
+                      title={project.title}
+                      onClose={() => setActiveFeaturedProject(null)}
+                    />
+                  ) : null}
+                </AnimatePresence>
               </GlassCard>
             );
           })}
