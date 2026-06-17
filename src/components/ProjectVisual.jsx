@@ -6,10 +6,10 @@ export function ScreenshotPreview({ src, alt, label, caption, className = '', im
   return (
     <figure className={`overflow-hidden rounded-2xl border border-cyan-200/15 bg-slate-950/70 shadow-lg shadow-cyan-950/20 ${className}`}>
       {label ? (
-        <figcaption className="flex items-center justify-between gap-3 border-b border-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-200">
+        <div className="flex items-center justify-between gap-3 border-b border-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-200">
           <span>{label}</span>
           <span className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.85)]" />
-        </figcaption>
+        </div>
       ) : null}
       {!hasError ? (
         <img

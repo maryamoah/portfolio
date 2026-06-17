@@ -5,7 +5,7 @@ import { contactCards, resumeLink } from '../data/portfolio';
 
 export function Contact() {
   const ResumeIcon = resumeLink.icon;
-  const cards = [...contactCards, { title: 'Resume', detail: 'Download PDF', href: resumeLink.href, icon: ResumeIcon, download: true }];
+  const cards = [...contactCards, { title: resumeLink.label, detail: 'PDF resume', href: resumeLink.href, icon: ResumeIcon, download: true }];
 
   return (
     <section id="contact" className="mx-auto max-w-7xl px-5 py-10 sm:py-12 lg:px-8">
@@ -17,7 +17,7 @@ export function Contact() {
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         {cards.map((card, index) => {
           const Icon = card.icon;
-          const isResume = card.title === 'Resume';
+          const isResume = card.href === resumeLink.href;
           return (
             <a
               key={card.title}

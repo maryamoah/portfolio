@@ -575,6 +575,6 @@ export const contactCards = [
 
 export const resumeLink = {
   label: 'Download Resume',
-  href: '/mary-amoah-resume.txt',
+  href: '/mary-amoah-resume.pdf',
   icon: FileDown,
 };
