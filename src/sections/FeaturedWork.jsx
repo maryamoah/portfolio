@@ -3,10 +3,41 @@ import { ChevronDown, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
+import { ScreenshotPreview, SoarWorkflowVisual } from '../components/ProjectVisual';
+import { screenshotAltText, screenshotPaths } from '../data/screenshots';
 import { SectionHeader } from '../components/SectionHeader';
 import { featuredWork, githubProjects, impactHighlights, projects, researchInterests } from '../data/portfolio';
 
 const selectedTitles = featuredWork.map((project) => project.title);
+
+const projectVisuals = {
+  'SOC Reporting & Management Platform': { type: 'screenshot', src: screenshotPaths.soc, alt: screenshotAltText.soc, label: 'SOC Reporting Platform', caption: 'Operational visibility, vulnerability posture, asset coverage, and reporting workflows.' },
+  'Security Automation & SOAR Platform': { type: 'workflow', caption: 'Automated containment and release workflow connecting alerts, enrichment, firewall enforcement, analyst review, and notifications.' },
+  'Threat Intelligence & Intelligence Distribution Platform': { type: 'screenshot', src: screenshotPaths.opencti, alt: screenshotAltText.opencti, label: 'OpenCTI Dashboard', caption: 'Threat intelligence dashboarding, indicators, reports, relationships, and CVE visibility.' },
+  'Wazuh SIEM Engineering & Detection': { type: 'screenshot', src: screenshotPaths.wazuh, alt: screenshotAltText.wazuh, label: 'Wazuh Dashboard' },
+  'OpenCTI Threat Intelligence Integration': { type: 'screenshot', src: screenshotPaths.opencti, alt: screenshotAltText.opencti, label: 'OpenCTI Dashboard' },
+};
+
+function ProjectVisual({ visual, expanded = false }) {
+  if (!visual) return null;
+  const imageClassName = expanded ? 'h-52 sm:h-64 lg:h-80' : 'h-32 sm:h-36';
+
+  if (visual.type === 'workflow') {
+    return <SoarWorkflowVisual caption={expanded ? visual.caption : null} imageClassName={imageClassName} className={expanded ? 'mt-4' : 'mb-4'} />;
+  }
+
+  return (
+    <ScreenshotPreview
+      src={visual.src}
+      alt={visual.alt}
+      label={visual.label}
+      caption={expanded ? visual.caption : null}
+      imageClassName={imageClassName}
+      className={expanded ? 'mt-4' : 'mb-4'}
+    />
+  );
+}
+
 const additionalTitles = [
   'AI-Assisted SOC Triage & Investigation',
   'Wazuh SIEM Engineering & Detection',
@@ -57,7 +88,8 @@ function FeaturedCaseStudy({ caseStudy, title, onClose }) {
       className="overflow-hidden"
     >
       <div className="mt-6 rounded-3xl border border-cyan-200/20 bg-white/[0.045] p-4 shadow-inner shadow-cyan-950/30 sm:p-5">
-        <div className="flex flex-col gap-3 border-b border-white/10 pb-4 sm:flex-row sm:items-start sm:justify-between">
+        <ProjectVisual visual={projectVisuals[title]} expanded />
+        <div className="mt-4 flex flex-col gap-3 border-b border-white/10 pb-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Expanded Case Study</p>
             <h4 className="mt-2 text-base font-semibold text-white">{title}</h4>
@@ -97,6 +129,7 @@ function ProjectPreview({ project, index }) {
 
   return (
     <GlassCard delay={index * 0.035} className="h-full bg-white/[0.035] p-5">
+      <ProjectVisual visual={projectVisuals[project.title]} />
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">{project.category}</p>
       <h3 className="mt-3 text-lg font-semibold text-white">{project.title}</h3>
       <p className="mt-2 text-sm leading-6 text-slate-200">{summary}</p>
@@ -145,6 +178,7 @@ export function FeaturedWork() {
             return (
               <GlassCard key={project.title} delay={index * 0.05} className="relative h-full overflow-hidden border-cyan-200/25 bg-slate-900/95 p-4 sm:p-6">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-300 via-sky-400 to-cyan-200 opacity-80" />
+                <ProjectVisual visual={projectVisuals[project.title]} />
                 <div className="grid h-11 w-11 place-items-center rounded-2xl bg-cyan-300/15"><Icon className="h-5 w-5 text-cyan-100" /></div>
                 <h3 className="mt-4 text-lg font-semibold tracking-tight text-white sm:text-xl">{project.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-200">{featuredWork[index].summary}</p>
