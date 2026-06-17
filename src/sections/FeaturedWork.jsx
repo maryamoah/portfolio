@@ -20,7 +20,7 @@ const projectVisuals = {
 
 function ProjectVisual({ visual, expanded = false }) {
   if (!visual) return null;
-  const imageClassName = expanded ? 'h-52 sm:h-64 lg:h-80' : 'h-32 sm:h-36';
+  const imageClassName = expanded ? 'h-52 sm:h-64 lg:h-80' : 'h-28 sm:h-32 md:h-36';
 
   if (visual.type === 'workflow') {
     return <SoarWorkflowVisual caption={expanded ? visual.caption : null} imageClassName={imageClassName} className={expanded ? 'mt-4' : 'mb-4'} />;
@@ -33,6 +33,7 @@ function ProjectVisual({ visual, expanded = false }) {
       label={visual.label}
       caption={expanded ? visual.caption : null}
       imageClassName={imageClassName}
+      imageToneClassName={visual.label === 'SOC Reporting Platform' ? 'brightness-75 contrast-95 saturate-90' : ''}
       className={expanded ? 'mt-4' : 'mb-4'}
     />
   );
@@ -169,7 +170,10 @@ export function FeaturedWork() {
       <section id="featured-projects" className="mx-auto max-w-7xl px-5 py-10 sm:py-14 lg:px-8">
         <SectionHeader
           eyebrow="Featured Engineering Projects"
-          title="Security platforms, automation, and intelligence systems"
+          title={(<>
+            <span className="md:hidden">Featured Security Engineering Work</span>
+            <span className="hidden md:inline">Security platforms, automation, and intelligence systems</span>
+          </>)}
           description="Three engineering project areas that show impact first and implementation details second."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
