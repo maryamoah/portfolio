@@ -26,5 +26,9 @@
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-refresh": "latest",
     "globals": "latest"
+  },
+  "packageManager": "npm@11.5.1",
+  "engines": {
+    "node": ">=20"
   }
 }

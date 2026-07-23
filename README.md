@@ -58,7 +58,9 @@ npm run preview
 
 This project includes a `vercel.json` configured for Vite:
 
+- Install command: `npm install`
 - Build command: `npm run build`
+- Development command: `npm run dev`
 - Output directory: `dist`
 - Framework: `vite`
 - SPA rewrite: all routes serve `index.html`
@@ -69,6 +71,14 @@ To deploy:
 2. Import the repository in Vercel.
 3. Confirm Vercel detects Vite or uses the included `vercel.json` settings.
 4. Deploy the `main` branch after the pull request is reviewed and merged.
+
+### Vercel build troubleshooting
+
+The expected Vercel build log for this repository should show `portfolio@0.1.0 build` followed by `vite build`. If the log shows another package name or `next build`, Vercel is building stale settings or a different project/repository. In that case:
+
+1. Confirm the Vercel project is connected to the repository that contains this `package.json` and `vercel.json`.
+2. In Vercel project settings, clear any build-command override that runs `next build`.
+3. Redeploy with the framework preset set to Vite and output directory set to `dist`.
 
 ## Content Updates
 
