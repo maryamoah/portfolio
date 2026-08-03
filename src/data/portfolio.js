@@ -3,21 +3,19 @@ import {
   Binary,
   BookOpenCheck,
   Bot,
-  Briefcase,
   Bug,
   Database,
   FileCheck,
   Fingerprint,
   GitBranch,
-  GraduationCap,
   FileDown,
   Link,
   Mail,
   Network,
+  Radar,
   Radio,
   SearchCheck,
   ShieldAlert,
-  ShieldCheck,
   Workflow,
 } from 'lucide-react';
 
@@ -31,84 +29,9 @@ export const profile = {
     'Mary builds SOC platforms, automates response workflows, operationalizes threat intelligence, and applies AI to analyst-reviewed cybersecurity reporting.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
   availability: 'Senior Cybersecurity Engineer • Security Automation Engineer • Consultant • Instructor',
-  links: [
-    { label: 'GitHub projects', href: '#github-projects', icon: GitBranch },
-    { label: 'Case studies', href: '#case-studies', icon: Link },
-  ],
 };
 
-
-export const specializations = [
-  'Security Operations Engineering',
-  'Security Automation & SOAR',
-  'Threat Intelligence & Vulnerability Intelligence',
-  'Security Reporting & Analytics',
-  'AI & Machine Learning Security Research',
-  'Vulnerability Assessment & Security Testing',
-  'Cybersecurity Education',
-];
-
-export const metrics = [
-  { value: 'Operations', label: 'Triage, escalation, investigation, and reporting workflows' },
-  { value: 'Response', label: 'Incident handoffs, evidence notes, and investigation timelines' },
-  { value: 'Applied AI', label: 'Security telemetry analysis and interpretable research' },
-];
-
-export const coreFocus = [
-  {
-    title: 'Security Operations Engineering',
-    icon: ShieldCheck,
-    description:
-      'Designing monitoring workflows, investigation paths, detection logic, dashboards, escalation models, and operational readiness views for SOC teams.',
-  },
-  {
-    title: 'Security Automation & SOAR',
-    icon: Workflow,
-    description:
-      'Building containment, enrichment, notification, case-management, and analyst-review workflows with clear control points and audit visibility.',
-  },
-  {
-    title: 'AI & Machine Learning Security Research',
-    icon: Binary,
-    description:
-      'Researching local LLMs, AI-assisted investigation, log explanations, anomaly detection, and interpretable security telemetry analysis.',
-  },
-  {
-    title: 'Security Reporting & Analytics',
-    icon: Activity,
-    description:
-      'Engineering dashboards, metrics, KPIs, trend summaries, SLA views, compliance-oriented reports, and executive-ready security narratives.',
-  },
-];
-
-export const professionalFocus = coreFocus.slice(0, 3);
-
-export const additionalFocus = [
-  {
-    title: 'Threat Intelligence Engineering',
-    icon: Database,
-    description:
-      'Building IOC enrichment, CVE monitoring, OpenCTI workflows, MITRE ATT&CK mapping, and intelligence distribution through Slack, email, and newsletters.',
-  },
-  {
-    title: 'Security Reporting & Analytics',
-    icon: Activity,
-    description:
-      'Engineering dashboards, metrics, KPIs, trend summaries, SLA views, compliance-oriented reports, and executive-ready security narratives.',
-  },
-  {
-    title: 'Vulnerability Assessment & Security Testing',
-    icon: Bug,
-    description:
-      'Validating findings, documenting risk, supporting remediation, and evaluating AI-assisted and automated penetration testing workflows using Pentagi and analyst validation.',
-  },
-  {
-    title: 'Cybersecurity Education',
-    icon: BookOpenCheck,
-    description:
-      'Designing labs, workshops, mentoring exercises, SIEM training, threat intelligence training, and practical security monitoring scenarios.',
-  },
-];
+export const githubUrl = 'https://github.com/maryamoah';
 
 export const impactHighlights = [
   { title: '180+ Log Sources', description: 'Administered Wazuh SIEM environments supporting enterprise monitoring and investigation workflows.' },
@@ -120,6 +43,39 @@ export const impactHighlights = [
 ];
 
 export const featuredWork = [
+  {
+    title: 'Sigma MITRE Detection Rules',
+    category: 'Detection Engineering',
+    icon: Radar,
+    href: 'https://github.com/maryamoah/sigma-mitre-detection-rules',
+    summary: 'Vendor-neutral Sigma detection rules mapped to MITRE ATT&CK, validated in CI and converted for Splunk, Sentinel, Elastic, QRadar, and Wazuh.',
+    highlights: [
+      '57 Sigma rules mapped to 56 ATT&CK techniques',
+      '13 of 14 ATT&CK tactics covered',
+      'CI-enforced with sigma check, custom rule validation, and coverage generation',
+      'Converts to Splunk, Sentinel, Elastic, QRadar, and Wazuh',
+      'Windows, Linux, firewall, AWS, Azure, and M365 log source coverage',
+      'MIT licensed, status: experimental',
+    ],
+    caseStudy: {
+      problem:
+        'Detection rules are usually shared as static lists. That format hides the part that matters: why a rule is scoped the way it is, what telemetry it depends on, and how an attacker would evade it.',
+      approach:
+        'Treat detections as code. Every rule declares its log source dependency, documents realistic false positives, and states maturity honestly. CI enforces the Sigma specification and repository conventions on every change.',
+      role:
+        'Sole author and maintainer. Wrote the rules, the validation tooling, the CI pipeline, and the documentation.',
+      capabilities: [
+        'sigma check for Sigma specification compliance on every rule.',
+        'validate_rules.py enforcing UUID uniqueness, ATT&CK tag format, and rejecting placeholder false positives.',
+        'generate_coverage.py builds coverage tables, a mapping CSV, and an ATT&CK Navigator layer from rule tags — CI fails if the output is stale.',
+        'yamllint, markdownlint, and relative link checking on every change.',
+        'Backend conversion smoke test across Python 3.11 and 3.12.',
+        'Platform coverage: Windows 28, Linux 10, firewall 6, AWS 5, Azure 4, M365 4.',
+      ],
+      outcome:
+        '57 rules across six telemetry domains, 56 ATT&CK techniques, green CI. Coverage is generated from rule metadata rather than maintained by hand, so the numbers cannot drift from the ruleset.',
+    },
+  },
   {
     title: 'SOC Reporting & Management Platform',
     category: 'Flagship Security Operations Platform',
@@ -192,17 +148,6 @@ export const featuredWork = [
         'Improved intelligence reach by combining OpenCTI, IOC enrichment, VirusTotal, AbuseIPDB, MITRE ATT&CK, CVE monitoring, weekly newsletters, Slack delivery, and email delivery into a consistent distribution process.',
     },
   },
-];
-
-export const consultingServices = [
-  'Operational readiness reviews',
-  'Detection and reporting roadmaps',
-  'Automation governance planning',
-  'Threat intelligence process alignment',
-  'Assessment finding remediation support',
-  'Investigation runbook development',
-  'Cybersecurity lab and workshop planning',
-  'Management-ready security communication',
 ];
 
 export const skills = [
@@ -338,9 +283,22 @@ export const githubProjects = [
     description: 'Threat intelligence notification concept for indicator context and security team updates.',
     tools: ['Threat intelligence', 'Automation bot', 'Security notifications', 'indicator context'],
   },
-];
+].map((project) => ({ ...project, href: `${githubUrl}/${project.repo}` }));
 
 export const projects = [
+  {
+    title: 'Sigma MITRE Detection Rules',
+    category: 'Detection Engineering',
+    icon: Radar,
+    featured: true,
+    href: 'https://github.com/maryamoah/sigma-mitre-detection-rules',
+    problem: 'Detection rules are usually shared as static lists. That format hides the part that matters: why a rule is scoped the way it is, what telemetry it depends on, and how an attacker would evade it.',
+    approach: 'Treat detections as code. Every rule declares its log source dependency, documents realistic false positives, and states maturity honestly. CI enforces the Sigma specification and repository conventions on every change.',
+    role: 'Mary is the sole author and maintainer. She wrote the rules, the validation tooling, the CI pipeline, and the documentation.',
+    capabilities: ['57 Sigma rules', '56 ATT&CK techniques', '13 of 14 ATT&CK tactics', 'sigma check validation', 'Custom convention validation', 'Generated coverage tables and ATT&CK Navigator layer', 'Multi-backend conversion (Splunk, Sentinel, Elastic, QRadar, Wazuh)'],
+    tools: ['Sigma', 'MITRE ATT&CK', 'YAML', 'Python', 'GitHub Actions', 'yamllint', 'markdownlint'],
+    outcome: '57 rules across six telemetry domains, 56 ATT&CK techniques, green CI. Coverage is generated from rule metadata rather than maintained by hand, so the numbers cannot drift from the ruleset.',
+  },
   {
     title: 'SOC Reporting & Management Platform',
     category: 'Flagship Security Operations Platform',
@@ -535,21 +493,6 @@ export const researchInterests = [
   },
 ];
 
-export const instructionHighlights = [
-  'Builds practical labs for security operations triage, SIEM dashboards, incident response, threat intelligence, vulnerability assessment and security testing practice, and digital forensics support.',
-  'Uses clear objectives, scenario prompts, evidence expectations, and reflection questions so learners understand both tools and judgment.',
-  'Connects technical tasks to reporting habits, escalation language, risk communication, and defensible documentation.',
-];
-
-export const certifications = [
-  { name: 'Security Operations Portfolio', issuer: 'Documented evidence', status: 'security operations triage, incident response, SIEM dashboards, and case documentation' },
-  { name: 'Cybersecurity Instruction Practice', issuer: 'Teaching evidence', status: 'Guided labs, learner support, tool walkthroughs, and assessment design' },
-  { name: 'Threat Intelligence Workflow', issuer: 'Portfolio evidence', status: 'OpenCTI, indicator enrichment, VirusTotal, AbuseIPDB, and MITRE ATT&CK mapping' },
-  { name: 'Security Operations Automation Workflow', issuer: 'Portfolio evidence', status: 'n8n, REST API integrations, Slack, Palo Alto, FortiGate, and analyst review gates' },
-  { name: 'AI & Machine Learning Security Analytics Research', issuer: 'Research evidence', status: 'Python, notebooks, Isolation Forest, anomaly detection, and interpretable machine learning' },
-  { name: 'Digital Forensics Support Utilities', issuer: 'Portfolio evidence', status: 'Evidence packaging, SHA256 verification, forensic timelines, and metadata review' },
-];
-
 export const contactCards = [
   {
     title: 'Email',
@@ -560,7 +503,7 @@ export const contactCards = [
   {
     title: 'GitHub',
     detail: 'View projects',
-    href: 'https://github.com/maryamoah',
+    href: githubUrl,
     icon: GitBranch,
     external: true,
   },
