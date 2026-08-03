@@ -131,7 +131,7 @@ function FeaturedCaseStudy({ caseStudy, title, onClose }) {
 
 function ProjectPreview({ project, index }) {
   const [open, setOpen] = useState(false);
-  const summary = project.outcome || project.approach;
+  const summary = project.approach || project.outcome;
 
   return (
     <GlassCard delay={index * 0.035} className="h-full bg-white/[0.035] p-5">
@@ -181,7 +181,7 @@ export function FeaturedWork() {
           </>)}
           description="Four engineering project areas that show impact first and implementation details second."
         />
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2">
           {selectedProjects.map((project, index) => {
             const Icon = project.icon;
             return (
@@ -210,7 +210,9 @@ export function FeaturedWork() {
                     >
                       View on GitHub <ArrowUpRight className="h-4 w-4" />
                     </a>
-                  ) : null}
+                  ) : (
+                    <span className="text-sm text-slate-400">Private repository</span>
+                  )}
                 </div>
                 <AnimatePresence initial={false}>
                   {activeFeaturedProject === project.title ? (
