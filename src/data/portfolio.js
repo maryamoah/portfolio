@@ -182,9 +182,9 @@ export const skills = [
 
 export const experience = [
   {
-    role: 'Senior Cybersecurity Engineer and Consultant',
+    role: 'Cybersecurity Engineer and Consultant',
     company: 'Security Operations, Automation, and Advisory Workflows',
-    period: 'Current focus',
+    period: '2025 – Present',
     highlights: [
       'Engineered Wazuh-centered SIEM workflows that improved endpoint visibility, alert triage, detection review, dashboarding, and reporting quality.',
       'Consolidated SOC management concepts into executive dashboards, analyst views, asset context, threat intelligence, KPIs, SLAs, and AI-assisted monthly reporting.',
@@ -193,23 +193,23 @@ export const experience = [
     ],
   },
   {
-    role: 'Cybersecurity Instructor',
-    company: 'Security Education and Practical Lab Development',
-    period: 'Current focus',
-    highlights: [
-      'Delivered practical labs that connect SIEM monitoring, incident response, threat intelligence, vulnerability assessment, forensics support, and plain-language reporting.',
-      'Enabled stronger analyst judgment through investigation questions, evidence validation, escalation criteria, tool usage, and defensible documentation habits.',
-      'Translated advanced SOC, threat intelligence, automation, and AI-assisted workflow concepts into practical workshops for emerging security professionals.',
-    ],
-  },
-  {
-    role: 'Security Automation Engineer and AI Security Researcher',
-    company: 'Independent Cybersecurity Projects',
-    period: 'GitHub and case study portfolio',
+    role: 'Independent Security Engineering & Research',
+    company: 'Self-directed detection engineering and security automation',
+    period: '2024 – Present',
     highlights: [
       'Engineered portfolio systems that improved IOC enrichment, malicious IP containment and release, vulnerability reporting, evidence packaging, and forensic timeline review.',
       'Evaluated Ollama, Qwen, local LLM reporting, AI log explanation, Pentagi, and Isolation Forest anomaly detection for analyst-reviewed cybersecurity workflows.',
       'Documented outcomes, review gates, limitations, and implementation tradeoffs for SOC engineering, security architecture, and PhD/research audiences.',
+    ],
+  },
+  {
+    role: 'Cybersecurity Instructor',
+    company: 'Security Education and Practical Lab Development',
+    period: '2022 – 2024',
+    highlights: [
+      'Delivered practical labs that connect SIEM monitoring, incident response, threat intelligence, vulnerability assessment, forensics support, and plain-language reporting.',
+      'Enabled stronger analyst judgment through investigation questions, evidence validation, escalation criteria, tool usage, and defensible documentation habits.',
+      'Translated advanced SOC, threat intelligence, automation, and AI-assisted workflow concepts into practical workshops for emerging security professionals.',
     ],
   },
 ];

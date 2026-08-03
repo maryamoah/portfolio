@@ -16,8 +16,8 @@ export function Experience() {
           <div key={`${item.role}-${item.company}`} className="relative pl-10 sm:pl-12">
             <span className="absolute left-3 top-8 h-3 w-3 -translate-x-1/2 rounded-full border-4 border-ink bg-cyan-300 shadow-glow sm:left-4" />
             <GlassCard delay={index * 0.08}>
-              <p className="text-sm text-cyan-300">{item.period}</p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">{item.role}</h3>
+              <h3 className="text-2xl font-semibold text-white">{item.role}</h3>
+              <p className="mt-2 text-base font-semibold text-cyan-300">{item.period}</p>
               <p className="mt-1 text-slate-200">{item.company}</p>
               <ul className="mt-5 space-y-2">
                 {item.highlights.map((highlight) => (
