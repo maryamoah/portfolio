@@ -8,26 +8,25 @@ export function Experience() {
       <SectionHeader
         eyebrow="Experience"
         title="Security Practice, Education, and Research"
-        description="A concise timeline of Mary’s current security operations, instruction, automation, and research focus areas."
+        description="A concise timeline of my current security operations, instruction, automation, and research focus areas."
       />
-      <div className="relative space-y-5 lg:space-y-6 lg:before:absolute lg:before:left-1/2 lg:before:top-3 lg:before:h-[calc(100%-1.5rem)] lg:before:w-px lg:before:bg-cyan-300/25">
+      <div className="relative mx-auto max-w-3xl space-y-5 sm:space-y-6">
+        <div className="absolute bottom-2 left-3 top-2 w-px bg-cyan-300/25 sm:left-4" aria-hidden="true" />
         {experience.map((item, index) => (
-          <div key={`${item.role}-${item.company}`} className="relative grid gap-4 lg:gap-6 lg:grid-cols-2">
-            <div className={`${index % 2 === 0 ? 'lg:pr-10' : 'lg:col-start-2 lg:pl-10'}`}>
-              <GlassCard delay={index * 0.08}>
-                <p className="text-sm text-cyan-300">{item.period}</p>
-                <h3 className="mt-3 text-2xl font-semibold text-white">{item.role}</h3>
-                <p className="mt-1 text-slate-200">{item.company}</p>
-                <ul className="mt-5 space-y-2">
-                  {item.highlights.map((highlight) => (
-                    <li key={highlight} className="text-sm leading-6 text-slate-200">
-                      • {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </GlassCard>
-            </div>
-            <span className="absolute top-8 hidden h-5 w-5 rounded-full border-4 border-ink bg-cyan-300 shadow-glow lg:left-1/2 lg:block lg:-translate-x-1/2" />
+          <div key={`${item.role}-${item.company}`} className="relative pl-10 sm:pl-12">
+            <span className="absolute left-3 top-8 h-3 w-3 -translate-x-1/2 rounded-full border-4 border-ink bg-cyan-300 shadow-glow sm:left-4" />
+            <GlassCard delay={index * 0.08}>
+              <p className="text-sm text-cyan-300">{item.period}</p>
+              <h3 className="mt-3 text-2xl font-semibold text-white">{item.role}</h3>
+              <p className="mt-1 text-slate-200">{item.company}</p>
+              <ul className="mt-5 space-y-2">
+                {item.highlights.map((highlight) => (
+                  <li key={highlight} className="text-sm leading-6 text-slate-200">
+                    • {highlight}
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
           </div>
         ))}
       </div>

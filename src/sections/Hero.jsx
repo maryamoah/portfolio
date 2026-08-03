@@ -18,27 +18,16 @@ export function Hero() {
             transition={{ duration: 0.7 }}
             className="mx-auto min-w-0 text-center lg:text-left"
           >
-            <Badge><span className="md:hidden">Cybersecurity Engineer • Security Automation</span><span className="hidden md:inline">{profile.role}</span></Badge>
+            <Badge>{profile.role}</Badge>
             <p className="mt-2 text-sm font-semibold leading-6 text-cyan-100 sm:mt-3 sm:text-base">
               {profile.name}
             </p>
             <h1 className="mx-auto mt-2 max-w-4xl text-xl font-semibold tracking-tight text-white sm:mt-3 sm:text-4xl md:text-5xl lg:mx-0">
-              <span className="md:hidden">Building SOC platforms, security automation, and AI-assisted workflows.</span>
-              <span className="hidden md:inline">{profile.headline}</span>
+              {profile.headline}
             </h1>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-200 sm:mt-4 sm:text-base sm:leading-7 lg:mx-0">
-              <span className="md:hidden">I build SOC reporting, SOAR automation, threat intelligence, and AI-assisted security workflows.</span>
-              <span className="hidden md:inline">{profile.summary}</span>
+              {profile.summary}
             </p>
-            <div className="mx-auto mt-5 hidden max-w-xl flex-wrap justify-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300 md:flex md:gap-3 lg:mx-0 lg:justify-start">
-              <span>Cybersecurity platforms</span>
-              <span className="text-cyan-300">•</span>
-              <span>Security automation</span>
-              <span className="text-cyan-300">•</span>
-              <span>Threat intelligence</span>
-              <span className="text-cyan-300">•</span>
-              <span>AI workflows</span>
-            </div>
             <div className="mt-4 flex flex-col justify-center gap-2 sm:mt-6 sm:flex-row sm:flex-wrap sm:gap-3 lg:justify-start">
               <a
                 href="#featured-projects"
