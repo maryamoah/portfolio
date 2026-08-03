@@ -24,7 +24,21 @@ export function useScrollSpy(sectionIds) {
       return observer;
     });
 
-    return () => observers.forEach((observer) => observer?.disconnect());
+    const lastId = sectionIds[sectionIds.length - 1];
+    const handleScroll = () => {
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      if (atBottom) {
+        setActiveId(lastId);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      observers.forEach((observer) => observer?.disconnect());
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [sectionIds]);
 
   return activeId;
