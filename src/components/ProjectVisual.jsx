@@ -34,6 +34,33 @@ export function ScreenshotPreview({ src, alt, label, caption, className = '', im
   );
 }
 
+export function SigmaRuleVisual({ label = 'Sigma Rule', caption, className = '', imageClassName = 'h-36 sm:h-40' }) {
+  return (
+    <figure className={`overflow-hidden rounded-2xl border border-cyan-200/15 bg-slate-950/80 shadow-lg shadow-cyan-950/20 ${className}`}>
+      <div className="flex items-center justify-between gap-3 border-b border-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-200">
+        <span>{label}</span>
+        <span className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.85)]" />
+      </div>
+      <div className={`relative w-full overflow-hidden bg-slate-950 px-4 py-3 ${imageClassName}`}>
+        <pre className="whitespace-pre font-mono text-[10.5px] leading-[1.55] text-slate-300 sm:text-[11px] md:text-xs">
+          <code>
+<span className="text-cyan-200">detection</span><span className="text-slate-500">:</span>{'\n'}
+{'    '}<span className="text-cyan-200">selection_img</span><span className="text-slate-500">:</span>{'\n'}
+{'        '}<span className="text-slate-500">- </span><span className="text-cyan-100">Image</span><span className="text-sky-300">|endswith</span><span className="text-slate-500">: </span><span className="text-white">'\rundll32.exe'</span>{'\n'}
+{'        '}<span className="text-slate-500">- </span><span className="text-cyan-100">OriginalFileName</span><span className="text-slate-500">: </span><span className="text-white">'RUNDLL32.EXE'</span>{'\n'}
+{'    '}<span className="text-cyan-200">selection_cli</span><span className="text-slate-500">:</span>{'\n'}
+{'        '}<span className="text-cyan-100">CommandLine</span><span className="text-sky-300">|contains|all</span><span className="text-slate-500">:</span>{'\n'}
+{'            '}<span className="text-slate-500">- </span><span className="text-white">'comsvcs'</span>{'\n'}
+{'            '}<span className="text-slate-500">- </span><span className="text-white">'MiniDump'</span>{'\n'}
+{'    '}<span className="text-cyan-200">condition</span><span className="text-slate-500">: </span><span className="text-slate-200">all of selection_*</span>
+          </code>
+        </pre>
+      </div>
+      {caption ? <figcaption className="border-t border-white/10 px-3 py-2 text-xs leading-5 text-slate-300">{caption}</figcaption> : null}
+    </figure>
+  );
+}
+
 export function SoarWorkflowVisual({ caption, className = '', imageClassName = 'h-36 sm:h-40' }) {
   const nodes = ['Wazuh', 'TheHive', 'Cortex', 'Firewall', 'Slack'];
 

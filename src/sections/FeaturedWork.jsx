@@ -3,7 +3,7 @@ import { ArrowUpRight, ChevronDown, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
-import { ScreenshotPreview, SoarWorkflowVisual } from '../components/ProjectVisual';
+import { ScreenshotPreview, SigmaRuleVisual, SoarWorkflowVisual } from '../components/ProjectVisual';
 import { screenshotAltText, screenshotPaths } from '../data/screenshots';
 import { SectionHeader } from '../components/SectionHeader';
 import { featuredWork, githubProjects, projects, researchInterests } from '../data/portfolio';
@@ -11,6 +11,7 @@ import { featuredWork, githubProjects, projects, researchInterests } from '../da
 const selectedTitles = featuredWork.map((project) => project.title);
 
 const projectVisuals = {
+  'Sigma MITRE Detection Rules': { type: 'rule', label: 'lsass_comsvcs_minidump.yml', caption: 'Detection logic for LSASS memory dumping via comsvcs.dll — one of 57 rules in the ruleset.' },
   'SOC Reporting & Management Platform': { type: 'screenshot', src: screenshotPaths.soc, alt: screenshotAltText.soc, label: 'SOC Reporting Platform', caption: 'Operational visibility, vulnerability posture, asset coverage, and reporting workflows.' },
   'Security Automation & SOAR Platform': { type: 'workflow', caption: 'Automated containment and release workflow connecting alerts, enrichment, firewall enforcement, analyst review, and notifications.' },
   'Threat Intelligence & Intelligence Distribution Platform': { type: 'screenshot', src: screenshotPaths.opencti, alt: screenshotAltText.opencti, label: 'OpenCTI Dashboard', caption: 'Threat intelligence dashboarding, indicators, reports, relationships, and CVE visibility.' },
@@ -24,6 +25,10 @@ function ProjectVisual({ visual, expanded = false }) {
 
   if (visual.type === 'workflow') {
     return <SoarWorkflowVisual caption={expanded ? visual.caption : null} imageClassName={imageClassName} className={expanded ? 'mt-4' : 'mb-4'} />;
+  }
+
+  if (visual.type === 'rule') {
+    return <SigmaRuleVisual label={visual.label} caption={expanded ? visual.caption : null} imageClassName={imageClassName} className={expanded ? 'mt-4' : 'mb-4'} />;
   }
 
   return (
