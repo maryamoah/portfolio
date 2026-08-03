@@ -182,36 +182,66 @@ export const skills = [
 
 export const experience = [
   {
-    role: 'Cybersecurity Engineer and Consultant',
-    company: 'Security Operations, Automation, and Advisory Workflows',
+    role: 'Senior Information Security Specialist',
+    employer: 'Centre for Information Systems, Sultan Qaboos University',
+    location: 'Muscat, Oman',
     period: '2025 – Present',
     highlights: [
-      'Engineered Wazuh-centered SIEM workflows that improved endpoint visibility, alert triage, detection review, dashboarding, and reporting quality.',
-      'Consolidated SOC management concepts into executive dashboards, analyst views, asset context, threat intelligence, KPIs, SLAs, and AI-assisted monthly reporting.',
-      'Implemented governed automation workflows that improved response consistency while preserving analyst review and accountability.',
-      'Operationalized OpenCTI, VirusTotal, AbuseIPDB, MITRE ATT&CK, and CVE distribution workflows so intelligence reaches cases, reports, Slack, email, and newsletters.',
+      'Led enterprise SIEM migration from FortiSIEM to Wazuh end-to-end across 200+ assets and 180+ log sources, removing commercial SIEM licensing dependence.',
+      'Built ATT&CK-aligned detection rules, decoders, and correlation logic that cut false positives by approximately 85%.',
+      'Integrated Wazuh, TheHive, Cortex, and OpenCTI into a centralised threat intelligence and incident response stack, automating enrichment and case creation in Python and n8n.',
+      'Escalation point for high-severity incidents; threat hunting across endpoint, identity, firewall, cloud, and network telemetry.',
+      'Microsoft Sentinel KQL hunting and Defender XDR across hybrid workloads.',
     ],
   },
   {
-    role: 'Independent Security Engineering & Research',
-    company: 'Self-directed detection engineering and security automation',
-    period: '2024 – Present',
+    role: 'Cybersecurity Analyst',
+    employer: 'Virtual Infosec Africa (MSSP)',
+    location: 'Ghana',
+    period: '2023 – 2025',
+    note: 'Held concurrently with the SOC Analyst role below',
     highlights: [
-      'Engineered portfolio systems that improved IOC enrichment, malicious IP containment and release, vulnerability reporting, evidence packaging, and forensic timeline review.',
-      'Evaluated Ollama, Qwen, local LLM reporting, AI log explanation, Pentagi, and Isolation Forest anomaly detection for analyst-reviewed cybersecurity workflows.',
-      'Documented outcomes, review gates, limitations, and implementation tradeoffs for SOC engineering, security architecture, and PhD/research audiences.',
+      'Security monitoring and incident response for banking-sector clients under PCI DSS obligations.',
+      'Root cause analysis and SIEM tuning that improved detection accuracy.',
+      'Managed incident lifecycle in ServiceNow against SLA and audit requirements.',
     ],
   },
   {
-    role: 'Cybersecurity Instructor',
-    company: 'Security Education and Practical Lab Development',
+    role: 'SOC Analyst (Tier 2)',
+    employer: 'Cibera Defence',
+    location: 'India',
     period: '2022 – 2024',
+    note: 'Held concurrently with the Cybersecurity Analyst role above',
     highlights: [
-      'Delivered practical labs that connect SIEM monitoring, incident response, threat intelligence, vulnerability assessment, forensics support, and plain-language reporting.',
-      'Enabled stronger analyst judgment through investigation questions, evidence validation, escalation criteria, tool usage, and defensible documentation habits.',
-      'Translated advanced SOC, threat intelligence, automation, and AI-assisted workflow concepts into practical workshops for emerging security professionals.',
+      'Investigated ~30 alerts per shift in a 24x7 enterprise SOC of ~16 analysts.',
+      'Securonix, Microsoft Sentinel, AlienVault USM, and Trellix EDR across Windows, Linux, firewall, email, and cloud telemetry.',
+      'SIEM rule tuning that reduced false-positive load on senior analysts.',
+      'Trained and mentored trainees and junior analysts on triage methodology, escalation criteria, and investigation documentation.',
     ],
   },
+  {
+    role: 'Cybersecurity Intern',
+    employer: 'TechDefence Labs',
+    location: 'India',
+    period: '2021',
+    highlights: [
+      'Vulnerability assessment and penetration testing across web applications, networks, and enterprise systems.',
+      'Technical assessment reports with remediation recommendations.',
+    ],
+  },
+];
+
+export const certifications = [
+  'Microsoft Certified: Security Operations Analyst Associate (SC-200)',
+  'EC-Council Certified SOC Analyst (CSA)',
+  'EC-Council Certified Incident Handler (ECIH)',
+  'LogRhythm Platform Administrator',
+  'LogRhythm Security Analyst',
+];
+
+export const education = [
+  { degree: 'M.Sc. Cybersecurity and Forensics', school: 'Gujarat University, India', note: 'Distinction' },
+  { degree: 'B.Sc. Forensic Science', school: 'University of Cape Coast, Ghana', note: 'First Class' },
 ];
 
 export const githubProjects = [
