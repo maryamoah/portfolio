@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Badge } from '../components/Badge';
 import { ScreenshotPreview } from '../components/ProjectVisual';
 import { screenshotAltText, screenshotPaths } from '../data/screenshots';
-import { profile, resumeLink } from '../data/portfolio';
+import { profile, sigmaRepoUrl } from '../data/portfolio';
 
 export function Hero() {
   return (
@@ -47,11 +47,12 @@ export function Hero() {
                 View Featured Projects <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href={resumeLink.href}
-                download
-                className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
+                href={sigmaRepoUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
               >
-                {resumeLink.label}
+                View on GitHub <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
           </motion.div>

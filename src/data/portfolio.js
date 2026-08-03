@@ -32,6 +32,7 @@ export const profile = {
 };
 
 export const githubUrl = 'https://github.com/maryamoah';
+export const sigmaRepoUrl = `${githubUrl}/sigma-mitre-detection-rules`;
 
 export const impactHighlights = [
   { title: '180+ Log Sources', description: 'Administered Wazuh SIEM environments supporting enterprise monitoring and investigation workflows.' },
@@ -47,7 +48,7 @@ export const featuredWork = [
     title: 'Sigma MITRE Detection Rules',
     category: 'Detection Engineering',
     icon: Radar,
-    href: 'https://github.com/maryamoah/sigma-mitre-detection-rules',
+    href: sigmaRepoUrl,
     summary: 'Vendor-neutral Sigma detection rules mapped to MITRE ATT&CK, validated in CI and converted for Splunk, Sentinel, Elastic, QRadar, and Wazuh.',
     highlights: [
       '57 Sigma rules mapped to 56 ATT&CK techniques',
@@ -291,7 +292,7 @@ export const projects = [
     category: 'Detection Engineering',
     icon: Radar,
     featured: true,
-    href: 'https://github.com/maryamoah/sigma-mitre-detection-rules',
+    href: sigmaRepoUrl,
     problem: 'Detection rules are usually shared as static lists. That format hides the part that matters: why a rule is scoped the way it is, what telemetry it depends on, and how an attacker would evade it.',
     approach: 'Treat detections as code. Every rule declares its log source dependency, documents realistic false positives, and states maturity honestly. CI enforces the Sigma specification and repository conventions on every change.',
     role: 'Mary is the sole author and maintainer. She wrote the rules, the validation tooling, the CI pipeline, and the documentation.',

@@ -1,6 +1,6 @@
-import { Shield } from 'lucide-react';
+import { GitBranch, Shield } from 'lucide-react';
 import { useMemo } from 'react';
-import { profile } from '../data/portfolio';
+import { githubUrl, profile } from '../data/portfolio';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const navItems = [
@@ -35,33 +35,45 @@ export function Navbar() {
           </span>
         </a>
 
-        <select
-          aria-label="Navigate portfolio sections"
-          value={activeId || 'featured-projects'}
-          onChange={handleMobileNav}
-          className="max-w-[10rem] rounded-full border border-white/10 bg-slate-950 px-3 py-2 text-xs font-semibold text-slate-100 outline-none ring-cyan-300/30 focus:ring-2 lg:hidden"
-        >
-          {navItems.map((item) => (
-            <option key={item.id} value={item.id}>
-              {item.label}
-            </option>
-          ))}
-        </select>
+        <div className="flex flex-none items-center gap-2 sm:gap-3">
+          <select
+            aria-label="Navigate portfolio sections"
+            value={activeId || 'featured-projects'}
+            onChange={handleMobileNav}
+            className="max-w-[8rem] rounded-full border border-white/10 bg-slate-950 px-3 py-2 text-xs font-semibold text-slate-100 outline-none ring-cyan-300/30 focus:ring-2 lg:hidden"
+          >
+            {navItems.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.label}
+              </option>
+            ))}
+          </select>
 
-        <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 lg:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={item.href}
-              className={`rounded-full px-3 py-2 text-xs transition xl:px-4 xl:text-sm ${
-                activeId === item.id
-                  ? 'bg-cyan-300/15 text-cyan-100'
-                  : 'text-slate-300 hover:bg-white/10 hover:text-white'
-              }`}
-            >
-              {item.label}
-            </a>
-          ))}
+          <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 lg:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={item.href}
+                className={`rounded-full px-3 py-2 text-xs transition xl:px-4 xl:text-sm ${
+                  activeId === item.id
+                    ? 'bg-cyan-300/15 text-cyan-100'
+                    : 'text-slate-300 hover:bg-white/10 hover:text-white'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex flex-none items-center gap-1.5 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-2 text-xs font-semibold text-cyan-100 transition hover:border-cyan-200/50 hover:bg-cyan-300/20 sm:gap-2 sm:px-3.5 sm:text-sm"
+          >
+            <GitBranch className="h-4 w-4" aria-hidden="true" />
+            <span className="hidden sm:inline">GitHub</span>
+          </a>
         </div>
       </nav>
     </header>
