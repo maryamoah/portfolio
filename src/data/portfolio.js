@@ -22,11 +22,11 @@ import {
 export const profile = {
   name: 'Mary Abenawa Techiesiwa Amoah',
   shortName: 'Mary Amoah',
-  role: 'Cybersecurity Engineer • Detection Engineer',
+  role: 'Senior Information Security Specialist • SIEM & Detection Engineering',
   headline:
-    'I build detection content and the tooling that validates it.',
+    'I rebuilt an enterprise SIEM and cut false positives by 85%.',
   summary:
-    '57 Sigma rules mapped to MITRE ATT&CK, validated in CI on every change.',
+    'Five years across enterprise, MSSP, and PCI DSS banking security operations. SIEM engineering, detection content, and the automation that runs on top.',
   contactFocus: 'Available through email, GitHub, LinkedIn, or resume download',
   availability: 'Senior Cybersecurity Engineer • Security Automation Engineer • Consultant • Instructor',
 };
