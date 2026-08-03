@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ChevronDown, X } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
@@ -174,7 +174,7 @@ export function FeaturedWork() {
             <span className="md:hidden">Featured Security Engineering Work</span>
             <span className="hidden md:inline">Security platforms, automation, and intelligence systems</span>
           </>)}
-          description="Three engineering project areas that show impact first and implementation details second."
+          description="Four engineering project areas that show impact first and implementation details second."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {selectedProjects.map((project, index) => {
@@ -187,14 +187,26 @@ export function FeaturedWork() {
                 <h3 className="mt-4 text-lg font-semibold tracking-tight text-white sm:text-xl">{project.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-200">{featuredWork[index].summary}</p>
                 <PillList items={featuredWork[index].highlights} />
-                <button
-                  type="button"
-                  onClick={() => setActiveFeaturedProject((activeTitle) => (activeTitle === project.title ? null : project.title))}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100"
-                  aria-expanded={activeFeaturedProject === project.title}
-                >
-                  View Case Study <ChevronDown className={`h-4 w-4 transition ${activeFeaturedProject === project.title ? 'rotate-180' : ''}`} />
-                </button>
+                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+                  <button
+                    type="button"
+                    onClick={() => setActiveFeaturedProject((activeTitle) => (activeTitle === project.title ? null : project.title))}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100"
+                    aria-expanded={activeFeaturedProject === project.title}
+                  >
+                    View Case Study <ChevronDown className={`h-4 w-4 transition ${activeFeaturedProject === project.title ? 'rotate-180' : ''}`} />
+                  </button>
+                  {project.href ? (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-cyan-100"
+                    >
+                      View on GitHub <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  ) : null}
+                </div>
                 <AnimatePresence initial={false}>
                   {activeFeaturedProject === project.title ? (
                     <FeaturedCaseStudy
@@ -243,11 +255,16 @@ export function FeaturedWork() {
             </GlassCard>
           )) : null}
           {showMore ? githubProjects.slice(0, 3).map((project, index) => (
-            <GlassCard key={project.repo} delay={index * 0.035} className="bg-white/[0.035] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">GitHub</p>
-              <h3 className="mt-3 break-words font-mono text-lg font-semibold text-white">{project.repo}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-200">{project.description}</p>
-            </GlassCard>
+            <a key={project.repo} href={project.href} target="_blank" rel="noreferrer" className="group block">
+              <GlassCard delay={index * 0.035} className="h-full bg-white/[0.035] p-5 transition group-hover:border-cyan-200/40">
+                <div className="flex items-start justify-between gap-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">GitHub</p>
+                  <ArrowUpRight className="h-4 w-4 flex-none text-cyan-200/70 transition group-hover:text-cyan-200" />
+                </div>
+                <h3 className="mt-3 break-words font-mono text-lg font-semibold text-white">{project.repo}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-200">{project.description}</p>
+              </GlassCard>
+            </a>
           )) : null}
         </div>
         <div className="mt-8 text-center">
