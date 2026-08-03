@@ -6,7 +6,7 @@ import { GlassCard } from '../components/GlassCard';
 import { ScreenshotPreview, SoarWorkflowVisual } from '../components/ProjectVisual';
 import { screenshotAltText, screenshotPaths } from '../data/screenshots';
 import { SectionHeader } from '../components/SectionHeader';
-import { featuredWork, githubProjects, impactHighlights, projects, researchInterests } from '../data/portfolio';
+import { featuredWork, githubProjects, projects, researchInterests } from '../data/portfolio';
 
 const selectedTitles = featuredWork.map((project) => project.title);
 
@@ -219,23 +219,6 @@ export function FeaturedWork() {
               </GlassCard>
             );
           })}
-        </div>
-      </section>
-
-
-      <section id="impact-highlights" className="mx-auto max-w-7xl px-5 py-8 sm:py-10 lg:px-8">
-        <SectionHeader
-          eyebrow="Impact Highlights"
-          title="Selected security outcomes"
-          description="Selected outcomes across security operations, automation, intelligence, and AI-assisted security workflows."
-        />
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-          {impactHighlights.map((item, index) => (
-            <GlassCard key={item.title} delay={index * 0.025} className="h-full bg-white/[0.035] p-4 sm:p-4">
-              <p className="text-sm font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-xs leading-5 text-slate-300 sm:text-[0.8rem]">{item.description}</p>
-            </GlassCard>
-          ))}
         </div>
       </section>
 

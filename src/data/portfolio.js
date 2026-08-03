@@ -34,15 +34,6 @@ export const profile = {
 export const githubUrl = 'https://github.com/maryamoah';
 export const sigmaRepoUrl = `${githubUrl}/sigma-mitre-detection-rules`;
 
-export const impactHighlights = [
-  { title: '180+ Log Sources', description: 'Administered Wazuh SIEM environments supporting enterprise monitoring and investigation workflows.' },
-  { title: 'SOC Reporting Platform', description: 'Consolidated visibility, KPIs, risk, assets, and threat intelligence for analysts and executives.' },
-  { title: 'Security Automation', description: 'Reduced containment effort through analyst-approved enrichment, notification, and response workflows.' },
-  { title: 'Threat Intelligence Operations', description: 'Operationalized OpenCTI, CVE monitoring, IOC enrichment, and intelligence distribution processes.' },
-  { title: 'AI-Assisted Reporting', description: 'Applied local LLM workflows to analyst-reviewed reporting and security narrative generation.' },
-  { title: 'Cybersecurity Education', description: 'Delivered practical labs, workshops, and investigation exercises for learners and analysts.' },
-];
-
 export const featuredWork = [
   {
     title: 'Sigma MITRE Detection Rules',
