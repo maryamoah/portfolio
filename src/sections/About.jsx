@@ -15,7 +15,7 @@ export function About() {
       <SectionHeader
         eyebrow="About"
         title="A cybersecurity builder with an operations mindset"
-        description="Mary connects SOC engineering, automation, intelligence, reporting, education, and research into practical systems."
+        description="I connect SOC engineering, automation, intelligence, reporting, education, and research into practical systems."
       />
       <GlassCard className="border-cyan-200/20 bg-slate-900/95">
         <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">

@@ -1,75 +1,150 @@
-# Mary Abenawa Techiesiwa Amoah Portfolio
+# Portfolio — Mary Amoah
 
-A production-ready cybersecurity portfolio for Mary Abenawa Techiesiwa Amoah, built with Vite, React, Tailwind CSS, Framer Motion, and Lucide React icons. The site highlights cybersecurity analyst experience, instructor work, SOC automation, SIEM monitoring, incident response workflows, threat intelligence, firewall automation, executive dashboards, and research interests.
+Personal site for Mary Amoah, Senior Information Security Specialist.
+Single-page React application covering security engineering experience,
+detection content, and SOC platform work.
 
-## Tech Stack
+**Live:** <https://portfolio-mary-amoah-s-projects.vercel.app>
 
-- [Vite](https://vite.dev/) for development and optimized production builds
-- [React](https://react.dev/) for component-based UI
-- [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
-- [Framer Motion](https://www.framer.com/motion/) for subtle entrance animations
-- [Lucide React](https://lucide.dev/) for consistent icons
-- [ESLint](https://eslint.org/) for code quality checks
+---
 
-## Project Structure
+## Stack
+
+| | |
+| --- | --- |
+| Build | [Vite](https://vite.dev/) |
+| UI | [React](https://react.dev/) |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) |
+| Animation | [Framer Motion](https://www.framer.com/motion/) |
+| Icons | [Lucide React](https://lucide.dev/) |
+| Linting | [ESLint](https://eslint.org/) |
+| Hosting | [Vercel](https://vercel.com/) |
+
+No router, no state library, no CMS. The site is one page with anchor
+navigation, and all copy lives in a single data file. That is a
+deliberate constraint: content changes should not require touching
+components.
+
+---
+
+## Structure
 
 ```text
 src/
-  components/  Reusable UI building blocks
-  sections/    Page sections for the one-page portfolio
-  data/        Mary Abenawa Techiesiwa Amoah profile, skills, case studies, research interests, and contact content
-  assets/      Static assets for images or documents
-  hooks/       Reusable React hooks
+  components/   Shared primitives: GlassCard, Badge, SectionHeader,
+                ProjectVisual, Navbar, Footer
+  sections/     One file per page section
+  data/
+    portfolio.js  All site copy and project data
+  hooks/        useScrollSpy — drives active nav state
+  assets/       Static images and documents
 ```
 
-## Getting Started
+### Section order
 
-Install dependencies:
+The page renders in this order, and the navbar mirrors it exactly:
+
+1. **Hero** — positioning, primary claim, two CTAs
+2. **Featured Engineering Projects** — four flagship projects with
+   expandable case studies
+3. **Technical Projects** — shorter previews, expand on demand
+4. **Experience** — professional history
+5. **Skills** — grouped capability chips
+6. **About** — context and working approach
+7. **Contact** — email, GitHub, LinkedIn, resume
+
+Nav order and page order are kept in sync intentionally. An earlier
+version had them diverge, which made anchor links jump backwards.
+
+---
+
+## Content
+
+Nearly all visible copy lives in `src/data/portfolio.js`. Editing that
+file is usually enough — components read from it and rarely need
+changes.
+
+The file exports:
+
+| Export | Drives |
+| --- | --- |
+| `profile` | Name, role badge, headline, sub-line |
+| `featuredWork` | Featured project cards and case studies |
+| `projects` | Technical project cards |
+| `githubProjects` | Repository cards, each with a real `href` |
+| `experience` | Professional history entries |
+| `skillGroups` | Grouped skill chips |
+| `contactCards` | Contact and profile links |
+
+### Conventions
+
+- **Every repository entry needs an `href`.** Repo cards were previously
+  rendered as plain text with no links, which defeated the point.
+- **First person throughout.** No third-person self-reference.
+- **Concrete over adjectival.** Prefer a number to a description.
+- **No inflated claims.** Specifically avoided: "enterprise-grade",
+  "production-ready", "battle-tested", "comprehensive". Work that is
+  experimental is labelled experimental.
+
+---
+
+## Local development
 
 ```bash
 npm install
+npm run dev        # dev server
+npm run lint       # ESLint
+npm run build      # production build to dist/
+npm run preview    # serve the production build locally
 ```
 
-Start the local development server:
+Run `npm run lint && npm run build` before pushing. Both run clean on
+`main`.
 
-```bash
-npm run dev
-```
+---
 
-Run linting:
+## Deployment
 
-```bash
-npm run lint
-```
+Vercel builds from `main` on push. Settings are committed in
+`vercel.json`:
 
-Create a production build:
+| Setting | Value |
+| --- | --- |
+| Framework | `vite` |
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Rewrites | All routes serve `index.html` |
 
-```bash
-npm run build
-```
+Branch pushes produce preview deployments. Note that Vercel
+Authentication is enabled for deployment-specific URLs, so preview links
+require a login — the project alias above is the public URL.
 
-Preview the production build locally:
+### Build troubleshooting
 
-```bash
-npm run preview
-```
+A correct build log shows `portfolio@0.1.0 build` followed by
+`vite build`. If it shows a different package name or `next build`,
+Vercel is building the wrong project or a stale override:
 
-## Deployment on Vercel
+1. Confirm the Vercel project points at this repository.
+2. Clear any build-command override in project settings.
+3. Redeploy with framework preset `vite` and output directory `dist`.
 
-This project includes a `vercel.json` configured for Vite:
+---
 
-- Build command: `npm run build`
-- Output directory: `dist`
-- Framework: `vite`
-- SPA rewrite: all routes serve `index.html`
+## Notes
 
-To deploy:
+Sections are added by creating a file in `src/sections/`, importing it
+into `App.jsx`, and adding a matching nav entry. Keep the nav array and
+the render order aligned — `useScrollSpy` depends on the anchor IDs
+matching.
 
-1. Push the repository to GitHub.
-2. Import the repository in Vercel.
-3. Confirm Vercel detects Vite or uses the included `vercel.json` settings.
-4. Deploy the `main` branch after the pull request is reviewed and merged.
+Animations are entrance-only (fade and slide on scroll into view). There
+is no scroll-linked or continuous animation, which keeps the page cheap
+to render and avoids motion sickness triggers.
 
-## Content Updates
+---
 
-Most visible copy is managed in `src/data/portfolio.js`, including Mary Abenawa Techiesiwa Amoah’s profile, skills, experience, detailed case studies, research interests, portfolio evidence, and contact cards.
+## License
+
+Personal portfolio. The code is available to read; the content, copy,
+and imagery are not licensed for reuse.

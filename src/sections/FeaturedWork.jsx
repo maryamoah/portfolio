@@ -3,10 +3,47 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Badge } from '../components/Badge';
 import { GlassCard } from '../components/GlassCard';
+import { ScreenshotPreview, SigmaRuleVisual, SoarWorkflowVisual } from '../components/ProjectVisual';
+import { screenshotAltText, screenshotPaths } from '../data/screenshots';
 import { SectionHeader } from '../components/SectionHeader';
 import { featuredWork, impactHighlights, projects } from '../data/portfolio';
 
 const selectedTitles = featuredWork.map((project) => project.title);
+
+const projectVisuals = {
+  'Sigma MITRE Detection Rules': { type: 'rule', label: 'lsass_comsvcs_minidump.yml', caption: 'Detection logic for LSASS memory dumping via comsvcs.dll — one of 57 rules in the ruleset.' },
+  'SOC Reporting & Management Platform': { type: 'screenshot', src: screenshotPaths.soc, alt: screenshotAltText.soc, label: 'SOC Reporting Platform', caption: 'Operational visibility, vulnerability posture, asset coverage, and reporting workflows.' },
+  'Security Automation & SOAR Platform': { type: 'workflow', caption: 'Automated containment and release workflow connecting alerts, enrichment, firewall enforcement, analyst review, and notifications.' },
+  'Threat Intelligence & Intelligence Distribution Platform': { type: 'screenshot', src: screenshotPaths.opencti, alt: screenshotAltText.opencti, label: 'OpenCTI Dashboard', caption: 'Threat intelligence dashboarding, indicators, reports, relationships, and CVE visibility.' },
+  'Wazuh SIEM Engineering & Detection': { type: 'screenshot', src: screenshotPaths.wazuh, alt: screenshotAltText.wazuh, label: 'Wazuh Dashboard' },
+  'OpenCTI Threat Intelligence Integration': { type: 'screenshot', src: screenshotPaths.opencti, alt: screenshotAltText.opencti, label: 'OpenCTI Dashboard' },
+};
+
+function ProjectVisual({ visual, expanded = false }) {
+  if (!visual) return null;
+  const imageClassName = expanded ? 'h-52 sm:h-64 lg:h-80' : 'h-28 sm:h-32 md:h-36';
+
+  if (visual.type === 'workflow') {
+    return <SoarWorkflowVisual caption={expanded ? visual.caption : null} imageClassName={imageClassName} className={expanded ? 'mt-4' : 'mb-4'} />;
+  }
+
+  if (visual.type === 'rule') {
+    return <SigmaRuleVisual label={visual.label} caption={expanded ? visual.caption : null} imageClassName={imageClassName} className={expanded ? 'mt-4' : 'mb-4'} />;
+  }
+
+  return (
+    <ScreenshotPreview
+      src={visual.src}
+      alt={visual.alt}
+      label={visual.label}
+      caption={expanded ? visual.caption : null}
+      imageClassName={imageClassName}
+      imageToneClassName={visual.label === 'SOC Reporting Platform' ? 'brightness-75 contrast-95 saturate-90' : ''}
+      className={expanded ? 'mt-4' : 'mb-4'}
+    />
+  );
+}
+
 const additionalTitles = [
   'AI-Assisted SOC Triage & Investigation',
   'Wazuh SIEM Engineering & Detection',
@@ -94,10 +131,11 @@ function CaseStudyDetails({ details, onClose }) {
 
 function ProjectPreview({ project, index }) {
   const [open, setOpen] = useState(false);
-  const summary = project.outcome || project.approach;
+  const summary = project.approach || project.outcome;
 
   return (
     <GlassCard delay={index * 0.035} className="h-full bg-white/[0.035] p-5">
+      <ProjectVisual visual={projectVisuals[project.title]} />
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">{project.category}</p>
       <h3 className="mt-3 text-lg font-semibold text-white">{project.title}</h3>
       <p className="mt-2 text-sm leading-6 text-slate-200">{summary}</p>
@@ -134,8 +172,11 @@ export function FeaturedWork() {
       <section id="featured-projects" className="mx-auto max-w-7xl px-5 py-10 sm:py-14 lg:px-8">
         <SectionHeader
           eyebrow="Featured Engineering Projects"
-          title="Security platforms, automation, and intelligence systems"
-          description="Three engineering project areas that show impact first and implementation details second."
+          title={(<>
+            <span className="md:hidden">Featured Security Engineering Work</span>
+            <span className="hidden md:inline">Security platforms, automation, and intelligence systems</span>
+          </>)}
+          description="Four engineering project areas that show impact first and implementation details second."
         />
         <div className="grid items-start gap-5 md:grid-cols-2 xl:grid-cols-3">
           {selectedProjects.map((project, index) => {
@@ -145,6 +186,7 @@ export function FeaturedWork() {
             return (
               <GlassCard key={project.title} delay={index * 0.05} className="relative h-full min-w-0 overflow-hidden border-cyan-200/25 bg-slate-900/95 p-4 sm:p-6">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-300 via-sky-400 to-cyan-200 opacity-80" />
+                <ProjectVisual visual={projectVisuals[project.title]} />
                 <div className="grid h-11 w-11 place-items-center rounded-2xl bg-cyan-300/15"><Icon className="h-5 w-5 text-cyan-100" /></div>
                 <h3 className="mt-4 text-lg font-semibold tracking-tight text-white sm:text-xl">{project.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-200">{featuredWork[index].summary}</p>
