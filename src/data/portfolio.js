@@ -33,6 +33,7 @@ export const profile = {
 
 export const githubUrl = 'https://github.com/maryamoah';
 export const sigmaRepoUrl = `${githubUrl}/sigma-mitre-detection-rules`;
+export const socPlaybooksRepoUrl = `${githubUrl}/soc-automation-playbooks`;
 
 export const featuredWork = [
   {
@@ -138,6 +139,39 @@ export const featuredWork = [
       ],
       outcome:
         'Improved intelligence reach by combining OpenCTI, IOC enrichment, VirusTotal, AbuseIPDB, MITRE ATT&CK, CVE monitoring, weekly newsletters, Slack delivery, and email delivery into a consistent distribution process.',
+    },
+  },
+  {
+    title: 'SOC Automation Playbooks',
+    category: 'AI-Assisted Triage Automation',
+    icon: Workflow,
+    href: socPlaybooksRepoUrl,
+    summary: 'An n8n workflow that turns a security event pasted into Slack into a structured triage assessment — source-aware prompts, self-hosted inference, and no path to take action on its own.',
+    highlights: [
+      '14-node n8n workflow: Slack event in, structured triage reply out',
+      '7 source-specific prompts — Wazuh, Windows Security, FortiGate, PAN-OS, F5 BIG-IP ASM, Trend Micro CEF, and general Q&A',
+      'Self-hosted Ollama inference — telemetry stays on the network',
+      'No write path to any security control; analyst approval stays mandatory',
+      'Severity, overall risk, and confidence tracked as three separate axes',
+      'CI scans every push for secrets, private IPs, and credential identifiers',
+    ],
+    caseStudy: {
+      problem:
+        'Security events land in Slack as raw text with no structured read on severity, risk, or what to do next. Getting that from an LLM risks confident-sounding conclusions the evidence does not support — a blocked connection is not a compromise, and a MITRE ATT&CK tag on a detection rule is a statement about the rule, not proof the technique ran.',
+      approach:
+        'Built an n8n workflow that classifies the pasted event by source, selects one of seven source-specific analyst prompts, and runs inference on a self-hosted Ollama model. The prompts spend more words on what the model must not conclude than on what it should: severity, operational risk, and confidence are tracked as three separate axes because they routinely differ, and the required answer is "Requires Investigation" whenever the evidence cannot decide.',
+      role:
+        'Sole author and maintainer. Built the workflow, the source-specific prompts, the classifier routing, the validation scripts, and the CI secret-scanning.',
+      capabilities: [
+        'Slack Events API webhook receives a pasted security event and replies in the same thread.',
+        'JavaScript classifier routes 10 input types across 7 source-specific analyst prompts (Wazuh, Windows Security, FortiGate, PAN-OS, F5 BIG-IP ASM, Trend Micro CEF, general Q&A).',
+        'Inference runs on self-hosted Ollama — security telemetry does not leave the network.',
+        'Output fields: verdict, severity, overall risk, confidence, evidence, assessment, recommended actions, missing information.',
+        'No node in the workflow can block, isolate, disable, or close anything — analyst approval stays mandatory for any consequential action.',
+        'JSON Schema contracts for alerts and triage results, dependency-free Python validation scripts, a sanitized importable export, and GitHub Actions CI that scans every push for secrets, private IPs, and credential identifiers.',
+      ],
+      outcome:
+        'A working personal build, not something running in production for an employer: 14 nodes, 7 source-specific prompts, and a JavaScript classifier routing 10 input types, with no write path into any security control. It also has real gaps — no threat-intelligence enrichment, no deterministic risk score (the assessment fields are model-generated text), three classifier routes (ip, hash, linux) wired to nothing that fail silently, and an unauthenticated webhook with no Slack signature verification yet.',
     },
   },
 ];
@@ -305,6 +339,12 @@ export const githubProjects = [
     description: 'Threat intelligence notification concept for indicator context and security team updates.',
     tools: ['Threat intelligence', 'Automation bot', 'Security notifications', 'indicator context'],
   },
+  {
+    repo: 'soc-automation-playbooks',
+    category: 'AI-Assisted Triage Automation',
+    description: 'n8n workflow that classifies a security event pasted into Slack, runs it through a source-specific prompt on a self-hosted Ollama model, and replies with a structured triage assessment in the same thread.',
+    tools: ['n8n', 'Ollama', 'Slack Events API', 'Wazuh', 'Python', 'JSON Schema', 'GitHub Actions'],
+  },
 ].map((project) => ({ ...project, href: `${githubUrl}/${project.repo}` }));
 
 export const projects = [
@@ -320,6 +360,12 @@ export const projects = [
     capabilities: ['57 Sigma rules', '56 ATT&CK techniques', '13 of 14 ATT&CK tactics', 'sigma check validation', 'Custom convention validation', 'Generated coverage tables and ATT&CK Navigator layer', 'Multi-backend conversion (Splunk, Sentinel, Elastic, QRadar, Wazuh)'],
     tools: ['Sigma', 'MITRE ATT&CK', 'YAML', 'Python', 'GitHub Actions', 'yamllint', 'markdownlint'],
     outcome: '57 rules across six telemetry domains, 56 ATT&CK techniques, green CI. Coverage is generated from rule metadata rather than maintained by hand, so the numbers cannot drift from the ruleset.',
+  },
+  {
+    title: 'SOC Automation Playbooks',
+    category: 'AI-Assisted Triage Automation',
+    icon: Workflow,
+    href: socPlaybooksRepoUrl,
   },
   {
     title: 'SOC Reporting & Management Platform',
