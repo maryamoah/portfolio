@@ -2,7 +2,8 @@ import { Navbar } from './components/Navbar';
 import { About } from './sections/About';
 import { Contact } from './sections/Contact';
 import { Experience } from './sections/Experience';
-import { FeaturedWork } from './sections/FeaturedWork';
+import { FeaturedWork, TechnicalProjects } from './sections/FeaturedWork';
+import { Research } from './sections/Research';
 import { Hero } from './sections/Hero';
 import { Skills } from './sections/Skills';
 
@@ -14,6 +15,8 @@ function App() {
         <Hero />
         <FeaturedWork />
         <Experience />
+        <TechnicalProjects />
+        <Research />
         <Skills />
         <About />
         <Contact />
